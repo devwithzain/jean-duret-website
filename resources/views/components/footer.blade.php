@@ -1,5 +1,5 @@
-<div class="w-full p-20 bg-[#000D51]">
-   <div class="w-full flex items-start justify-between gap-10">
+<div class="w-full px-20 py-10 bg-[#000D51]">
+   <div class="w-full flex items-start justify-between gap-10 py-10">
       <div class="w-1/4 flex flex-col gap-4">
          <img src={{ asset('assets/logo.png') }} alt="aboutUsImage" width="80" height="80">
          <p class="text-white text-lg font-normal leading-normal tracking-normal">Lorem Ipsum is simply dummy text of
@@ -77,3 +77,8 @@
          </div>
       </div>
    </div>
+   <div class="w-full flex items-center justify-center pt-5">
+      <p class="text-white text-lg font-normal leading-normal tracking-normal">©Copyright 2025. All Right Reserved
+      </p>
+   </div>
+</div>

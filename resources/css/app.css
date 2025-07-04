@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "locomotive-scroll/dist/locomotive-scroll.css";
 @import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -12,17 +13,6 @@
         "Noto Color Emoji";
 }
 
-html,
-body {
-    scrollbar-width: none;
+body::-webkit-scrollbar {
+    width: 0;
 }
-
-/* html,
-body {
-    height: 100%;
-    overflow-x: hidden;
-}
-
-[data-scroll-container] {
-    will-change: transform;
-} */

@@ -1,8 +1,17 @@
 import "./bootstrap";
-// import LocomotiveScroll from "locomotive-scroll";
-// import "locomotive-scroll/dist/locomotive-scroll.css";
+import LocomotiveScroll from "locomotive-scroll";
 
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector("[data-scroll-container]"),
-//     smooth: true,
-// });
+window.addEventListener("load", function () {
+    const scrollContainer = document.querySelector("[data-scroll-container]");
+
+    if (scrollContainer) {
+        const scroll = new LocomotiveScroll({
+            el: scrollContainer,
+            smooth: true,
+        });
+
+        setTimeout(() => {
+            scroll.update();
+        }, 1000);
+    }
+});
