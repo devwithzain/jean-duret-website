@@ -9,6 +9,7 @@ use App\Http\Controllers\ContactPageController;
 use App\Http\Controllers\RegisterPageController;
 use App\Http\Controllers\ServicesPageController;
 use App\Http\Controllers\ServiceDetailPageController;
+use App\Http\Controllers\Admin\AdminHomePageController;
 
 Route::get('/', [HomePageController::class, 'index'])->name('home');
 Route::get('/about', [AboutPageController::class, 'index'])->name('about');
@@ -21,3 +22,6 @@ Route::get('/register', [RegisterPageController::class, 'index'])->name('registe
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Admin Routes
+Route::get('/admin', [AdminHomePageController::class, 'index'])->name('admin');
