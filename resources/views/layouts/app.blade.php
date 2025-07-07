@@ -11,18 +11,23 @@
 
 <body>
    <div data-scroll-container>
+      @if(!request()->is('login') && !request()->is('register'))
       <section data-scroll-section>
          @include('components.navbar')
       </section>
+      @endif
 
       <main data-scroll-section>
          @yield('content')
       </main>
 
+      @if(!request()->is('login') && !request()->is('register'))
       <section data-scroll-section>
          @include('components.footer')
       </section>
+      @endif
    </div>
+   <script src="https://unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>

@@ -1,16 +1,21 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\ServiceController;
+
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:sanctum');
 
 // Services
-Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
-Route::post('/service', [ServiceController::class, 'store'])->name('services.store');
-Route::get('/service/{slug}', [ServiceController::class, 'show'])->name('services.show');
-Route::put('/service/{id}', [ServiceController::class, 'update'])->name('services.update');
-Route::delete('/service/{id}', [ServiceController::class, 'destroy'])->name('services.destroy');
+Route::get('/services', [ServiceController::class, 'index']);
+Route::post('/service', [ServiceController::class, 'store']);
+Route::get('/service/{slug}', [ServiceController::class, 'show']);
+Route::put('/service/{id}', [ServiceController::class, 'update']);
+Route::delete('/service/{id}', [ServiceController::class, 'destroy']);
 
-
-Route::get('/test', function () {
-   return response()->json(['message' => 'API is working']);
-});
+// Auth Routes
+Route::post("/login", [AuthController::class, "login"]);
+Route::post("/register", [AuthController::class, "register"]);

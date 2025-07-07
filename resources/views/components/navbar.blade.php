@@ -9,6 +9,15 @@
       <a href="/contact" class="text-white text-xl font-medium leading-tight tracking-tight">Contact</a>
    </div>
    <div>
-      <button
-         class="text-white text-xl font-medium leading-tight tracking-tight border-2 border-white px-14 py-3">LogIn</button>
+      @auth
+      <form method="POST" action="{{ route('logout') }}">
+         @csrf
+         <button type="submit"
+            class="text-white text-xl font-medium cursor-pointer leading-tight tracking-tight border-2 border-white px-14 py-3">Logout</button>
+      </form>
+      @else
+      <a href="/login"
+         class="text-white text-xl font-medium leading-tight cursor-pointer tracking-tight border-2 border-white px-14 py-3">LogIn</a>
+      @endauth
+   </div>
 </nav>
