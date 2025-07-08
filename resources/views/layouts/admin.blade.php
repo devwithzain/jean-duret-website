@@ -12,9 +12,14 @@
 <body>
    <div data-scroll-container>
 
-      <main data-scroll-section>
-         @yield('content')
-      </main>
+      <div class="w-full flex items-center justify-between">
+         <section>
+            @include('admin.components.admin-sidebar')
+         </section>
+         <main class="w-[86%]" data-scroll-section>
+            @yield('content')
+         </main>
+      </div>
 
    </div>
    <script src="https://unpkg.com/alpinejs" defer></script>

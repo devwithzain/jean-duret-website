@@ -6,6 +6,6 @@ class LoginPageController extends Controller
 {
    public function index()
    {
-      return view('container.login.login', ['title' => 'LogIn - Divine Solution Funding']);
+      return view('client.container.login.login', ['title' => 'LogIn - Divine Solution Funding']);
    }
 }

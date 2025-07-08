@@ -1,5 +1,4 @@
 <div class="w-full bg-[#000D51] h-screen overflow-hidden">
-   @include('components.navbar')
    <div class="w-full h-full px-20 flex items-center justify-center gap-10">
       <div class="w-1/2 flex flex-col gap-10">
          <div class="flex flex-col gap-2">

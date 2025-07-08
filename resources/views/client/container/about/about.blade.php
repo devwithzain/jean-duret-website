@@ -3,8 +3,8 @@
 @section('title', $title ?? 'Default Title')
 
 @section('content')
-@include('container.about.hero')
-@include('container.about.funding')
-@include('container.about.divine')
-@include('container.about.choseus')
+@include('client.container.about.hero')
+@include('client.container.about.funding')
+@include('client.container.about.divine')
+@include('client.container.about.choseus')
 @endsection

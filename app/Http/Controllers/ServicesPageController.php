@@ -6,6 +6,6 @@ class ServicesPageController extends Controller
 {
    public function index()
    {
-      return view('container.services.services', ['title' => 'Services - Divine Solution Funding']);
+      return view('client.container.services.services', ['title' => 'Services - Divine Solution Funding']);
    }
 }

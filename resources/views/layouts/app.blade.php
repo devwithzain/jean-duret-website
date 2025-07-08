@@ -12,8 +12,8 @@
 <body>
    <div data-scroll-container>
       @if(!request()->is('login') && !request()->is('register'))
-      <section data-scroll-section>
-         @include('components.navbar')
+      <section>
+         @include('client.components.navbar')
       </section>
       @endif
 
@@ -22,8 +22,8 @@
       </main>
 
       @if(!request()->is('login') && !request()->is('register'))
-      <section data-scroll-section>
-         @include('components.footer')
+      <section>
+         @include('client.components.footer')
       </section>
       @endif
    </div>

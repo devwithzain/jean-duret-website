@@ -6,6 +6,6 @@ class HomePageController extends Controller
 {
    public function index()
    {
-      return view('container.home.home', ['title' => 'Divine Solution Funding']);
+      return view('client.container.home.home', ['title' => 'Divine Solution Funding']);
    }
 }
