@@ -3,7 +3,7 @@
 @section('title', $title ?? 'Default Title')
 
 @section('content')
-@include('container.services.hero')
-@include('container.services.stats')
-@include('container.services.consulting')
+@include('client.container.services.hero')
+@include('client.container.services.stats')
+@include('client.container.services.consulting')
 @endsection

@@ -1,15 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\LoginPageController;
-use App\Http\Controllers\AboutPageController;
-use App\Http\Controllers\ContactPageController;
-use App\Http\Controllers\RegisterPageController;
-use App\Http\Controllers\ServicesPageController;
-use App\Http\Controllers\ServiceDetailPageController;
-use App\Http\Controllers\Admin\AdminHomePageController;
+use App\Http\Controllers\Client\HomePageController;
+use App\Http\Controllers\Client\LoginPageController;
+use App\Http\Controllers\Client\AboutPageController;
+use App\Http\Controllers\Client\ContactPageController;
+use App\Http\Controllers\Client\RegisterPageController;
+use App\Http\Controllers\Client\ServicesPageController;
+use App\Http\Controllers\Client\ServiceDetailPageController;
+use App\Http\Controllers\Admin\Dashboard\AdminHomePageController;
+use App\Http\Controllers\Admin\Services\ServicesListingController;
 
 // Public routes accessible to all
 Route::get('/', [HomePageController::class, 'index'])->name('home');
@@ -32,6 +33,7 @@ Route::middleware(['guest'])->group(function () {
 // Admin routes (only for authenticated admins)
 Route::middleware(['auth'])->group(function () {
    Route::get('/dashboard', [AdminHomePageController::class, 'index'])->name('admin.dashboard');
+   Route::get('/dashboard/services', [ServicesListingController::class, 'index'])->name('services');
 });
 
 // Authenticated user routes (for all authenticated users)

@@ -34,9 +34,15 @@ class ServiceController extends Controller
          'service' => $service
       ]);
    }
-   public function show($slug)
+   public function show(string $id)
    {
-      $service = Service::where('slug', $slug)->firstOrFail();
+      $service = Service::find($id);
+      if (!$service) {
+         return response()->json([
+            'error' => 'Not Found.'
+         ], 404);
+      }
+
       return response()->json([
          'service' => $service
       ]);

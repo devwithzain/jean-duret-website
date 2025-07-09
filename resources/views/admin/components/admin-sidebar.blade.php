@@ -1,5 +1,5 @@
 <nav class="w-[14%] h-screen fixed top-0 left-0 z-50 bg-[#FAFAFA] border-r border-gray-200">
-   <div class="w-full h-full flex flex-col justify-between p-5">
+   <div class="w-full h-full flex flex-col justify-between p-3">
       <div class="flex flex-col gap-7">
          <div class="flex gap-2 items-center">
             <img src="{{ asset('assets/logo.png') }}" alt="logo" class="w-10 h-10">
@@ -74,15 +74,61 @@
             <div class="w-9 h-9 rounded-full bg-black"></div>
             <div class="flex flex-col">
                <h1 class="text-xl font-semibold text-gray-800 tracking-tight leading-tight">Jean Duret</h1>
-               <p class="text-sm text-gray-500 font-normal tracking-tight leading-tight">Admin Dashboard</p>
+               <p class="text-sm text-gray-500 font-normal tracking-tight leading-tight">Admin@gmail.com</p>
             </div>
          </div>
-         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-chevrons-up-down-icon lucide-chevrons-up-down">
-            <path d="m7 15 5 5 5-5" />
-            <path d="m7 9 5-5 5 5" />
-         </svg>
+         <div class="relative">
+            <button onclick="toggleSettingDropdown()">
+               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-chevrons-up-down-icon lucide-chevrons-up-down">
+                  <path d="m7 15 5 5 5-5" />
+                  <path d="m7 9 5-5 5 5" />
+               </svg>
+            </button>
+            <div id="settingDropdown"
+               class="hidden absolute -bottom-full left-full mb-4 ml-2 w-60 bg-white rounded-lg border border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
+               <button class="w-full px-4 py-2 text-left hover:bg-gray-100 border-b border-black/20">
+                  <div class="flex gap-2 items-center">
+                     <div class="w-9 h-9 rounded-full bg-black"></div>
+                     <div class="flex flex-col">
+                        <h1 class="text-xl font-semibold text-gray-800 tracking-tight leading-tight">Jean Duret</h1>
+                        <p class="text-sm text-gray-500 font-normal tracking-tight leading-tight">Admin@gmail.com</p>
+                     </div>
+                  </div>
+               </button>
+               <button class="w-full px-4 py-2 text-left hover:bg-gray-100 border-b border-black/20">
+                  <div class="flex items-center gap-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-settings-icon lucide-settings">
+                        <path
+                           d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                        <circle cx="12" cy="12" r="3" />
+                     </svg>
+                     <h1>Account</h1>
+                  </div>
+               </button>
+               <button class="w-full px-4 py-2 text-left hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-log-out-icon lucide-log-out">
+                        <path d="m16 17 5-5-5-5" />
+                        <path d="M21 12H9" />
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                     </svg>
+                     <h1>LogOut</h1>
+                  </div>
+               </button>
+            </div>
+         </div>
+         <script>
+         function toggleSettingDropdown() {
+            const dropdown = document.getElementById('settingDropdown');
+            dropdown.classList.toggle('hidden');
+         }
+         </script>
       </div>
    </div>
 </nav>
