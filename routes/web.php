@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Services\ServicesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Client\HomePageController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\Client\RegisterPageController;
 use App\Http\Controllers\Client\ServicesPageController;
 use App\Http\Controllers\Client\ServiceDetailPageController;
 use App\Http\Controllers\Admin\Dashboard\AdminHomePageController;
+use App\Http\Controllers\Admin\Services\ServicesCreateController;
 use App\Http\Controllers\Admin\Services\ServicesListingController;
 
 // Public routes accessible to all
@@ -33,7 +35,14 @@ Route::middleware(['guest'])->group(function () {
 // Admin routes (only for authenticated admins)
 Route::middleware(['auth'])->group(function () {
    Route::get('/dashboard', [AdminHomePageController::class, 'index'])->name('admin.dashboard');
-   Route::get('/dashboard/services', [ServicesListingController::class, 'index'])->name('services');
+
+   Route::get('/dashboard/services', [ServicesController::class, 'index'])->name('index');
+   Route::get('/dashboard/services/create', [ServicesController::class, 'create'])->name('create');
+   Route::post('/dashboard/services', [ServicesController::class, 'store'])->name('store');
+   Route::get('/dashboard/services/{id}', [ServicesController::class, 'show'])->name('show');
+   Route::get('/dashboard/services/{id}/edit', [ServicesController::class, 'edit'])->name('edit');
+   Route::put('/dashboard/services/{id}', [ServicesController::class, 'update'])->name('update');
+   Route::delete('/dashboard/services/{id}', [ServicesController::class, 'delete'])->name('delete');
 });
 
 // Authenticated user routes (for all authenticated users)
