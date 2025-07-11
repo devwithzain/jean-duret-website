@@ -28,8 +28,9 @@
                </p>
             </div>
          </div>
-         <button class="w-fit text-white text-xl font-medium leading-tight tracking-tight px-14 py-5 bg-[#2460FD]">Get
-            Started</button>
+         <a href="{{route('services')}}"
+            class="w-fit text-white text-xl font-medium leading-tight tracking-tight px-14 py-5 bg-[#2460FD]">Get
+            Started</a>
       </div>
       <div class="w-1/2 h-full relative">
          <svg xmlns="http://www.w3.org/2000/svg" width="904" height="442" viewBox="0 0 904 442" fill="none"

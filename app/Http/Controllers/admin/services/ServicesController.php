@@ -13,8 +13,7 @@ class ServicesController extends Controller
 {
    public function index()
    {
-      $services = Service::all();
-      return view('admin.container.services.listings', compact('services'), ['title' => 'Create - Divine Solution Funding']);
+      return view('admin.container.services.listings',  ['title' => 'Create - Divine Solution Funding']);
    }
    public function create()
    {
@@ -36,10 +35,9 @@ class ServicesController extends Controller
 
       return redirect()->route('admin.container.services.listings')->with('success', 'Service added successfully!');
    }
-   public function show($id)
+   public function show()
    {
-      $service = Service::findOrFail($id);
-      return view('admin.container.services', compact('service'));
+      return view('admin.container.services');
    }
    public function edit($id)
    {
@@ -62,7 +60,6 @@ class ServicesController extends Controller
          'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
       ]);
 
-      // Update fields only if provided
       if ($request->has('title')) {
          $service->title = $validatedData['title'];
       }
@@ -76,12 +73,10 @@ class ServicesController extends Controller
       if ($request->hasFile('image')) {
          $storage = Storage::disk('public');
 
-         // Delete old image if exists
          if ($service->image && $storage->exists($service->image)) {
             $storage->delete($service->image);
          }
 
-         // Store new image
          $image = $request->file('image');
          $imageName = 'services/' . Str::random(32) . '.' . $image->getClientOriginalExtension();
          $storage->put($imageName, file_get_contents($image->getRealPath()));

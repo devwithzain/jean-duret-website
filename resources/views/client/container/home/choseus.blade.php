@@ -39,8 +39,7 @@
                   <h1 class="text-white text-2xl font-medium leading-tight tracking-tight">Fast & Hassle-Free Process
                   </h1>
                   <p class="text-white text-lg font-normal leading-tight tracking-tight">Lorem Ipsum is simply dummy
-                     text
-                     of the printing and typesetting industry.
+                     text of the printing and typesetting industry.
                   </p>
                </div>
             </div>
