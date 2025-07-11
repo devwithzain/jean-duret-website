@@ -5,7 +5,7 @@
       <div class="w-full grid grid-cols-3 gap-10">
          <div class="w-full h-[400px] shadow-[0_0_15px_rgba(0,0,0,0.15)] hover:bg-[#000D51] bg-white p-10 group">
             <div class="w-full h-full flex flex-col justify-center gap-5">
-               <img src={{ asset('assets/investment.svg') }} alt="heroGirl" class="w-20 h-20 object-cover">
+               <img src={{ asset('assets/investment.png') }} alt="heroGirl" class="w-20 h-20 object-cover">
                <h1 class="group-hover:text-white text-[#000D51] text-3xl font-semibold leading-tight tracking-tight">
                   Real Estate Investment</h1>
                <p class="group-hover:text-white text-[#000D51] text-lg font-normal leading-tight tracking-tight">Lorem
@@ -18,7 +18,7 @@
          </div>
          <div class="w-full h-[400px] shadow-[0_0_15px_rgba(0,0,0,0.15)] hover:bg-[#000D51] bg-white p-10 group">
             <div class="w-full h-full flex flex-col justify-center gap-5">
-               <img src={{ asset('assets/approval.svg') }} alt="heroGirl" class="w-20 h-20 object-cover">
+               <img src={{ asset('assets/approval.png') }} alt="heroGirl" class="w-20 h-20 object-cover">
                <h1 class="group-hover:text-white text-[#000D51] text-3xl font-semibold leading-tight tracking-tight">
                   Loan Pre-Approval</h1>
                <p class="group-hover:text-white text-[#000D51] text-lg font-normal leading-tight tracking-tight">Lorem
@@ -31,7 +31,7 @@
          </div>
          <div class="w-full h-[400px] shadow-[0_0_15px_rgba(0,0,0,0.15)] hover:bg-[#000D51] bg-white p-10 group">
             <div class="w-full h-full flex flex-col justify-center gap-5">
-               <img src={{ asset('assets/planing.svg') }} alt="heroGirl" class="w-20 h-20 object-cover">
+               <img src={{ asset('assets/planing.png') }} alt="heroGirl" class="w-20 h-20 object-cover">
                <h1 class="group-hover:text-white text-[#000D51] text-3xl font-semibold leading-tight tracking-tight">
                   Focused Financial Planning</h1>
                <p class="group-hover:text-white text-[#000D51] text-lg font-normal leading-tight tracking-tight">Lorem

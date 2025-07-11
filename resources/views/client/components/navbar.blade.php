@@ -3,9 +3,9 @@ $navLinks = include resource_path('constants/navlinks.php');
 @endphp
 
 <nav class="w-full flex items-center justify-between px-20 py-5 fixed top-0 z-50">
-   <div>
+   <a href={{ route('home') }} class="flex items-center gap-2">
       <img src={{ asset('assets/logo.png') }} alt="logo" width="80" height="80">
-   </div>
+   </a>
    <div class="flex gap-8">
       @foreach($navLinks as $link)
       <a href="{{ $link['href'] }}"
@@ -13,7 +13,7 @@ $navLinks = include resource_path('constants/navlinks.php');
       @endforeach
    </div>
    <div>
-      @auth
+      @if(auth()->check() && auth()->user()->role === 'user')
       <form method="POST" action="{{ route('logout') }}">
          @csrf
          <button type="submit"
@@ -22,6 +22,6 @@ $navLinks = include resource_path('constants/navlinks.php');
       @else
       <a href="/login"
          class="text-white text-xl font-medium leading-tight cursor-pointer tracking-tight border-2 border-white px-14 py-3">LogIn</a>
-      @endauth
+      @endif
    </div>
 </nav>

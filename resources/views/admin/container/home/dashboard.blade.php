@@ -1,3 +1,8 @@
+@extends('layouts.admin')
+
+@section('title', $title ?? 'Default Title')
+
+@section('content')
 <div class="w-full h-screen p-5 flex flex-col gap-5">
    <div class="w-full py-2 flex items-center justify-between">
       <div class="flex items-center gap-2">
@@ -52,3 +57,4 @@
       <div class="w-full h-full bg-white rounded-lg border border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]"></div>
    </div>
 </div>
+@endsection

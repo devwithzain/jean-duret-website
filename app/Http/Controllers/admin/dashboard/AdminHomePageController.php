@@ -8,6 +8,6 @@ class AdminHomePageController extends Controller
 {
    public function index()
    {
-      return view('admin.container.home.home', ['title' => 'Admin - Divine Solution Funding']);
+      return view('admin.container.home.dashboard', ['title' => 'Admin - Divine Solution Funding']);
    }
 }
