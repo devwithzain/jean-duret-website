@@ -1,17 +1,18 @@
 import "./bootstrap";
-import LocomotiveScroll from "locomotive-scroll";
+import Lenis from "@studio-freight/lenis";
 
-window.addEventListener("load", function () {
-    const scrollContainer = document.querySelector("[data-scroll-container]");
-
-    if (scrollContainer) {
-        const scroll = new LocomotiveScroll({
-            el: scrollContainer,
-            smooth: true,
-        });
-
-        setTimeout(() => {
-            scroll.update();
-        }, 1000);
-    }
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true,
+    direction: "vertical",
 });
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+export default lenis;

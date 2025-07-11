@@ -10,14 +10,14 @@
 </head>
 
 <body>
-   <div data-scroll-container>
+   <div data-lenis>
       @if(!request()->is('login') && !request()->is('register'))
       <section>
          @include('client.components.navbar')
       </section>
       @endif
 
-      <main data-scroll-section>
+      <main data-lenis-scroll>
          @yield('content')
       </main>
 

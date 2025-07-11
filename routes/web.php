@@ -38,7 +38,7 @@ Route::middleware(['guest'])->group(function () {
 });
 
 // Admin routes (only for authenticated admins)
-Route::middleware(['auth', 'admin'])->group(function () {
+Route::middleware(['auth'])->group(function () {
    Route::get('/dashboard', [AdminHomePageController::class, 'index'])->name('admin.dashboard');
 
    Route::get('/dashboard/services', [ServicesController::class, 'index'])->name('admin.container.services.listings');

@@ -10,12 +10,12 @@
 </head>
 
 <body>
-   <div data-scroll-container>
+   <div>
       <div class="w-full flex items-center justify-between">
          <section>
             @include('admin.components.sidebar')
          </section>
-         <main class="w-[86%]" data-scroll-section>
+         <main class="w-[86%]">
             @yield('content')
          </main>
       </div>
