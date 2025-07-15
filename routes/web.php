@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\Api\ContactFormController;
 use Illuminate\Support\Facades\Route;
 
 // Api Controllers
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\BookFormController;
+use App\Http\Controllers\Api\ContactFormController;
 
 // Client Controllers
 use App\Http\Controllers\Client\HomePageController;
@@ -25,6 +26,7 @@ Route::get('/', action: [HomePageController::class, 'index'])->name('home');
 Route::get('/about', [AboutPageController::class, 'index'])->name('about');
 Route::get('/contact', [ContactPageController::class, 'index'])->name('contact');
 Route::get('/services', [ServicesPageController::class, 'index'])->name('services');
+Route::post('/book-service', [BookFormController::class, 'bookService'])->name('book-service');
 Route::post('/contact', [ContactFormController::class, 'sendContactForm'])->name('send-contact-form');
 Route::get('/services/service-detail', [ServiceDetailPageController::class, 'index'])->name('service-detail');
 Route::get('/services/service-detail/{slug}', [ServiceDetailPageController::class, 'index'])->name('service-detail');

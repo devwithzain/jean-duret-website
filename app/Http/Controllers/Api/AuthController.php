@@ -33,7 +33,12 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->intended('/dashboard')->with('success', 'Login successful.');
+        if (Auth::user()->role == 'admin') {
+            return redirect()->intended('/dashboard')->with('success', 'Login successful.');
+        }
+        if (Auth::user()->role == 'user') {
+            return redirect()->intended('/')->with('success', 'Login successful.');
+        }
     }
     public function register(RegisterRequest $request)
     {

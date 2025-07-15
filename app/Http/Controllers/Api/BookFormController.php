@@ -1,0 +1,52 @@
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Models\User;
+use App\Models\BookService;
+use Illuminate\Support\Str;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\BookServiceRequest;
+
+class BookFormController extends Controller
+{
+   public function bookService(BookServiceRequest $request)
+   {
+      $validatedData = $request->validated();
+
+      $user = User::where('email', $validatedData['email'])->first();
+
+      if (!$user) {
+         $user = User::create([
+            'name' => $validatedData['name'],
+            'email' => $validatedData['email'],
+            'password' => Hash::make('defaultPassword123'),
+         ]);
+      }
+
+      Auth::login($user);
+
+      $imageName = null;
+      if ($request->hasFile('image')) {
+         $image = $request->file('image');
+         $imageName = 'bookService/' . Str::random(32) . '.' . $image->getClientOriginalExtension();
+         Storage::disk('public')->put($imageName, file_get_contents($image));
+      }
+
+      BookService::create([
+         'user_id'         => $user->id,
+         'name' => $validatedData['name'],
+         'date' => $validatedData['date'],
+         'email' => $validatedData['email'],
+         'phone' => $validatedData['phone'],
+         'specialMessage' => $validatedData['specialMessage'],
+         'service_id' => $validatedData['service_id'] ?? null,
+         'image' => $imageName,
+      ]);
+
+      return redirect()->back()->with('success', 'Your service has been booked and user registered successfully!');
+   }
+}

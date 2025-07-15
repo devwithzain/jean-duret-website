@@ -18,4 +18,8 @@ class Service extends Model
             $service->slug = Str::slug($service->title);
         });
     }
+    public function bookings()
+    {
+        return $this->hasMany(BookService::class);
+    }
 }
