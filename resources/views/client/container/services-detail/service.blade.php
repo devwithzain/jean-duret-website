@@ -1,4 +1,3 @@
-<!-- Modal -->
 <div class="w-full flex items-center justify-between gap-10 bg-[#F3F4F9]">
    <div class="w-1/2">
       <img src={{ asset('assets/serviceDetail.png') }} alt="serviceDetail" class="w-full h-full object-cover">
@@ -19,8 +18,6 @@
       </div>
    </div>
 </div>
-
-<!-- Booking Modal -->
 <div id="bookingModal" class="fixed hidden inset-0 bg-black/80 z-50 bg-opacity-50 overflow-y-auto h-full w-full"
    style="position: fixed; top: 0; left: 0;"
    onclick="if(event.target==this){document.getElementById('bookingModal').style.display='none';document.body.style.overflow='auto';}">
@@ -35,25 +32,38 @@
          <form class="mt-4 space-y-4" action="{{ route('book-service') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="service_id" value="{{ $service->id }}">
-            <div>
-               <input type="text" name="name" placeholder="Full Name" required
+            <div class="flex flex-col gap-1">
+               <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+               <input type="text" id="name" name="name" placeholder="Full Name" required
                   class="w-full px-3 py-2 border rounded-md">
             </div>
-            <div>
-               <input type="email" name="email" placeholder="Email" required class="w-full px-3 py-2 border rounded-md">
+            <div class="flex flex-col gap-1">
+               <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+               <input type="email" id="email" name="email" placeholder="Email" required
+                  class="w-full px-3 py-2 border rounded-md">
             </div>
-            <div>
-               <input type="tel" name="phone" placeholder="Phone" required class="w-full px-3 py-2 border rounded-md">
+            <div class="flex flex-col gap-1">
+               <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+               <input type="tel" id="phone" name="phone" placeholder="Phone" required
+                  class="w-full px-3 py-2 border rounded-md">
             </div>
-            <div>
-               <input type="date" name="date" required class="w-full px-3 py-2 border rounded-md">
+            <div class="flex flex-col gap-1">
+               <label for="date" class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+               <input type="date" id="date" name="date" required class="w-full px-3 py-2 border rounded-md">
             </div>
-            <div>
-               <textarea name="specialMessage" placeholder="Message" required
+            <div class="flex flex-col gap-1">
+               <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service</label>
+               <input type="text" id="service" value="{{ $service->title }}" disabled
+                  class="w-full px-3 py-2 border rounded-md bg-gray-100">
+            </div>
+            <div class="flex flex-col gap-1">
+               <label for="specialMessage" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+               <textarea id="specialMessage" name="specialMessage" placeholder="Message" rows="5" required
                   class="w-full px-3 py-2 border rounded-md"></textarea>
             </div>
-            <div>
-               <input type="file" name="image" accept="image/*" class="w-full px-3 py-2 border rounded-md">
+            <div class="flex flex-col gap-1">
+               <label for="image" class="block text-sm font-medium text-gray-700 mb-1">Image</label>
+               <input type="file" id="image" name="image" accept="image/*" class="w-full px-3 py-2 border rounded-md">
             </div>
             <div class="flex justify-between">
                <button type="submit" class="bg-[#000D51] text-white px-4 py-2 rounded-md">Submit</button>
