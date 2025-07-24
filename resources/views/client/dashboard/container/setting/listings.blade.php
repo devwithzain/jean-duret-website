@@ -1,16 +1,16 @@
-@extends('layouts.admin')
+@extends('layouts.user')
 
 @section('title', $title ?? 'Default Title')
 
 @section('content')
-  <div class="px-5">
+  <div class="p-5">
     <div class="w-full flex items-center justify-between gap-4 border-b border-black/15 pb-3">
     <div class="flex flex-col">
       <h1 class="text-black text-4xl font-bold leading-tight tracking-tight">Edit Setting</h1>
       <p class="text-black/50 text-md font-normal leading-tight tracking-tight">Edit Setting.</p>
     </div>
     </div>
-    <form action={{ route('admin.container.setting.update', $user->id) }} method="post"
+    <form action={{ route('client.dashboard.container.setting.update', $user->id) }} method="post"
     class="w-full flex flex-col gap-5 py-8" enctype="multipart/form-data">
     @method('PUT')
     @csrf
@@ -37,7 +37,7 @@
       <input id="image" name="image" accept="image/*"
       class="w-full outline-none focus:border-black/50 px-3 py-1.5 text-black text-md bg-white font-normal rounded-lg border border-black/10 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
       type="file" onchange="previewImage(event)">
-      <img id="adminImagePreview"
+      <img id="userImagePreview"
       src="{{ $user->image ? asset('storage/' . $user->image) : asset('assets/placeholder.png') }}" alt="Preview"
       class="mt-2 w-40 rounded-lg">
     </div>
@@ -50,7 +50,7 @@
   <script>
     function previewImage(event) {
     const file = event.target.files[0];
-    const preview = document.getElementById('adminImagePreview');
+    const preview = document.getElementById('userImagePreview');
     if (file) {
       const reader = new FileReader();
       reader.onload = function (e) {

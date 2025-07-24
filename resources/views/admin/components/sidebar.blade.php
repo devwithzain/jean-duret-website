@@ -57,17 +57,6 @@
                  </svg>
                  <h1 class="text-md font-normal text-black tracking-tight leading-tight">Services</h1>
                </a>
-               <a href={{ route('admin.dashboard') }} class="flex items-center gap-2">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                   stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   class="lucide lucide-square-chart-gantt-icon lucide-square-chart-gantt">
-                   <rect width="18" height="18" x="3" y="3" rx="2" />
-                   <path d="M9 8h7" />
-                   <path d="M8 12h6" />
-                   <path d="M11 16h5" />
-                 </svg>
-                 <h1 class="text-md font-normal text-black tracking-tight leading-tight">Products</h1>
-               </a>
             </div>
           </div>
         </div>

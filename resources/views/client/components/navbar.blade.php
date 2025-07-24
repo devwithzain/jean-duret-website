@@ -17,16 +17,30 @@
           class="text-white text-xl font-medium leading-tight tracking-tight">{{ $link['label'] }}</a>
      @endforeach
    </div>
-   <div>
-      @if(auth()->check() && auth()->user()->role === 'user')
-        <form method="POST" action="{{ route('logout') }}">
-          @csrf
-          <button type="submit"
-            class="text-white text-xl font-medium cursor-pointer leading-tight tracking-tight border-2 border-white px-14 py-3">Logout</button>
-        </form>
-     @else
+   <div class="flex items-center gap-3">
+      @if(!auth()->check())
         <a href="/login"
           class="text-white text-xl font-medium leading-tight cursor-pointer tracking-tight border-2 border-white px-14 py-3">LogIn</a>
      @endif
+      <div x-data="{ open: false }" class="relative">
+         @if(auth()->check())
+          <button @click="open = !open" class="rounded-full border-2 border-white w-12 h-12 overflow-hidden">
+            <img
+               src="{{ auth()->user()->image ? asset('storage/' . auth()->user()->image) : asset('assets/placeholder.png') }}"
+               alt="User" class="w-full h-full object-cover">
+          </button>
+          <div x-show="open" @click.away="open = false"
+            class="absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg py-2 z-50 transition-opacity duration-300">
+            <a href="{{route('client.dashboard.container.setting.index')}}"
+               class="block px-4 py-2 hover:bg-gray-200">Profile</a>
+            <a href="{{route('client.dashboard.container.home.dashboard')}}"
+               class="block px-4 py-2 hover:bg-gray-200">Dashboard</a>
+            <form method="POST" action="{{ route('logout') }}">
+               @csrf
+               <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-200">Logout</button>
+            </form>
+          </div>
+       @endif
+      </div>
    </div>
 </nav>

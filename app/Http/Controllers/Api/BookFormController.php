@@ -29,6 +29,9 @@ class BookFormController extends Controller
 
       Auth::login($user);
 
+      $data = $request->all();
+      $data['user_id'] = Auth::id();
+
       $imageName = null;
       if ($request->hasFile('image')) {
          $image = $request->file('image');
@@ -36,17 +39,8 @@ class BookFormController extends Controller
          Storage::disk('public')->put($imageName, file_get_contents($image));
       }
 
-      BookService::create([
-         'user_id'         => $user->id,
-         'name' => $validatedData['name'],
-         'date' => $validatedData['date'],
-         'email' => $validatedData['email'],
-         'phone' => $validatedData['phone'],
-         'specialMessage' => $validatedData['specialMessage'],
-         'service_id' => $validatedData['service_id'] ?? null,
-         'image' => $imageName,
-      ]);
+      BookService::create($data);
 
-      return redirect()->back()->with('success', 'Your service has been booked and user registered successfully!');
+      return redirect()->route('dashboard')->with('success', 'Your inquiry has been submitted.');
    }
 }

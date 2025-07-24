@@ -19,7 +19,12 @@ use App\Http\Controllers\Client\ServiceDetailPageController;
 // Admin Controllers
 use App\Http\Controllers\Admin\Setting\SettingController;
 use App\Http\Controllers\Admin\Services\ServicesController;
+use App\Http\Controllers\User\Dashboard\UserHomePageController;
 use App\Http\Controllers\Admin\Dashboard\AdminHomePageController;
+
+// User Dashboard
+use App\Http\Controllers\User\Inquries\InquriesController;
+use App\Http\Controllers\User\Setting\UserSettingController;
 
 // Public routes accessible to all
 Route::get('/', action: [HomePageController::class, 'index'])->name('home');
@@ -59,5 +64,11 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 // Authenticated user routes (for all authenticated users)
 Route::middleware(['auth'])->group(function () {
-   Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+   Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+   Route::get('/user-dashboard', [UserHomePageController::class, 'index'])->name('client.dashboard.container.home.dashboard');
+   Route::get('/user-dashboard/inquries', [InquriesController::class, 'index'])->name('client.dashboard.container.inquries.listings');
+
+   // Setting routes
+   Route::get('/user-dashboard/setting', [UserSettingController::class, 'index'])->name('client.dashboard.container.setting.index');
+   Route::put('/user-dashboard/setting/{id}', [UserSettingController::class, 'update'])->name('client.dashboard.container.setting.update');
 });

@@ -10,16 +10,14 @@
 </head>
 
 <body>
-   <div>
-      <div class="w-full flex items-center justify-between">
-         <section>
-            @include('admin.components.sidebar')
-         </section>
-         <main class="w-[86%]">
-            @include('admin.components.navbar')
-            @yield('content')
-         </main>
-      </div>
+   <div class="w-full flex items-center justify-between">
+      <section>
+         @include('client.dashboard.components.sidebar')
+      </section>
+      <main class="w-[86%]">
+         @include('client.dashboard.components.navbar')
+         @yield('content')
+      </main>
    </div>
    <script src="https://unpkg.com/alpinejs" defer></script>
 </body>
