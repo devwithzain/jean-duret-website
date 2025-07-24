@@ -37,7 +37,7 @@ class ServicesController extends Controller
    }
    public function show()
    {
-      return view('admin.container.services');
+      return view('admin.container.services.create');
    }
    public function edit($id)
    {
