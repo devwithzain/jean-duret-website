@@ -41,6 +41,6 @@ class BookFormController extends Controller
 
       BookService::create($data);
 
-      return redirect()->route('dashboard')->with('success', 'Your inquiry has been submitted.');
+      return redirect()->back()->with('success', 'Your inquiry has been submitted.');
    }
 }
