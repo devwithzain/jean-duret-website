@@ -19,7 +19,7 @@
    </div>
    <div class="flex items-center gap-3">
       @if(!auth()->check())
-        <a href="/login"
+        <a href="{{ route('login') }}"
           class="text-white text-xl font-medium leading-tight cursor-pointer tracking-tight border-2 border-white px-14 py-3">LogIn</a>
      @endif
       <div x-data="{ open: false }" class="relative">
@@ -31,11 +31,11 @@
           </button>
           <div x-show="open" @click.away="open = false"
             class="absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg py-2 z-50 transition-opacity duration-300">
-            <a href="{{route('client.dashboard.container.setting.index')}}"
-               class="block px-4 py-2 hover:bg-gray-200">Profile</a>
             <a href="{{route('client.dashboard.container.home.dashboard')}}"
                class="block px-4 py-2 hover:bg-gray-200">Dashboard</a>
-            <form method="POST" action="{{ route('logout') }}">
+            <a href="{{route('client.dashboard.container.setting.index')}}"
+               class="block px-4 py-2 hover:bg-gray-200">Profile</a>
+            <form method="POST" action="{{ url('/api/logout') }}">
                @csrf
                <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-200">Logout</button>
             </form>

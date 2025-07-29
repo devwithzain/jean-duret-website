@@ -11,10 +11,10 @@
                   <h1 class="text-white text-3xl font-bold leading-tight tracking-tight">Create an Account</h1>
                   <div class="flex items-center gap-2">
                      <p class="text-sm text-[#ADABB8]">Already have an account?</p>
-                     <a href={{ route('login') }} class="text-sm text-[#9887c9] underline">LogIn</a>
+                     <a href={{ route('login') }} class="text-sm text-[#9887c9] underline">Login</a>
                   </div>
                </div>
-               <form method="POST" action="{{ route('register') }}" class="flex flex-col gap-5">
+               <form method="POST" action="{{ url('/api/register') }}" class="flex flex-col gap-5">
                   @csrf
                   <div class="flex flex-col gap-2">
                      <div
@@ -29,8 +29,8 @@
                            class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none w-full" />
                      </div>
                      @error('name')
-                     <span class="text-red-500 text-sm">{{ $message }}</span>
-                     @enderror
+                   <span class="text-red-500 text-sm">{{ $message }}</span>
+                @enderror
                   </div>
                   <div class="flex flex-col gap-2">
                      <div
@@ -45,13 +45,12 @@
                            class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none w-full" />
                      </div>
                      @error('email')
-                     <span class="text-red-500 text-sm">{{ $message }}</span>
-                     @enderror
+                   <span class="text-red-500 text-sm">{{ $message }}</span>
+                @enderror
                   </div>
                   <div class="flex flex-col gap-2">
                      <div
                         class="w-full flex items-center bg-[#3c375269] rounded-lg p-4 gap-2 @error('password') border-red-500 border @enderror">
-                        {{-- Lucide Lock Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="#6D6980" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                            class="lucide lucide-lock-icon lucide-lock">
@@ -82,8 +81,8 @@
                         </button>
                      </div>
                      @error('password')
-                     <span class="text-red-500 text-sm">{{ $message }}</span>
-                     @enderror
+                   <span class="text-red-500 text-sm">{{ $message }}</span>
+                @enderror
                   </div>
                   <div class="flex flex-col gap-2">
                      <div
@@ -119,8 +118,8 @@
                         </button>
                      </div>
                      @error('password_confirmation')
-                     <span class="text-red-500 text-sm">{{ $message }}</span>
-                     @enderror
+                   <span class="text-red-500 text-sm">{{ $message }}</span>
+                @enderror
                   </div>
                   <button type="submit"
                      class="w-full bg-[#2f1d88] rounded-lg p-4 text-[16px] text-white font-normal text-center">
