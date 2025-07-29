@@ -19,7 +19,12 @@ class AppServiceProvider extends ServiceProvider
             return config('app.frontend_url') . "/password-reset/$token?email={$notifiable->getEmailForPasswordReset()}";
         });
         View::composer('*', function ($view) {
-            $view->with('services', Service::all());
+            try {
+                $services = Service::all();
+            } catch (\Throwable $e) {
+                $services = collect();
+            }
+            $view->with('services', $services);
         });
     }
 }
