@@ -13,7 +13,7 @@
    </a>
    <div class="flex gap-8">
       @foreach($navLinks as $link)
-        <a href="{{ $link['href'] }}"
+        <a href="{{ route($link['href']) }}"
           class="text-white text-xl font-medium leading-tight tracking-tight">{{ $link['label'] }}</a>
      @endforeach
    </div>
