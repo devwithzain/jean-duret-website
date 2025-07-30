@@ -14,7 +14,7 @@
                      <a href={{ route('register') }} class="text-sm text-[#9887c9] underline">Register</a>
                   </div>
                </div>
-               <form method="POST" action="{{ url('/api/login') }}" class="flex flex-col gap-5">
+               <form method="POST" action="{{ route('login') }}" class="flex flex-col gap-5">
                   @csrf
                   <div class="flex flex-col gap-2">
                      <div

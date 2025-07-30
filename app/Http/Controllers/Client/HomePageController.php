@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers\Client;
 
+use App\Models\Service;
 use App\Http\Controllers\Controller;
 
 class HomePageController extends Controller
 {
    public function index()
    {
-      return view('client.container.home.home')->with(['title' => 'Home - Divine Solution Funding']);
+      $services = Service::latest()->get();
+
+      return view('client.container.home.home', [
+         'title' => 'Home - Divine Solution Funding',
+         'services' => $services,
+      ]);
    }
 }

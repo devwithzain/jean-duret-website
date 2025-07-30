@@ -29,7 +29,7 @@
       </div>
       <div class="w-1/2 mt-3">
          <h3 class="text-[#000D51] text-5xl font-semibold leading-tight tracking-tight">Book Service</h3>
-         <form class="mt-4 space-y-4" method="POST" action="{{ url('/api/book-service') }}"
+         <form class="mt-4 space-y-4" method="POST" action="{{ route('book-service') }}"
             enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="service_id" value="{{ $service->id }}">

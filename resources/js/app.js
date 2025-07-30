@@ -1,18 +1,7 @@
-import "./bootstrap";
-import Lenis from "@studio-freight/lenis";
+import './bootstrap';
 
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-    direction: "vertical",
-});
+import Alpine from 'alpinejs';
 
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
+window.Alpine = Alpine;
 
-requestAnimationFrame(raf);
-
-export default lenis;
+Alpine.start();

@@ -16,9 +16,7 @@ class RedirectIfAuthenticated
             if (Auth::guard($guard)->check()) {
                 if (Auth::user()->is_admin) {
                     return redirect('/dashboard');
-                } else if (Auth::user()->is_admin) {
-                    return redirect('/user-dashboard');
-                }
+                } 
             }
         }
 

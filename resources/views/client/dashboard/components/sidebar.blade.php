@@ -91,7 +91,7 @@
           <p>Account</p>
         </div>
         </a>
-        <form action={{ url('/api/logout') }} method="post"
+        <form action={{ route('logout') }} method="post"
         class="w-full px-4 py-2 cursor-pointer text-left hover:bg-gray-100">
         @csrf
         <div class="flex items-center gap-2">

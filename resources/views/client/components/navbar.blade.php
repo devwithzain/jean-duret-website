@@ -35,7 +35,7 @@
                class="block px-4 py-2 hover:bg-gray-200">Dashboard</a>
             <a href="{{route('client.dashboard.container.setting.index')}}"
                class="block px-4 py-2 hover:bg-gray-200">Profile</a>
-            <form method="POST" action="{{ url('/api/logout') }}">
+            <form method="POST" action="{{ route('logout') }}">
                @csrf
                <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-200">Logout</button>
             </form>

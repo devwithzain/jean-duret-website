@@ -6,8 +6,7 @@
     <div class="px-5"">
                 <div class=" w-full flex items-center justify-between gap-4 border-b border-black/15 pb-3">
         <div class="flex flex-col">
-            <h1 class="text-black text-4xl font-bold leading-tight tracking-tight">Services
-                ({{ count(getAllServices()) }})</h1>
+            <h1 class="text-black text-4xl font-bold leading-tight tracking-tight">Services</h1>
             <p class="text-black/50 text-md font-normal leading-tight tracking-tight">Manage Services for
                 your website.</p>
         </div>
@@ -49,7 +48,8 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (getAllServices() as $service)
+                @if($services)
+                @foreach($services as $service)
                     <tr class="border-b border-black/10 hover:bg-gray-50">
                         <td class="px-4 py-2">{{ $service->title }}</td>
                         <td class="px-4 py-2">{{ $service->description }}</td>
@@ -93,6 +93,7 @@
                         </td>
                     </tr>
                 @endforeach
+                @endif
             </tbody>
         </table>
     </div>

@@ -14,18 +14,25 @@ use App\Http\Controllers\Client\ServiceDetailPageController;
 // Admin Controllers
 use App\Http\Controllers\Admin\Setting\SettingController;
 use App\Http\Controllers\Admin\Services\ServicesController;
-use App\Http\Controllers\User\Dashboard\UserHomePageController;
+use App\Http\Controllers\Admin\Inquries\AdminInquriesController;
 use App\Http\Controllers\Admin\Dashboard\AdminHomePageController;
 
 // User Dashboard
 use App\Http\Controllers\User\Inquries\InquriesController;
 use App\Http\Controllers\User\Setting\UserSettingController;
+use App\Http\Controllers\User\Dashboard\UserHomePageController;
+
+// Api
+use App\Http\Controllers\Api\BookFormController;
+use App\Http\Controllers\Api\ContactFormController;
 
 // Public routes accessible to all
-Route::get('/', action: [HomePageController::class, 'index'])->name('home');
+Route::get('/', [HomePageController::class, 'index'])->name('home');
 Route::get('/about', [AboutPageController::class, 'index'])->name('about');
 Route::get('/contact', [ContactPageController::class, 'index'])->name('contact');
 Route::get('/services', [ServicesPageController::class, 'index'])->name('services');
+Route::post('/book-service', [BookFormController::class, 'bookService'])->name('book-service');
+Route::post('/contact', [ContactFormController::class, 'sendContactForm'])->name('send-contact-form');
 Route::get('/services/service-detail', [ServiceDetailPageController::class, 'index'])->name('service-detail');
 Route::get('/services/service-detail/{slug}', [ServiceDetailPageController::class, 'index'])->name('service-detail');
 
@@ -47,6 +54,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/dashboard/services/{id}', [ServicesController::class, 'update'])->name('admin.container.services.update');
     Route::get('/dashboard/services/{id}/edit', [ServicesController::class, 'edit'])->name('admin.container.services.edit');
     Route::delete('/dashboard/services/{id}', [ServicesController::class, 'destroy'])->name('admin.container.services.destroy');
+    
+    // Inquries routes
+    Route::get('/dashboard/inquries', [AdminInquriesController::class, 'index'])->name('admin.container.inquries.listings');
 
     // Setting routes
     Route::get('/dashboard/setting', [SettingController::class, 'index'])->name('admin.container.setting.index');
@@ -63,4 +73,4 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/user-dashboard/setting/{id}', [UserSettingController::class, 'update'])->name('client.dashboard.container.setting.update');
 });
 
-require __DIR__ . '/api.php';
+require __DIR__.'/auth.php';

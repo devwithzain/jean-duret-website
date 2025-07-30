@@ -7,7 +7,7 @@
             <p class="text-[#000D5180] text-lg font-normal leading-tight tracking-tight">Business consulting</p>
             <h1 class="text-[#000D51] text-7xl font-semibold leading-tight tracking-tight">Get in touch</h1>
         </div>
-        <form action="{{ url('/api/contact') }}" method="POST" class="w-full flex flex-col gap-4">
+        <form action="{{ route('contact') }}" method="POST" class="w-full flex flex-col gap-4">
             @csrf
             <div class="flex gap-4">
                 <div class="w-1/2">

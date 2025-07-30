@@ -21,7 +21,8 @@
          </div>
       </div>
       <div class="w-full grid grid-cols-3 gap-10">
-         @foreach(getAllServices() as $service)
+           @if($services)
+         @foreach($services as $service)
           <div
             class="w-full h-[400px] shadow-[0_0_15px_rgba(0,0,0,0.15)] hover:bg-[#000D51] ease-linear duration-200 bg-white p-10 group">
             <div class="w-full h-full flex flex-col justify-center gap-5">
@@ -38,6 +39,7 @@
             </div>
           </div>
        @endforeach
+       @endif
       </div>
    </div>
 </div>

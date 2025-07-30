@@ -13,11 +13,12 @@ class ServicesController extends Controller
 {
    public function index()
    {
-      return view('admin.container.services.listings',  ['title' => 'Create - Divine Solution Funding']);
+      $services = Service::latest()->get();
+      return view('admin.container.services.listings',  ['title' => 'Create - Divine Solution Funding', 'services' => $services,]);
    }
    public function create()
    {
-      return view('admin.container.services.create', ['title' => 'Create - Divine Solution Funding']);
+       return view('admin.container.services.create', ['title' => 'Create - Divine Solution Funding']);
    }
    public function store(ServiceRequest $request)
    {
