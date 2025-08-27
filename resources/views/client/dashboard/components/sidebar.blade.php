@@ -1,6 +1,6 @@
 @if(auth()->check() && auth()->user()->role === 'user')
   <nav
-    class="w-[14%] h-screen fixed top-0 left-0 z-50 bg-[#FAFAFA] dark:bg-black border-r border-gray-200 dark:border-gray-700">
+    class="w-[14%] h-screen fixed top-0 left-0 z-50 bg-[#FAFAFA] dark:bg-[#18181B] border-r border-gray-200 dark:border-gray-700">
     <div class="w-full h-full flex flex-col justify-between p-3">
       <div class="flex flex-col gap-7">
         <div class="flex gap-2 items-center">
@@ -65,7 +65,7 @@
             </svg>
           </button>
           <div id="settingDropdown"
-            class="hidden absolute -bottom-full left-full mb-4 ml-2 w-60 bg-white dark:bg-black rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
+            class="hidden absolute -bottom-full left-full mb-4 ml-2 w-60 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
             <button
               class="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-900/70 border-b border-black/20 dark:border-gray-700">
               <div class="flex gap-2 items-center">

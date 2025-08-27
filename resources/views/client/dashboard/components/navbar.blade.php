@@ -8,11 +8,24 @@
             <path d="M9 3v18" />
          </svg>
          <span class="text-lg font-thin text-gray-500 dark:text-white"> | </span>
-         <h1 class="text-lg font-thin text-gray-500 dark:text-white">User Dashboard</h1>
+         @php
+            $segments = request()->segments();
+         @endphp
+         <h1 class="text-lg font-thin text-black dark:text-white flex items-center">
+            @foreach($segments as $index => $segment)
+               <span class="mx-1">></span>
+               @php
+                  $url = url(implode('/', array_slice($segments, 0, $index + 1)));
+               @endphp
+               <a href="{{ $url }}" class="font-normal">
+                  {{ ucfirst($segment) }}
+               </a>
+            @endforeach
+         </h1>
       </div>
       <div class="relative">
          <button
-            class="p-2 bg-white dark:bg-black rounded-lg border border-black/20 dark:border-gray-700 shadow-[0_1px_1px_rgb(0,0,0,0.2)] flex items-center"
+            class="p-2 bg-white dark:bg-[#18181B] rounded-lg border border-black/20 dark:border-gray-700 shadow-[0_1px_1px_rgb(0,0,0,0.2)] flex items-center"
             onclick="toggleDropdown()">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -29,7 +42,7 @@
             </svg>
          </button>
          <div id="themeDropdown"
-            class="hidden absolute top-full right-0 mt-2 w-32 bg-white dark:bg-black rounded-lg border border-black/20 dark:border-gray-700 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
+            class="hidden absolute top-full right-0 mt-2 w-32 bg-white dark:bg-[#18181B] rounded-lg border border-black/20 dark:border-gray-700 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
             <button
                class="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-900/70 text-black dark:text-white border-b border-black/20 dark:border-gray-700"
                onclick="setTheme('light')">Light</button>

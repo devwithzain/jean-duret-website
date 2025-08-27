@@ -12,8 +12,8 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 
-<body>
-   <div class="w-full flex items-center justify-between bg-white dark:bg-black">
+<body class="bg-white dark:bg-[#09090B] text-black dark:text-white">
+   <div class="w-full flex items-center justify-between">
       <section>
          @include('client.dashboard.components.sidebar')
       </section>
