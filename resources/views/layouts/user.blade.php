@@ -13,7 +13,7 @@
 </head>
 
 <body>
-   <div class="w-full flex items-center justify-between">
+   <div class="w-full flex items-center justify-between bg-white dark:bg-black">
       <section>
          @include('client.dashboard.components.sidebar')
       </section>

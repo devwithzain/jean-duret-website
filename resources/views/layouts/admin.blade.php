@@ -12,13 +12,13 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 
-<body>
+<body class="bg-white dark:bg-[#09090B] text-black dark:text-white">
    <div>
       <div class="w-full flex items-center justify-between">
          <section>
             @include('admin.components.sidebar')
          </section>
-         <main class="w-[86%]">
+         <main class="w-[85%]">
             @include('admin.components.navbar')
             @yield('content')
          </main>
@@ -45,20 +45,20 @@
       };
 
       @if(Session::has('success'))
-        toastr.success("{{ Session::get('success') }}");
-     @endif
+         toastr.success("{{ Session::get('success') }}");
+      @endif
 
       @if(Session::has('error'))
-        toastr.error("{{ Session::get('error') }}");
-     @endif
+         toastr.error("{{ Session::get('error') }}");
+      @endif
 
       @if(Session::has('info'))
-        toastr.info("{{ Session::get('info') }}");
-     @endif
+         toastr.info("{{ Session::get('info') }}");
+      @endif
 
       @if(Session::has('warning'))
-        toastr.warning("{{ Session::get('warning') }}");
-     @endif
+         toastr.warning("{{ Session::get('warning') }}");
+      @endif
    </script>
 </body>
 

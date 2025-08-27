@@ -1,22 +1,22 @@
 <div class="w-full p-5 flex flex-col gap-5">
    <div class="w-full py-2 flex items-center justify-between">
       <div class="flex items-center gap-2">
-         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-panel-left-icon lucide-panel-left">
+         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-panel-left-icon lucide-panel-left stroke-black dark:stroke-white">
             <rect width="18" height="18" x="3" y="3" rx="2" />
             <path d="M9 3v18" />
          </svg>
-         <span class="text-lg font-thin text-gray-500"> | </span>
-         <h1>User Dashboard</h1>
+         <span class="text-lg font-thin text-gray-500 dark:text-white"> | </span>
+         <h1 class="text-lg font-thin text-gray-500 dark:text-white">User Dashboard</h1>
       </div>
       <div class="relative">
          <button
-            class="p-2 bg-white rounded-lg border border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)] flex items-center"
+            class="p-2 bg-white dark:bg-black rounded-lg border border-black/20 dark:border-gray-700 shadow-[0_1px_1px_rgb(0,0,0,0.2)] flex items-center"
             onclick="toggleDropdown()">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-               class="lucide lucide-sun-icon lucide-sun">
+               class="lucide lucide-sun-icon lucide-sun stroke-black dark:stroke-white">
                <circle cx="12" cy="12" r="4" />
                <path d="M12 2v2" />
                <path d="M12 20v2" />
@@ -29,11 +29,54 @@
             </svg>
          </button>
          <div id="themeDropdown"
-            class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg border border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
-            <button class="w-full px-4 py-2 text-left hover:bg-gray-100 border-b border-black/20">Light</button>
-            <button class="w-full px-4 py-2 text-left hover:bg-gray-100 border-b border-black/20">Dark</button>
-            <button class="w-full px-4 py-2 text-left hover:bg-gray-100 border-b border-black/20">System</button>
+            class="hidden absolute top-full right-0 mt-2 w-32 bg-white dark:bg-black rounded-lg border border-black/20 dark:border-gray-700 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
+            <button
+               class="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-900/70 text-black dark:text-white border-b border-black/20 dark:border-gray-700"
+               onclick="setTheme('light')">Light</button>
+            <button
+               class="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-900/70 text-black dark:text-white border-b border-black/20 dark:border-gray-700"
+               onclick="setTheme('dark')">Dark</button>
+            <button
+               class="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-900/70 text-black dark:text-white border-b border-black/20 dark:border-gray-700"
+               onclick="setTheme('system')">System</button>
          </div>
+         <script>
+            function setTheme(mode) {
+               const html = document.documentElement;
+               if (mode === 'light') {
+                  html.classList.remove('dark');
+                  localStorage.setItem('theme', 'light');
+               } else if (mode === 'dark') {
+                  html.classList.add('dark');
+                  localStorage.setItem('theme', 'dark');
+               } else if (mode === 'system') {
+                  localStorage.removeItem('theme');
+                  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                     html.classList.add('dark');
+                  } else {
+                     html.classList.remove('dark');
+                  }
+               }
+               document.getElementById('themeDropdown').classList.add('hidden');
+            }
+
+            // Apply theme on page load
+            (function () {
+               const theme = localStorage.getItem('theme');
+               const html = document.documentElement;
+               if (theme === 'dark') {
+                  html.classList.add('dark');
+               } else if (theme === 'light') {
+                  html.classList.remove('dark');
+               } else {
+                  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                     html.classList.add('dark');
+                  } else {
+                     html.classList.remove('dark');
+                  }
+               }
+            })();
+         </script>
       </div>
       <script>
          function toggleDropdown() {

@@ -54,7 +54,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/dashboard/services/{id}', [ServicesController::class, 'update'])->name('admin.container.services.update');
     Route::get('/dashboard/services/{id}/edit', [ServicesController::class, 'edit'])->name('admin.container.services.edit');
     Route::delete('/dashboard/services/{id}', [ServicesController::class, 'destroy'])->name('admin.container.services.destroy');
-    
+
     // Inquries routes
     Route::get('/dashboard/inquries', [AdminInquriesController::class, 'index'])->name('admin.container.inquries.listings');
 
@@ -73,4 +73,4 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/user-dashboard/setting/{id}', [UserSettingController::class, 'update'])->name('client.dashboard.container.setting.update');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
