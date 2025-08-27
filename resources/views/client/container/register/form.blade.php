@@ -18,7 +18,7 @@
                   @csrf
                   <div class="flex flex-col gap-2">
                      <div
-                        class="w-full flex items-center bg-[#3c375269] rounded-lg p-4 gap-2 @error('name') border-red-500 border @enderror">
+                        class="w-full flex items-center bg-[#3c375269] rounded-lg px-4 py-2 gap-2 @error('name') border-red-500 border @enderror">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="#6D6980" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                            class="lucide lucide-user-round-icon lucide-user-round">
@@ -26,15 +26,15 @@
                            <path d="M20 21a8 8 0 0 0-16 0" />
                         </svg>
                         <input type="text" name="name" placeholder="Name" value="{{ old('name') }}"
-                           class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none w-full" />
+                           class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none focus:border-none focus:ring-0 border-none w-full" />
                      </div>
                      @error('name')
-                   <span class="text-red-500 text-sm">{{ $message }}</span>
-                @enderror
+                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                     @enderror
                   </div>
                   <div class="flex flex-col gap-2">
                      <div
-                        class="w-full flex items-center bg-[#3c375269] rounded-lg p-4 gap-2 @error('email') border-red-500 border @enderror">
+                        class="w-full flex items-center bg-[#3c375269] rounded-lg px-4 py-2 gap-2 @error('email') border-red-500 border @enderror">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="#6D6980" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                            class="lucide lucide-mail-icon lucide-mail">
@@ -42,15 +42,15 @@
                            <rect x="2" y="4" width="20" height="16" rx="2" />
                         </svg>
                         <input type="email" name="email" placeholder="Email" value="{{ old('email') }}"
-                           class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none w-full" />
+                           class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none focus:border-none focus:ring-0 border-none w-full" />
                      </div>
                      @error('email')
-                   <span class="text-red-500 text-sm">{{ $message }}</span>
-                @enderror
+                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                     @enderror
                   </div>
                   <div class="flex flex-col gap-2">
                      <div
-                        class="w-full flex items-center bg-[#3c375269] rounded-lg p-4 gap-2 @error('password') border-red-500 border @enderror">
+                        class="w-full flex items-center bg-[#3c375269] rounded-lg px-4 py-2 gap-2 @error('password') border-red-500 border @enderror">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="#6D6980" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                            class="lucide lucide-lock-icon lucide-lock">
@@ -59,7 +59,7 @@
                         </svg>
                         <input :type="showPassword ? 'text' : 'password'" name="password"
                            placeholder="Enter your password"
-                           class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none w-full" />
+                           class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none focus:border-none focus:ring-0 border-none w-full" />
                         <button type="button" @click="showPassword = !showPassword">
                            <svg x-show="!showPassword" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                               viewBox="0 0 24 24" fill="none" stroke="#6D6980" stroke-width="2" stroke-linecap="round"
@@ -81,12 +81,12 @@
                         </button>
                      </div>
                      @error('password')
-                   <span class="text-red-500 text-sm">{{ $message }}</span>
-                @enderror
+                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                     @enderror
                   </div>
                   <div class="flex flex-col gap-2">
                      <div
-                        class="w-full flex items-center bg-[#3c375269] rounded-lg p-4 gap-2 @error('password_confirmation') border-red-500 border @enderror">
+                        class="w-full flex items-center bg-[#3c375269] rounded-lg px-4 py-2 gap-2 @error('password_confirmation') border-red-500 border @enderror">
                         {{-- Lucide Lock Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="#6D6980" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -96,7 +96,7 @@
                         </svg>
                         <input :type="showConfirmPassword ? 'text' : 'password'" name="password_confirmation"
                            placeholder="Confirm your password"
-                           class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none w-full" />
+                           class="bg-transparent text-white placeholder:text-[#6D6980] focus:outline-none focus:border-none focus:ring-0 border-none w-full" />
                         <button type="button" @click="showConfirmPassword = !showConfirmPassword">
                            <svg x-show="!showConfirmPassword" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                               viewBox="0 0 24 24" fill="none" stroke="#6D6980" stroke-width="2" stroke-linecap="round"
@@ -118,8 +118,8 @@
                         </button>
                      </div>
                      @error('password_confirmation')
-                   <span class="text-red-500 text-sm">{{ $message }}</span>
-                @enderror
+                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                     @enderror
                   </div>
                   <button type="submit"
                      class="w-full bg-[#2f1d88] rounded-lg p-4 text-[16px] text-white font-normal text-center">

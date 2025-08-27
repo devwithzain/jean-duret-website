@@ -1,6 +1,6 @@
 <div class="w-full flex items-center justify-between gap-10 bg-[#F3F4F9]">
    <div class="w-1/2">
-      <img src={{ asset('assets/serviceDetail.png') }} alt="serviceDetail" class="w-full h-full object-cover">
+      <img src="{{ asset('assets/serviceDetail.png') }}" alt="serviceDetail" class="w-full h-full object-cover">
    </div>
    <div class="w-1/2 flex flex-col gap-10 p-20">
       <div class="w-full flex flex-col gap-10">
@@ -24,13 +24,12 @@
    <div
       class="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 flex gap-5 border w-[70%] shadow-lg rounded-md bg-white">
       <div class="w-1/2">
-         <img src={{ asset('assets/serviceDetail.png') }} alt="serviceDetail"
+         <img src="{{ asset('assets/serviceDetail.png') }}" alt="serviceDetail"
             class="w-full rounded-lg h-full object-cover">
       </div>
       <div class="w-1/2 mt-3">
          <h3 class="text-[#000D51] text-5xl font-semibold leading-tight tracking-tight">Book Service</h3>
-         <form class="mt-4 space-y-4" method="POST" action="{{ route('book-service') }}"
-            enctype="multipart/form-data">
+         <form class="mt-4 space-y-4" method="POST" action="{{ route('book-service') }}" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="service_id" value="{{ $service->id }}">
             <div class="flex flex-col gap-1">
@@ -63,8 +62,32 @@
                   class="w-full px-3 py-2 border rounded-md"></textarea>
             </div>
             <div class="flex flex-col gap-1">
-               <label for="image" class="block text-sm font-medium text-gray-700 mb-1">Image</label>
-               <input type="file" id="image" name="image" accept="image/*" class="w-full px-3 py-2 border rounded-md">
+               <label for="image" class="block text-sm font-medium text-gray-700 mb-1">Image
+
+                  <span>(optional)</span>
+               </label>
+               <input type="file" id="image" name="image" accept="image/*" class="w-full sr-only" />
+               <label for="image"
+                  class="cursor-pointer px-3 py-2 border rounded-md bg-gray-100 text-gray-700 flex items-center justify-between">
+                  <span>Select Image</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="upload">
+                     <path
+                        d="M5 10c-.6 0-1-.4-1-1 0-3.9 3.1-7 7-7 3 0 5.7 2 6.7 4.9.1.5-.1 1.1-.7 1.2-.5.2-1.1-.1-1.3-.6C15.1 5.4 13.2 4 11 4 8.2 4 6 6.2 6 9c0 .6-.4 1-1 1z">
+                     </path>
+                     <path
+                        d="M18 18c-.6 0-1-.4-1-1s.4-1 1-1c2.2 0 4-1.8 4-4s-1.8-4-4-4c-.3 0-.7 0-1 .1-.5.1-1.1-.2-1.2-.7s.2-1.1.7-1.2c.5-.1 1-.2 1.5-.2 3.3 0 6 2.7 6 6s-2.7 6-6 6zM8 18H5c-.6 0-1-.4-1-1s.4-1 1-1h3c.6 0 1 .4 1 1s-.4 1-1 1z">
+                     </path>
+                     <path
+                        d="M18 18h-2c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1zM5 18c-2.8 0-5-2.2-5-5s2.2-5 5-5c.6 0 1 .4 1 1s-.4 1-1 1c-1.7 0-3 1.3-3 3s1.3 3 3 3c.6 0 1 .4 1 1s-.4 1-1 1zm7 4c-.6 0-1-.4-1-1V11c0-.6.4-1 1-1s1 .4 1 1v10c0 .6-.4 1-1 1z">
+                     </path>
+                     <path
+                        d="M9 15c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l3-3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-3 3c-.2.2-.4.3-.7.3z">
+                     </path>
+                     <path
+                        d="M15 15c-.3 0-.5-.1-.7-.3l-3-3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l3 3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3z">
+                     </path>
+                  </svg>
+               </label>
             </div>
             <div class="flex justify-between">
                <button type="submit" class="bg-[#000D51] text-white px-4 py-2 rounded-md">Submit</button>

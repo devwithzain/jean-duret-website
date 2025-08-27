@@ -4,4 +4,4 @@
 
 @section('content')
 @include('client.container.login.form')
-@endsectionn
+@endsection

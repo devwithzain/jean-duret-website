@@ -20,7 +20,7 @@
    <div class="flex items-center gap-3">
       @if(!auth()->check())
         <a href="{{ route('login') }}"
-          class="text-white text-xl font-medium leading-tight cursor-pointer tracking-tight border-2 border-white px-14 py-3">LogIn</a>
+          class="text-white text-xl font-medium leading-tight cursor-pointer tracking-tight border-2 border-white px-14 py-3">Login</a>
      @endif
       <div x-data="{ open: false }" class="relative">
          @if(auth()->check())

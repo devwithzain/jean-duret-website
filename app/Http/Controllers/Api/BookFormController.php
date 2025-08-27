@@ -12,6 +12,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Password;
 use App\Http\Requests\BookServiceRequest;
 
 class BookFormController extends Controller
@@ -26,8 +27,9 @@ class BookFormController extends Controller
          $user = User::create([
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
-            'password' => Hash::make('defaultPassword123'),
+            'password' => Hash::make(Str::random(12)),
          ]);
+         $isNewUser = true;
       }
 
       Auth::login($user);
@@ -42,6 +44,14 @@ class BookFormController extends Controller
          Storage::disk('public')->put($imageName, file_get_contents($image));
       }
 
+      if ($isNewUser) {
+         $status = Password::sendResetLink(['email' => $user->email]);
+
+         if ($status !== Password::RESET_LINK_SENT) {
+            return back()->withErrors(['email' => __($status)]);
+         }
+      }
+
       BookService::create($data);
 
       $service = Service::find($data['service_id']);
@@ -50,6 +60,10 @@ class BookFormController extends Controller
       Mail::to(config('mail.from.address'))->send(new InquiryFormMail("New Inquiry from " . $data['name'], $data));
 
       Mail::to($data['email'])->send(new InquiryFormMail("New Inquiry from " . $data['name'], $data));
+
+      if ($isNewUser) {
+         Password::sendResetLink(['email' => $user->email]);
+      }
 
       return redirect()->back()->with('success', 'Your inquiry has been submitted.');
    }
