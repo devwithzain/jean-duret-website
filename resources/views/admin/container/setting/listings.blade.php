@@ -46,6 +46,50 @@
         <button type="submit" class="text-white text-lg font-normal leading-tight tracking-tight">Update</button>
       </div>
     </form>
+    <div class="w-full flex items-center justify-between gap-4 border-b border-black/15 dark:border-gray-700 pb-3">
+      <div class="flex flex-col">
+        <h1 class="text-4xl font-bold leading-tight tracking-tight">Change Password</h1>
+      </div>
+    </div>
+    <form action={{ route('admin.container.setting.update', $user->id) }} method="post"
+      class="w-full flex flex-col gap-5 py-8" enctype="multipart/form-data">
+      @method('PUT')
+      @csrf
+      <div class="flex flex-col gap-1.5">
+        <label for="current_password">
+          <p class="text-md font-normal leading-tight tracking-tight">Current Password</p>
+        </label>
+        <input id="current_password" name="current_password" type="password"
+          class="w-full outline-none focus:border-black/50 px-3 py-1.5 text-md bg-white dark:bg-black font-normal rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
+          placeholder="Enter current password">
+        @error('current_password')
+          <span class="text-red-500 text-sm">{{ $message }}</span>
+        @enderror
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="password">
+          <p class="text-md font-normal leading-tight tracking-tight">New Password</p>
+        </label>
+        <input id="password" name="password" type="password"
+          class="w-full outline-none focus:border-black/50 px-3 py-1.5 text-md bg-white dark:bg-black font-normal rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
+          placeholder="Enter new password">
+        @error('password')
+          <span class="text-red-500 text-sm">{{ $message }}</span>
+        @enderror
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="password_confirmation">
+          <p class="text-md font-normal leading-tight tracking-tight">Confirm Password</p>
+        </label>
+        <input id="password_confirmation" name="password_confirmation" type="password"
+          class="w-full outline-none focus:border-black/50 px-3 py-1.5 text-md bg-white dark:bg-black font-normal rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
+          placeholder="Confirm new password">
+      </div>
+      <div
+        class="w-fit flex items-center gap-2 bg-black px-5 py-3 rounded-lg border border-black/10 dark:border-gray-700">
+        <button type="submit" class="text-white text-lg font-normal leading-tight tracking-tight">Update</button>
+      </div>
+    </form>
   </div>
 
   <script>
