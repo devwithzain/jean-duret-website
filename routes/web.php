@@ -68,7 +68,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/user-dashboard', [UserHomePageController::class, 'index'])->name('client.dashboard.container.home.dashboard');
     Route::get('/user-dashboard/inquries', [InquriesController::class, 'index'])->name('client.dashboard.container.inquries.listings');
-    Route::get('/user-dashboard/loan', [LoanController::class, 'index'])->name('client.dashboard.container.loan.pre-loan');
+    Route::get('/user-dashboard/loan-application', [LoanController::class, 'index'])->name('client.dashboard.container.loan.pre-loan');
 
     // Setting routes
     Route::get('/user-dashboard/setting', [UserSettingController::class, 'index'])->name('client.dashboard.container.setting.index');
