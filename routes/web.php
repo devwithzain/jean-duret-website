@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\User\Loan\LoanController;
 use Illuminate\Support\Facades\Route;
 
 // Client Controllers
@@ -19,6 +18,7 @@ use App\Http\Controllers\Admin\Inquries\AdminInquriesController;
 use App\Http\Controllers\Admin\Dashboard\AdminHomePageController;
 
 // User Dashboard
+use App\Http\Controllers\User\Loan\LoanController;
 use App\Http\Controllers\User\Inquries\InquriesController;
 use App\Http\Controllers\User\Setting\UserSettingController;
 use App\Http\Controllers\User\Dashboard\UserHomePageController;
@@ -26,6 +26,10 @@ use App\Http\Controllers\User\Dashboard\UserHomePageController;
 // Api
 use App\Http\Controllers\Api\BookFormController;
 use App\Http\Controllers\Api\ContactFormController;
+use App\Http\Controllers\Api\PreLoanApplicationController;
+
+Route::post('/pre-loan', [PreLoanApplicationController::class, 'submitForm'])->name('preloan.submit');
+Route::get('/pre-loan/download/{id}', [PreLoanApplicationController::class, 'downloadPDF'])->name('preloan.download');
 
 // Public routes accessible to all
 Route::get('/', [HomePageController::class, 'index'])->name('home');

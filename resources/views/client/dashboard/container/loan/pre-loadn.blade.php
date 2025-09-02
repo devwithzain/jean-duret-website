@@ -108,35 +108,38 @@
                                 10. GUARANTOR SIGNATURE</h1>
                         </template>
                     </div>
-                    <form class="col-span-2 flex flex-col gap-8">
+                    <form action="{{ route('preloan.submit') }}" method="POST" class="col-span-2 flex flex-col gap-8">
+                        @csrf
                         <!-- Step 1: Additional Information -->
                         <div x-show="step === 1" class="flex flex-col gap-8">
                             <div class="w-full flex items-center gap-4">
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="componyName"
+                                    <label for="company_name"
                                         class="text-md font-normal leading-tight tracking-tight">Company
                                         Name:</label>
-                                    <input id="componyName" name="componyName" type="text"
+                                    <input id="company_name" name="company_name" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="brokerName" class="text-md font-normal leading-tight tracking-tight">Broker
+                                    <label for="broker_name" class="text-md font-normal leading-tight tracking-tight">Broker
                                         Name:</label>
-                                    <input id="brokerName" name="brokerName" type="text"
+                                    <input id="broker_name" name="broker_name" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                             </div>
                             <div class="w-full flex items-center gap-4">
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="brokerEmail" class="text-md font-normal leading-tight tracking-tight">Broker
+                                    <label for="broker_email"
+                                        class="text-md font-normal leading-tight tracking-tight">Broker
                                         Email:</label>
-                                    <input id="brokerEmail" name="brokerEmail" type="email"
+                                    <input id="broker_email" name="broker_email" type="email"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="brokerPhone" class="text-md font-normal leading-tight tracking-tight">Broker
+                                    <label for="broker_phone"
+                                        class="text-md font-normal leading-tight tracking-tight">Broker
                                         Phone:</label>
-                                    <input id="brokerPhone" name="brokerPhone" type="number"
+                                    <input id="broker_phone" name="broker_phone" type="number"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                             </div>
@@ -149,29 +152,30 @@
                         <div x-show="step === 2" class="flex flex-col gap-8">
                             <div class="w-full flex items-center gap-4">
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="loanAmount"
+                                    <label for="purchase_price"
                                         class="text-md font-normal leading-tight tracking-tight">Purchase Price
                                         if you're purchasing:</label>
-                                    <input id="loanAmount" name="loanAmount" type="number"
+                                    <input id="purchase_price" name="purchase_price" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="loanPurpose"
+                                    <label for="desired_loan_amount"
                                         class="text-md font-normal leading-tight tracking-tight">Desired Loan
                                         Amount:</label>
-                                    <input id="loanPurpose" name="loanPurpose" type="text"
+                                    <input id="desired_loan_amount" name="desired_loan_amount" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="loanPurpose"
+                                    <label for="loan_purpose"
                                         class="text-md font-normal leading-tight tracking-tight">Purpose of the
                                         loan:</label>
-                                    <input id="loanPurpose" name="loanPurpose" type="text"
+                                    <input id="loan_purpose" name="loan_purpose" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                             </div>
                             <div class="w-full flex flex-col gap-2">
-                                <label for="loanPurpose" class="text-md font-normal leading-tight tracking-tight">Desired
+                                <label for="loan_term_months"
+                                    class="text-md font-normal leading-tight tracking-tight">Desired
                                     Loan
                                     term:</label>
                                 <div class="flex items-center gap-4">
@@ -180,32 +184,32 @@
                                         <div class="flex items-center gap-2">
                                             <div class="flex items-center gap-1">
                                                 <span>3</span>
-                                                <input id="loanPurpose" name="loanPurpose" type="checkbox"
+                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
                                                     class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>6</span>
-                                                <input id="loanPurpose" name="loanPurpose" type="checkbox"
+                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
                                                     class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>9</span>
-                                                <input id="loanPurpose" name="loanPurpose" type="checkbox"
+                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
                                                     class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>12</span>
-                                                <input id="loanPurpose" name="loanPurpose" type="checkbox"
+                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
                                                     class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>18</span>
-                                                <input id="loanPurpose" name="loanPurpose" type="checkbox"
+                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
                                                     class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>36</span>
-                                                <input id="loanPurpose" name="loanPurpose" type="checkbox"
+                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
                                                     class="rounded-full" />
                                             </div>
                                         </div>
@@ -215,7 +219,7 @@
                                         <div class="flex items-center gap-2">
                                             <div class="flex items-center gap-1">
                                                 <span>3</span>
-                                                <input id="loanPurpose" name="loanPurpose" type="checkbox"
+                                                <input id="loan_term_years" name="loan_term_years" type="checkbox"
                                                     class="rounded-full" />
                                             </div>
                                         </div>
@@ -225,7 +229,7 @@
                                         <div class="flex items-center gap-2">
                                             <div class="flex items-center gap-1">
                                                 <span>3</span>
-                                                <input id="loanPurpose" name="loanPurpose" type="checkbox"
+                                                <input id="loan_term_arm" name="loan_term_arm" type="checkbox"
                                                     class="rounded-full" />
                                             </div>
                                         </div>
@@ -244,136 +248,133 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="componyName"
+                                        <label for="property_street_address"
                                             class="text-md font-normal leading-tight tracking-tight">Subject
                                             Property Street Address:</label>
-                                        <input id="componyName" name="componyName" type="text"
+                                        <input id="property_street_address" name="property_street_address" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="componyName"
-                                            class="text-md font-normal leading-tight tracking-tight">Subject
-                                            Property Street Address:</label>
-                                        <input id="componyName" name="componyName" type="text"
+                                        <label for="property_city"
+                                            class="text-md font-normal leading-tight tracking-tight">City:</label>
+                                        <input id="property_city" name="property_city" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
-                                            class="text-md font-normal leading-tight tracking-tight">Broker
-                                            Name:</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <label for="property_state"
+                                            class="text-md font-normal leading-tight tracking-tight">State:</label>
+                                        <input id="property_state" name="property_state" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
-                                            class="text-md font-normal leading-tight tracking-tight">Broker
-                                            Email:</label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <label for="property_zip"
+                                            class="text-md font-normal leading-tight tracking-tight">Zip:</label>
+                                        <input id="property_zip" name="property_zip" type="email"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <p class="text-md font-normal leading-tight tracking-tight">Does the property generate
-                                        income?
-                                    </p>
+                                        income?</p>
                                     <div class="flex items-center gap-1.5">
-                                        <label for="componyName"
+                                        <label for="property_generates_income_yes"
                                             class="text-md font-normal leading-tight tracking-tight">Yes</label>
-                                        <input id="componyName" name="componyName" type="checkbox"
-                                            class="rounded-full" />
+                                        <input id="property_generates_income_yes" name="property_generates_income"
+                                            value="1" type="radio" class="rounded-full" />
                                     </div>
                                     <div class="flex items-center gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="property_generates_income_no"
                                             class="text-md font-normal leading-tight tracking-tight">No</label>
-                                        <input id="brokerName" name="brokerName" type="checkbox" class="rounded-full" />
+                                        <input id="property_generates_income_no" name="property_generates_income"
+                                            value="0" type="radio" class="rounded-full" />
                                     </div>
                                     <div class="flex items-center gap-1.5">
-                                        <label for="brokerEmail"
-                                            class="text-md font-normal leading-tight tracking-tight">It
-                                            will</label>
-                                        <input id="brokerEmail" name="brokerEmail" type="checkbox"
-                                            class="rounded-full" />
+                                        <label for="property_generates_income_will"
+                                            class="text-md font-normal leading-tight tracking-tight">It will</label>
+                                        <input id="property_generates_income_will" name="property_generates_income"
+                                            value="2" type="radio" class="rounded-full" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="componyName"
+                                        <label for="gross_monthly_rent"
                                             class="text-md font-normal leading-tight tracking-tight">Actual or
                                             expected Gross Monthly Rent:
                                         </label>
-                                        <input id="componyName" name="componyName" type="text"
+                                        <input id="gross_monthly_rent" name="gross_monthly_rent" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="expected_gross_monthly_rent"
                                             class="text-md font-normal leading-tight tracking-tight">Actual or
                                             expected Gross Monthly Rent:
                                         </label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="expected_gross_monthly_rent" name="expected_gross_monthly_rent"
+                                            type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="componyName"
+                                        <label for="number_of_units"
                                             class="text-md font-normal leading-tight tracking-tight">Number of
                                             Units
                                         </label>
-                                        <input id="componyName" name="componyName" type="text"
+                                        <input id="number_of_units" name="number_of_units" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="yearly_property_taxes"
                                             class="text-md font-normal leading-tight tracking-tight">Yearly
                                             property taxes (estimate):
                                         </label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="yearly_property_taxes" name="yearly_property_taxes" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="yearly_hoa_dues"
                                             class="text-md font-normal leading-tight tracking-tight">Yearly HOA
                                             Dues:
                                         </label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="yearly_hoa_dues" name="yearly_hoa_dues" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="componyName"
+                                        <label for="anticipated_rehab_cost"
                                             class="text-md font-normal leading-tight tracking-tight">Cost of
                                             Anticipated Rehab:
                                         </label>
-                                        <input id="componyName" name="componyName" type="text"
+                                        <input id="anticipated_rehab_cost" name="anticipated_rehab_cost" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="after_repair_value"
                                             class="text-md font-normal leading-tight tracking-tight">Estimated
                                             After Repair Value:
                                         </label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="after_repair_value" name="after_repair_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="componyName"
+                                        <label for="original_cost"
                                             class="text-md font-normal leading-tight tracking-tight">Original
                                             Cost (If refinance)
                                         </label>
-                                        <input id="componyName" name="componyName" type="text"
+                                        <input id="original_cost" name="original_cost" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="as_is_value"
                                             class="text-md font-normal leading-tight tracking-tight">Estimated
                                             "AS IS" Value:
                                         </label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="as_is_value" name="as_is_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
@@ -390,27 +391,27 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="componyName"
+                                        <label for="entity_name"
                                             class="text-md font-normal leading-tight tracking-tight">Entity
                                             Name:</label>
-                                        <input id="componyName" name="componyName" type="text"
+                                        <input id="entity_name" name="entity_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="federal_ein"
                                             class="text-md font-normal leading-tight tracking-tight">Federal
                                             EIN:</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="federal_ein" name="federal_ein" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="state_registered"
                                             class="text-md font-normal leading-tight tracking-tight">State
                                             Registered:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="state_registered" name="state_registered" type="email"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
@@ -427,49 +428,49 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="bind_entity_name_1"
                                             class="text-md font-normal leading-tight tracking-tight">Name:</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="bind_entity_name_1" name="bind_entity_name_1" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bind_entity_percent_1"
                                             class="text-md font-normal leading-tight tracking-tight">Percent %
                                             owned
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bind_entity_percent_1" name="bind_entity_percent_1" type="email"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="bind_entity_name_2"
                                             class="text-md font-normal leading-tight tracking-tight">Name:</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="bind_entity_name_2" name="bind_entity_name_2" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bind_entity_percent_2"
                                             class="text-md font-normal leading-tight tracking-tight">Percent %
                                             owned
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bind_entity_percent_2" name="bind_entity_percent_2" type="email"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="bind_entity_name_3"
                                             class="text-md font-normal leading-tight tracking-tight">Name:</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="bind_entity_name_3" name="bind_entity_name_3" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bind_entity_percent_3"
                                             class="text-md font-normal leading-tight tracking-tight">Percent %
                                             owned
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bind_entity_percent_3" name="bind_entity_percent_3" type="email"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
@@ -486,166 +487,166 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="available_cash_to_close"
                                             class="text-md font-normal leading-tight tracking-tight">Tot.
                                             Available cash to close: (Available liquid cash)</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="available_cash_to_close" name="available_cash_to_close" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="bank_1_name"
                                             class="text-md font-normal leading-tight tracking-tight">Bank 1
                                             Name:</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="bank_1_name" name="bank_1_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_1_acc"
                                             class="text-md font-normal leading-tight tracking-tight">Acc.# (Last
                                             3 Dig.)
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_1_acc" name="bank_1_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_1_amount"
                                             class="text-md font-normal leading-tight tracking-tight">Amount:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_1_amount" name="bank_1_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_1_other_assets"
                                             class="text-md font-normal leading-tight tracking-tight">Other
                                             Assets:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_1_other_assets" name="bank_1_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_1_value"
                                             class="text-md font-normal leading-tight tracking-tight">Value:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_1_value" name="bank_1_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="bank_2_name"
                                             class="text-md font-normal leading-tight tracking-tight">Bank 2
                                             Name:</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="bank_2_name" name="bank_2_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_2_acc"
                                             class="text-md font-normal leading-tight tracking-tight">Acc.# (Last
                                             3 Dig.)
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_2_acc" name="bank_2_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_2_amount"
                                             class="text-md font-normal leading-tight tracking-tight">Amount:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_2_amount" name="bank_2_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_2_other_assets"
                                             class="text-md font-normal leading-tight tracking-tight">Other
                                             Assets:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_2_other_assets" name="bank_2_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_2_value"
                                             class="text-md font-normal leading-tight tracking-tight">Value:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_2_value" name="bank_2_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="bank_3_name"
                                             class="text-md font-normal leading-tight tracking-tight">Bank 3
                                             Name:</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="bank_3_name" name="bank_3_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_3_acc"
                                             class="text-md font-normal leading-tight tracking-tight">Acc.# (Last
                                             3 Dig.)
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_3_acc" name="bank_3_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_3_amount"
                                             class="text-md font-normal leading-tight tracking-tight">Amount:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_3_amount" name="bank_3_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_3_other_assets"
                                             class="text-md font-normal leading-tight tracking-tight">Other
                                             Assets:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_3_other_assets" name="bank_3_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_3_value"
                                             class="text-md font-normal leading-tight tracking-tight">Value:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_3_value" name="bank_3_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="bank_4_name"
                                             class="text-md font-normal leading-tight tracking-tight">Bank 4
                                             Name:</label>
-                                        <input id="brokerName" name="brokerName" type="text"
+                                        <input id="bank_4_name" name="bank_4_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_4_acc"
                                             class="text-md font-normal leading-tight tracking-tight">Acc.# (Last
                                             3 Dig.)
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_4_acc" name="bank_4_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_4_amount"
                                             class="text-md font-normal leading-tight tracking-tight">Amount:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_4_amount" name="bank_4_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_4_other_assets"
                                             class="text-md font-normal leading-tight tracking-tight">Other
                                             Assets:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_4_other_assets" name="bank_4_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerEmail"
+                                        <label for="bank_4_value"
                                             class="text-md font-normal leading-tight tracking-tight">Value:
                                         </label>
-                                        <input id="brokerEmail" name="brokerEmail" type="email"
+                                        <input id="bank_4_value" name="bank_4_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
@@ -662,70 +663,71 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="find_property"
                                             class="text-md font-normal leading-tight tracking-tight">How did you
                                             find this property?</label>
-                                        <textarea id="brokerName" name="brokerName" type="text" rows="5"
+                                        <textarea id="find_property" name="find_property" type="text" rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20"></textarea>
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="payoff_strategy"
                                             class="text-md font-normal leading-tight tracking-tight">How do you
                                             intend to pay off this loan?
                                         </label>
-                                        <textarea id="brokerName" name="brokerName" type="text" rows="5"
+                                        <textarea id="payoff_strategy" name="payoff_strategy" type="text" rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20"></textarea>
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex items-center gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="rehab_time"
                                             class="text-md text-nowrap font-normal leading-tight tracking-tight">How long
                                             will it take you to rehab (if rehab loan)? (in months)
                                         </label>
-                                        <input id="brokerName" name="brokerName" type="text" rows="5"
+                                        <input id="rehab_time" name="rehab_time" type="text" rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20">
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="funds_usage"
                                             class="text-md font-normal leading-tight tracking-tight">How will you
                                             use the funds provided by this loan?
                                         </label>
-                                        <textarea id="brokerName" name="brokerName" type="text" rows="5"
+                                        <textarea id="funds_usage" name="funds_usage" type="text" rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20"></textarea>
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex items-center gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="fix_flip_profit"
                                             class="text-md text-nowrap font-normal leading-tight tracking-tight">Fix&Flip:
                                             How much
                                             will you profit?
                                         </label>
-                                        <input id="brokerName" name="brokerName" type="text" rows="5"
+                                        <input id="fix_flip_profit" name="fix_flip_profit" type="text" rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20">
                                     </div>
                                     <div class="w-full flex items-center gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="hold_rent_income"
                                             class="text-md text-nowrap font-normal leading-tight tracking-tight">Hold &
                                             Rent: Expected
                                             monthly net income
                                         </label>
-                                        <input id="brokerName" name="brokerName" type="text" rows="5"
+                                        <input id="hold_rent_income" name="hold_rent_income" type="text"
+                                            rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20">
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="brokerName"
+                                        <label for="experience_description"
                                             class="text-md font-normal leading-tight tracking-tight">Do you have
                                             any Fix & Flip, rehabbing or renting experience? If yes, please describe
                                         </label>
-                                        <textarea id="brokerName" name="brokerName" type="text" rows="5"
+                                        <textarea id="experience_description" name="experience_description" type="text" rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20"></textarea>
                                     </div>
                                 </div>
@@ -745,62 +747,65 @@
                                 </h2>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">Full Name:</label>
-                                        <input type="text" name="fullName"
+                                        <label for="guarantor_full_name" class="text-md font-normal">Full Name:</label>
+                                        <input type="text" name="guarantor_full_name" id="guarantor_full_name"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">SSN (Last 4 Digits):</label>
-                                        <input type="text" name="ssn"
+                                        <label for="guarantor_ssn" class="text-md font-normal">SSN (Last 4
+                                            Digits):</label>
+                                        <input type="text" name="guarantor_ssn" id="guarantor_ssn"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">DOB:</label>
-                                        <input type="date" name="dob"
-                                            class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
-                                    </div>
-                                </div>
-
-                                <div class="w-full flex items-center gap-4">
-                                    <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">Cell Phone:</label>
-                                        <input type="text" name="cellPhone"
-                                            class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
-                                    </div>
-                                    <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">Home Phone:</label>
-                                        <input type="text" name="homePhone"
+                                        <label for="guarantor_dob" class="text-md font-normal">DOB:</label>
+                                        <input type="text" name="guarantor_dob" id="guarantor_dob"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                 </div>
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">Email Address:</label>
-                                        <input type="email" name="email"
+                                        <label for="guarantor_cell_phone" class="text-md font-normal">Cell Phone:</label>
+                                        <input type="text" name="guarantor_cell_phone" id="guarantor_cell_phone"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">Street Address:</label>
-                                        <input type="text" name="streetAddress"
+                                        <label for="guarantor_home_phone" class="text-md font-normal">Home Phone:</label>
+                                        <input type="text" name="guarantor_home_phone" id="guarantor_home_phone"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                 </div>
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">City:</label>
-                                        <input type="text" name="city"
+                                        <label for="guarantor_email" class="text-md font-normal">Email Address:</label>
+                                        <input type="email" name="guarantor_email" id="guarantor_email"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">State:</label>
-                                        <input type="text" name="state"
+                                        <label for="guarantor_street_address" class="text-md font-normal">Street
+                                            Address:</label>
+                                        <input type="text" name="guarantor_street_address"
+                                            id="guarantor_street_address"
+                                            class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
+                                    </div>
+                                </div>
+
+                                <div class="w-full flex items-center gap-4">
+                                    <div class="w-full flex flex-col gap-1.5">
+                                        <label for="guarantor_city" class="text-md font-normal">City:</label>
+                                        <input type="text" name="guarantor_city" id="guarantor_city"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label class="text-md font-normal">Zip:</label>
-                                        <input type="text" name="zip"
+                                        <label for="guarantor_state" class="text-md font-normal">State:</label>
+                                        <input type="text" name="guarantor_state" id="guarantor_state"
+                                            class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
+                                    </div>
+                                    <div class="w-full flex flex-col gap-1.5">
+                                        <label for="guarantor_zip" class="text-md font-normal">Zip:</label>
+                                        <input type="text" name="guarantor_zip" id="guarantor_zip"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                 </div>
@@ -809,55 +814,56 @@
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label>Employer #1:</label>
-                                        <input type="text" name="employer1"
+                                        <label for="employer_1">Employer #1:</label>
+                                        <input type="text" name="employer_1" id="employer_1"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label>Position:</label>
-                                        <input type="text" name="position1"
+                                        <label for="position_1">Position:</label>
+                                        <input type="text" name="position_1" id="position_1"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label>Years With Company:</label>
-                                        <input type="number" name="years1"
+                                        <label for="years_with_company_1">Years With Company:</label>
+                                        <input type="number" name="years_with_company_1" id="years_with_company_1"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                 </div>
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label>Employer #2:</label>
-                                        <input type="text" name="employer2"
+                                        <label for="employer_2">Employer #2:</label>
+                                        <input type="text" name="employer_2" id="employer_2"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label>Position:</label>
-                                        <input type="text" name="position2"
+                                        <label for="position_2">Position:</label>
+                                        <input type="text" name="position_2" id="position_2"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label>Years With Company:</label>
-                                        <input type="number" name="years2"
+                                        <label for="years_with_company_2">Years With Company:</label>
+                                        <input type="number" name="years_with_company_2" id="years_with_company_2"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                 </div>
 
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label>Total Monthly Income:</label>
-                                    <input type="text" name="income"
+                                    <label for="total_monthly_income">Total Monthly Income:</label>
+                                    <input type="text" name="total_monthly_income" id="total_monthly_income"
                                         class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                 </div>
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label>Estimated Credit Score:</label>
-                                        <input type="text" name="creditScore"
+                                        <label for="estimated_credit_score">Estimated Credit Score:</label>
+                                        <input type="text" name="estimated_credit_score" id="estimated_credit_score"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label>How Many Completed Flips In Previous 24 Months:</label>
-                                        <input type="text" name="flips"
+                                        <label for="completed_flips">How Many Completed Flips In Previous 24
+                                            Months:</label>
+                                        <input type="text" name="completed_flips" id="completed_flips"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                 </div>
@@ -871,7 +877,7 @@
                         </div>
                         <!-- Step 9: Additional Information -->
                         <div x-show="step === 9" class="flex flex-col gap-8">
-                            <div class="w-full rounded-2xl shadow-md">
+                            <div class="w-full">
                                 <div class="space-y-6 rounded-b-2xl">
                                     @php
                                         $questions = [
@@ -895,21 +901,21 @@
                                         <div class="flex flex-col sm:flex-row sm:items-center justify-between">
                                             <p class="text-black dark:text-white font-medium">{{ $question }}</p>
                                             <div class="flex items-center gap-4 mt-2 sm:mt-0">
-                                                <label class="flex items-center gap-1">
-                                                    <input type="radio" name="q{{ $index }}" value="yes"
-                                                        class="text-blue-600">
+                                                <label for="question_{{ $index }}" class="flex items-center gap-1">
+                                                    <input type="radio" name="question_{{ $index }}"
+                                                        value="yes" class="text-blue-600">
                                                     Yes
                                                 </label>
-                                                <label class="flex items-center gap-1">
-                                                    <input type="radio" name="q{{ $index }}" value="no"
-                                                        class="text-blue-600" checked>
+                                                <label for="question_{{ $index }}" class="flex items-center gap-1">
+                                                    <input type="radio" name="question_{{ $index }}"
+                                                        value="no" class="text-blue-600" checked>
                                                     No
                                                 </label>
                                             </div>
                                         </div>
                                     @endforeach
                                 </div>
-                                <div class="mt-6 text-md text-black dark:text-white leading-relaxed">
+                                <p class="mt-6 text-md text-black dark:text-white leading-relaxed">
                                     Each of the undersigned hereby authorize Lender and Lender's actual or potential
                                     lenders,
                                     agents, brokers, processors,
@@ -919,7 +925,7 @@
                                     to verify the accuracy of the information provided herein, and to determine my/our
                                     credit
                                     worthiness. This includes
-                                    my/our and my company’s past and present employment, earnings records, bank accounts,
+                                    my/our and my company's past and present employment, earnings records, bank accounts,
                                     stock
                                     holdings, insurance
                                     information and any other asset balances needed to process this private funding
@@ -948,7 +954,7 @@
                                     affiliates collecting it or
                                     their assignees in determining whether you qualify for a prospective private funding
                                     loan under
-                                    the company’s program.
+                                    the company's program.
                                     Additionally, this information may be used to determine fees, pricing, and other
                                     compensating
                                     factors associated with
@@ -958,18 +964,134 @@
                                     permitted by law. You do not have to provide this information, but if you do not your
                                     application for approval as a
                                     prospective private funding borrower may be delayed or rejected.
-                                </div>
-                                <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                                    <div class="flex flex-col w-full sm:w-1/2">
-                                        <label class="text-black dark:text-white text-sm">Signature</label>
-                                        <input type="text" name="signature"
-                                            class="mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                </p>
+                                <div class="w-full mt-6 flex flex-col items-center justify-between gap-4">
+                                    <div class="flex flex-col w-full">
+                                        <label for="authorization_signature"
+                                            class="text-black dark:text-white text-sm">Signature</label>
+                                        <div class="border rounded-lg overflow-hidden">
+                                            <canvas id="signature-pad_9" width="600" height="128"
+                                                class="w-full h-32 bg-white dark:bg-black block touch-none"></canvas>
+                                        </div>
+                                        <div class="flex gap-2 mt-2">
+                                            <button type="button" id="clear-signature_9"
+                                                class="px-4 py-1 text-sm bg-red-600 text-white rounded-lg">Clear</button>
+                                        </div>
+                                        <!-- hidden input to store base64 signature -->
+                                        <input type="hidden" name="authorization_signature" id="signature-input_9">
                                     </div>
-                                    <div class="flex flex-col w-full sm:w-1/2">
-                                        <label class="text-black dark:text-white text-sm">Please Pull This Credit Report To
+                                    <script>
+                                        (function() {
+                                            const canvas = document.getElementById('signature-pad_9');
+                                            const clearBtn = document.getElementById('clear-signature_9');
+                                            const signatureInput = document.getElementById('signature-input_9');
+
+                                            if (!canvas || !clearBtn || !signatureInput) return;
+
+                                            const ctx = canvas.getContext('2d');
+
+                                            // Set canvas actual size for better resolution
+                                            function resizeCanvas() {
+                                                const rect = canvas.getBoundingClientRect();
+                                                const devicePixelRatio = window.devicePixelRatio || 1;
+
+                                                canvas.width = rect.width * devicePixelRatio;
+                                                canvas.height = rect.height * devicePixelRatio;
+
+                                                ctx.scale(devicePixelRatio, devicePixelRatio);
+                                                canvas.style.width = rect.width + 'px';
+                                                canvas.style.height = rect.height + 'px';
+
+                                                setStrokeStyle();
+                                            }
+
+                                            function setStrokeStyle() {
+                                                ctx.strokeStyle = document.documentElement.classList.contains('dark') ? 'white' : '#000D51';
+                                                ctx.lineWidth = 2;
+                                                ctx.lineCap = 'round';
+                                                ctx.lineJoin = 'round';
+                                            }
+
+                                            resizeCanvas();
+                                            canvas.style.cursor = 'crosshair';
+
+                                            let isDrawing = false;
+
+                                            function getPointerPosition(e) {
+                                                const rect = canvas.getBoundingClientRect();
+                                                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                                                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+                                                return {
+                                                    x: clientX - rect.left,
+                                                    y: clientY - rect.top
+                                                };
+                                            }
+
+                                            function startDrawing(e) {
+                                                e.preventDefault();
+                                                isDrawing = true;
+                                                setStrokeStyle();
+                                                const pos = getPointerPosition(e);
+                                                ctx.beginPath();
+                                                ctx.moveTo(pos.x, pos.y);
+                                            }
+
+                                            function draw(e) {
+                                                e.preventDefault();
+                                                if (!isDrawing) return;
+
+                                                const pos = getPointerPosition(e);
+                                                ctx.lineTo(pos.x, pos.y);
+                                                ctx.stroke();
+                                                ctx.beginPath();
+                                                ctx.moveTo(pos.x, pos.y);
+                                            }
+
+                                            function stopDrawing(e) {
+                                                e.preventDefault();
+                                                if (!isDrawing) return;
+                                                isDrawing = false;
+                                                signatureInput.value = canvas.toDataURL('image/png');
+                                            }
+
+                                            // Mouse events
+                                            canvas.addEventListener('mousedown', startDrawing);
+                                            canvas.addEventListener('mousemove', draw);
+                                            canvas.addEventListener('mouseup', stopDrawing);
+                                            canvas.addEventListener('mouseleave', stopDrawing);
+
+                                            // Touch support for mobile
+                                            canvas.addEventListener('touchstart', startDrawing, {
+                                                passive: false
+                                            });
+                                            canvas.addEventListener('touchmove', draw, {
+                                                passive: false
+                                            });
+                                            canvas.addEventListener('touchend', stopDrawing, {
+                                                passive: false
+                                            });
+
+                                            clearBtn.addEventListener('click', () => {
+                                                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                                signatureInput.value = '';
+                                            });
+
+                                            // Update stroke color on theme change
+                                            const observer = new MutationObserver(setStrokeStyle);
+                                            observer.observe(document.documentElement, {
+                                                attributes: true,
+                                                attributeFilter: ['class']
+                                            });
+                                        })();
+                                    </script>
+                                    <div class="flex flex-col w-full">
+                                        <label for="pull_credit_report_signature"
+                                            class="text-black dark:text-white text-sm">Please Pull This Credit Report To
                                             Help Determine Pricing</label>
-                                        <input type="text" name="signature"
-                                            class="mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                        <input type="checkbox" name="pull_credit_report_signature"
+                                            id="pull_credit_report_signature"
+                                            class="mt-1 py-5 px-10 border bg-white dark:bg-black dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
                                     </div>
                                 </div>
                             </div>
@@ -1004,7 +1126,7 @@
                                     application and/or criminal penalties.
                                 </p>
                                 <p class="text-md text-black dark:text-white leading-relaxed font-normal">
-                                    The loan requested pursuant to this application (the “Loan”) will be secured by a
+                                    The loan requested pursuant to this application (the "Loan") will be secured by a
                                     mortgage or
                                     deed of trust on the
                                     property described in this application.
@@ -1044,8 +1166,8 @@
                                     condition or value of the property.
                                 </p>
                                 <p class="text-md text-black dark:text-white leading-relaxed font-normal">
-                                    My transmission of this application as an “electronic record” containing my “electronic
-                                    signature,” as those terms are defined in applicable federal and/or state laws, or my
+                                    My transmission of this application as an "electronic record" containing my "electronic
+                                    signature," as those terms are defined in applicable federal and/or state laws, or my
                                     facsimile
                                     transmission of this application containing a facsimile of my signature, shall be
                                     effective,
@@ -1065,18 +1187,131 @@
                                     any credit reporting agency.
                                 </p>
                             </div>
-                            <div class="flex w-full items-center gap-4">
-                                <div class="flex items-center gap-2">
+                            <div class="flex w-full flex-col gap-4">
+                                <div>
                                     <label class="text-black dark:text-white text-sm">Guarantor Signature</label>
-                                    <input type="text" name="signature"
-                                        class="mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                    <div class="border rounded-lg overflow-hidden">
+                                        <canvas id="signature-pad" width="600" height="128"
+                                            class="w-full h-32 bg-white dark:bg-black block touch-none"></canvas>
+                                    </div>
+                                    <div class="flex gap-2 mt-2">
+                                        <button type="button" id="clear-signature"
+                                            class="px-4 py-1 text-sm bg-red-600 text-white rounded-lg">Clear</button>
+                                    </div>
+                                    <input type="hidden" name="guarantor_signature" id="signature-input">
                                 </div>
-                                <div class="flex items-center gap-2">
-                                    <label class="text-black dark:text-white text-sm">Date</label>
-                                    <input type="text" name="signature"
-                                        class="mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                <div>
+                                    <label for="guarantor_signature_date"
+                                        class="text-black dark:text-white text-sm">Date</label>
+                                    <input type="date" name="guarantor_signature_date" id="guarantor_signature_date"
+                                        class="mt-1 p-2 border rounded-lg dark:bg-black dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600">
                                 </div>
                             </div>
+                            <script>
+                                (function() {
+                                    const canvas = document.getElementById('signature-pad');
+                                    const clearBtn = document.getElementById('clear-signature');
+                                    const signatureInput = document.getElementById('signature-input');
+
+                                    if (!canvas || !clearBtn || !signatureInput) return;
+
+                                    const ctx = canvas.getContext('2d');
+
+                                    // Set canvas actual size for better resolution
+                                    function resizeCanvas() {
+                                        const rect = canvas.getBoundingClientRect();
+                                        const devicePixelRatio = window.devicePixelRatio || 1;
+
+                                        canvas.width = rect.width * devicePixelRatio;
+                                        canvas.height = rect.height * devicePixelRatio;
+
+                                        ctx.scale(devicePixelRatio, devicePixelRatio);
+                                        canvas.style.width = rect.width + 'px';
+                                        canvas.style.height = rect.height + 'px';
+
+                                        setStrokeStyle();
+                                    }
+
+                                    function setStrokeStyle() {
+                                        ctx.strokeStyle = document.documentElement.classList.contains('dark') ? 'white' : '#000D51';
+                                        ctx.lineWidth = 2;
+                                        ctx.lineCap = 'round';
+                                        ctx.lineJoin = 'round';
+                                    }
+
+                                    resizeCanvas();
+                                    canvas.style.cursor = 'crosshair';
+
+                                    let isDrawing = false;
+
+                                    function getPointerPosition(e) {
+                                        const rect = canvas.getBoundingClientRect();
+                                        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                                        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+                                        return {
+                                            x: clientX - rect.left,
+                                            y: clientY - rect.top
+                                        };
+                                    }
+
+                                    function startDrawing(e) {
+                                        e.preventDefault();
+                                        isDrawing = true;
+                                        setStrokeStyle();
+                                        const pos = getPointerPosition(e);
+                                        ctx.beginPath();
+                                        ctx.moveTo(pos.x, pos.y);
+                                    }
+
+                                    function draw(e) {
+                                        e.preventDefault();
+                                        if (!isDrawing) return;
+
+                                        const pos = getPointerPosition(e);
+                                        ctx.lineTo(pos.x, pos.y);
+                                        ctx.stroke();
+                                        ctx.beginPath();
+                                        ctx.moveTo(pos.x, pos.y);
+                                    }
+
+                                    function stopDrawing(e) {
+                                        e.preventDefault();
+                                        if (!isDrawing) return;
+                                        isDrawing = false;
+                                        signatureInput.value = canvas.toDataURL('image/png');
+                                    }
+
+                                    // Mouse events
+                                    canvas.addEventListener('mousedown', startDrawing);
+                                    canvas.addEventListener('mousemove', draw);
+                                    canvas.addEventListener('mouseup', stopDrawing);
+                                    canvas.addEventListener('mouseleave', stopDrawing);
+
+                                    // Touch support for mobile
+                                    canvas.addEventListener('touchstart', startDrawing, {
+                                        passive: false
+                                    });
+                                    canvas.addEventListener('touchmove', draw, {
+                                        passive: false
+                                    });
+                                    canvas.addEventListener('touchend', stopDrawing, {
+                                        passive: false
+                                    });
+
+                                    clearBtn.addEventListener('click', () => {
+                                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                        signatureInput.value = '';
+                                    });
+
+                                    // Update stroke color on theme change
+                                    const observer = new MutationObserver(setStrokeStyle);
+                                    observer.observe(document.documentElement, {
+                                        attributes: true,
+                                        attributeFilter: ['class']
+                                    });
+                                })();
+                            </script>
                             <div class=" text-black dark:text-white text-sm">
                                 If there are more guarantors, please complete the " guarantor add-on form" for each
                                 guarantor.
@@ -1088,4 +1323,5 @@
                 </div>
             </div>
         </div>
-    @endsection
+    </div>
+@endsection
