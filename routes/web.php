@@ -25,9 +25,9 @@ use App\Http\Controllers\User\Dashboard\UserHomePageController;
 
 // Api
 use App\Http\Controllers\Api\BookFormController;
+use App\Http\Controllers\Api\NewsletterController;
 use App\Http\Controllers\Api\ContactFormController;
 use App\Http\Controllers\Api\PreLoanApplicationController;
-use App\Models\PreLoanApplication;
 
 // Public routes accessible to all
 Route::get('/', [HomePageController::class, 'index'])->name('home');
@@ -35,16 +35,13 @@ Route::get('/about', [AboutPageController::class, 'index'])->name('about');
 Route::get('/contact', [ContactPageController::class, 'index'])->name('contact');
 Route::get('/services', [ServicesPageController::class, 'index'])->name('services');
 Route::post('/book-service', [BookFormController::class, 'bookService'])->name('book-service');
+Route::post('/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 Route::post('/contact', [ContactFormController::class, 'sendContactForm'])->name('send-contact-form');
 Route::post('/pre-loan', [PreLoanApplicationController::class, 'submitForm'])->name('preloan.submit');
 Route::get('/services/service-detail', [ServiceDetailPageController::class, 'index'])->name('service-detail');
 Route::get('/services/service-detail/{slug}', [ServiceDetailPageController::class, 'index'])->name('service-detail');
 Route::get('/pre-loan/download/{id}', action: [PreLoanApplicationController::class, 'downloadPDF'])->name('client.dashboard.container.my-loan.submission');
 
-Route::get('/asd', function () {
-    $application = PreLoanApplication::all();
-    return view('client.dashboard.container.my-loan.submission', compact('application'));
-});
 
 // Authentication routes (only for guests)
 Route::middleware(['guest'])->group(function () {

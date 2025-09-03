@@ -14,7 +14,7 @@
 
 <body>
     <div data-lenis>
-        @if(!request()->is('login') && !request()->is('register'))
+        @if (!request()->is('login') && !request()->is('register'))
             <section>
                 @include('client.components.navbar')
             </section>
@@ -24,7 +24,7 @@
             @yield('content')
         </main>
 
-        @if(!request()->is('login') && !request()->is('register'))
+        @if (!request()->is('login') && !request()->is('register'))
             <section>
                 @include('client.components.footer')
             </section>
@@ -50,19 +50,19 @@
             "hideMethod": "fadeOut"
         };
 
-        @if(Session::has('success'))
+        @if (Session::has('success'))
             toastr.success("{{ Session::get('success') }}");
         @endif
 
-        @if(Session::has('error'))
+        @if (Session::has('error'))
             toastr.error("{{ Session::get('error') }}");
         @endif
 
-        @if(Session::has('info'))
+        @if (Session::has('info'))
             toastr.info("{{ Session::get('info') }}");
         @endif
 
-        @if(Session::has('warning'))
+        @if (Session::has('warning'))
             toastr.warning("{{ Session::get('warning') }}");
         @endif
     </script>
