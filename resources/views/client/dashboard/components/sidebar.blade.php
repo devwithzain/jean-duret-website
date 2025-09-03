@@ -1,6 +1,6 @@
 @if (auth()->check() && auth()->user()->role === 'user')
     <nav
-        class="w-[14%] h-screen fixed top-0 left-0 z-50 bg-[#FAFAFA] dark:bg-[#18181B] border-r border-gray-200 dark:border-gray-700">
+        class="w-[15%] h-screen fixed top-0 left-0 z-50 bg-[#FAFAFA] dark:bg-[#18181B] border-r border-gray-200 dark:border-gray-700">
         <div class="w-full h-full flex flex-col justify-between p-3">
             <div class="flex flex-col gap-7">
                 <div class="flex gap-2 items-center">
@@ -45,8 +45,7 @@
                             <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Inquries</h1>
                         </a>
-                        <a href={{ route('client.dashboard.container.loan.pre-loan') }}
-                            class="flex hover:bg-gray-200/10 py-2 rounded-md items-center gap-2">
+                        <a href={{ route('client.dashboard.container.loan.pre-loan') }} class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                 fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 class="lucide lucide-dock-icon lucide-dock stroke-black dark:stroke-white">
@@ -54,8 +53,21 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="M6 16h12" />
                             </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">Pre
+                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
+                                Apply For
                                 Loan</h1>
+                        </a>
+                        <a href={{ route('client.dashboard.container.my-loan.my_loan') }}
+                            class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-dock-icon lucide-dock stroke-black dark:stroke-white">
+                                <path d="M2 8h20" />
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="M6 16h12" />
+                            </svg>
+                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">My
+                                Loan Applications</h1>
                         </a>
                     </div>
                 </div>

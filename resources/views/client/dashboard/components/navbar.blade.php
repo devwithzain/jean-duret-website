@@ -13,33 +13,32 @@
                     const mainContainer = document.getElementById('mainContainer');
                     const sidebar = document.querySelector('section');
 
-                    // Add transition for smoothness
-                    sidebar.style.transition = 'width 0.3s, opacity 0.1s';
-                    mainContainer.style.transition = 'width 0.3s';
+                    // Check saved state on page load
+                    const isExpanded = localStorage.getItem('sidebarHidden') === 'true';
 
-                    let isExpanded = false;
+                    if (isExpanded) {
+                        sidebar.style.display = 'none';
+                        mainContainer.style.width = '100%';
+                    } else {
+                        sidebar.style.display = 'block';
+                        mainContainer.style.width = '85%';
+                    }
 
                     svg.addEventListener('click', function() {
-                        isExpanded = !isExpanded;
-                        if (isExpanded) {
-                            sidebar.style.width = '0';
-                            sidebar.style.opacity = '0';
-                            setTimeout(() => {
-                                sidebar.style.display = 'none';
-                            }, 200);
-                            mainContainer.style.width = '100%';
-                        } else {
+                        const currentlyHidden = sidebar.style.display === 'none';
+
+                        if (currentlyHidden) {
                             sidebar.style.display = 'block';
-                            setTimeout(() => {
-                                sidebar.style.width = '';
-                                sidebar.style.opacity = '1';
-                            }, 200);
-                            mainContainer.style.width = '86%';
+                            mainContainer.style.width = '85%';
+                            localStorage.setItem('sidebarHidden', 'false');
+                        } else {
+                            sidebar.style.display = 'none';
+                            mainContainer.style.width = '100%';
+                            localStorage.setItem('sidebarHidden', 'true');
                         }
                     });
                 });
             </script>
-
             @php
                 $segments = request()->segments();
             @endphp

@@ -15,7 +15,7 @@
 <body class="bg-white dark:bg-[#09090B] text-black dark:text-white">
     <div class="w-full flex items-center justify-between">
         <section> @include('client.dashboard.components.sidebar') </section>
-        <main class="w-[86%] transition-all duration-300" id="mainContainer">
+        <main class="w-[85%] transition-all duration-300" id="mainContainer">
             @include('client.dashboard.components.navbar')
             @yield('content')
         </main>

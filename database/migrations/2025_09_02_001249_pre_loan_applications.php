@@ -10,6 +10,7 @@ class PreLoanApplications extends Migration
     {
         Schema::create('pre_loan_applications', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             // Step 1
             $table->text('company_name')->nullable();
             $table->text('broker_name')->nullable();

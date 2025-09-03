@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class PreLoanApplication extends Model
 {
    protected $fillable = [
+      'user_id',
       'company_name',
       'broker_name',
       'broker_email',
@@ -105,4 +106,8 @@ class PreLoanApplication extends Model
       'guarantor_signature',
       'guarantor_signature_date'
    ];
+   public function user()
+   {
+      return $this->belongsTo(User::class);
+   }
 }

@@ -1,13 +1,44 @@
-<div class="w-full p-5 flex flex-col gap-5">
-    <div class="w-full py-2 flex items-center justify-between">
+<div class="w-full px-5 py-3 flex flex-col gap-5">
+    <div class="w-full flex items-center justify-between">
         <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            <svg id="panelToggleSvgDash" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-panel-left-icon lucide-panel-left stroke-black dark:stroke-white">
                 <rect width="18" height="18" x="3" y="3" rx="2" />
                 <path d="M9 3v18" />
             </svg>
-            <span class="text-lg font-thin text-black dark:text-white"> | </span>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const svg = document.getElementById('panelToggleSvgDash');
+                    const mainContainer = document.getElementById('mainContainer');
+                    const sidebar = document.querySelector('section');
+
+                    // Check saved state on page load
+                    const isExpanded = localStorage.getItem('sidebarHidden') === 'true';
+
+                    if (isExpanded) {
+                        sidebar.style.display = 'none';
+                        mainContainer.style.width = '100%';
+                    } else {
+                        sidebar.style.display = 'block';
+                        mainContainer.style.width = '85%';
+                    }
+
+                    svg.addEventListener('click', function() {
+                        const currentlyHidden = sidebar.style.display === 'none';
+
+                        if (currentlyHidden) {
+                            sidebar.style.display = 'block';
+                            mainContainer.style.width = '85%';
+                            localStorage.setItem('sidebarHidden', 'false');
+                        } else {
+                            sidebar.style.display = 'none';
+                            mainContainer.style.width = '100%';
+                            localStorage.setItem('sidebarHidden', 'true');
+                        }
+                    });
+                });
+            </script>
             @php
                 $segments = request()->segments();
             @endphp

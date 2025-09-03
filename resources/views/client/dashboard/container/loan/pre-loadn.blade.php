@@ -110,6 +110,7 @@
                     </div>
                     <form action="{{ route('preloan.submit') }}" method="POST" class="col-span-2 flex flex-col gap-8">
                         @csrf
+                        <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                         <!-- Step 1: Additional Information -->
                         <div x-show="step === 1" class="flex flex-col gap-8">
                             <div class="w-full flex items-center gap-4">
@@ -174,64 +175,80 @@
                                 </div>
                             </div>
                             <div class="w-full flex flex-col gap-2">
-                                <label for="loan_term_months"
-                                    class="text-md font-normal leading-tight tracking-tight">Desired
-                                    Loan
-                                    term:</label>
-                                <div class="flex items-center gap-4">
+                                <div class="flex flex-col gap-2">
+                                    <label for="loan_term_type"
+                                        class="text-md font-normal leading-tight tracking-tight">Desired
+                                        Loan
+                                        term:</label>
                                     <div class="flex flex-col gap-2">
                                         (Months)
                                         <div class="flex items-center gap-2">
                                             <div class="flex items-center gap-1">
                                                 <span>3</span>
-                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
-                                                    class="rounded-full" />
+                                                <input id="loan_term_3_months" name="loan_term" type="radio"
+                                                    value="3_months" class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>6</span>
-                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
-                                                    class="rounded-full" />
+                                                <input id="loan_term_6_months" name="loan_term" type="radio"
+                                                    value="6_months" class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>9</span>
-                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
-                                                    class="rounded-full" />
+                                                <input id="loan_term_9_months" name="loan_term" type="radio"
+                                                    value="9_months" class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>12</span>
-                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
-                                                    class="rounded-full" />
+                                                <input id="loan_term_12_months" name="loan_term" type="radio"
+                                                    value="12_months" class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>18</span>
-                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
-                                                    class="rounded-full" />
+                                                <input id="loan_term_18_months" name="loan_term" type="radio"
+                                                    value="18_months" class="rounded-full" />
                                             </div>
                                             <div class="flex items-center gap-1">
                                                 <span>36</span>
-                                                <input id="loan_term_months" name="loan_term_months" type="checkbox"
-                                                    class="rounded-full" />
+                                                <input id="loan_term_36_months" name="loan_term" type="radio"
+                                                    value="36_months" class="rounded-full" />
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex flex-col items-center gap-2">
+                                    <div class="flex flex-col gap-2">
                                         ( Years )
                                         <div class="flex items-center gap-2">
-                                            <div class="flex items-center gap-1">
-                                                <span>3</span>
-                                                <input id="loan_term_years" name="loan_term_years" type="checkbox"
-                                                    class="rounded-full" />
-                                            </div>
+                                            <select name="loan_term_years" id="loan_term_years"
+                                                class="px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20"
+                                                onchange="handleYearsSelection(this)">
+                                                <option value="">Select Years</option>
+                                                <option value="1_year">1 Year</option>
+                                                <option value="2_years">2 Years</option>
+                                                <option value="3_years">3 Years</option>
+                                                <option value="4_years">4 Years</option>
+                                                <option value="5_years">5 Years</option>
+                                                <option value="10_years">10 Years</option>
+                                                <option value="15_years">15 Years</option>
+                                                <option value="20_years">20 Years</option>
+                                                <option value="25_years">25 Years</option>
+                                                <option value="30_years">30 Years</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="flex flex-col items-center gap-2">
+                                    <div class="flex flex-col gap-2">
                                         ( A.R.M )
                                         <div class="flex items-center gap-2">
-                                            <div class="flex items-center gap-1">
-                                                <span>3</span>
-                                                <input id="loan_term_arm" name="loan_term_arm" type="checkbox"
-                                                    class="rounded-full" />
-                                            </div>
+                                            <select name="loan_term_arm" id="loan_term_arm"
+                                                class="px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20"
+                                                onchange="handleArmSelection(this)">
+                                                <option value="">Select A.R.M</option>
+                                                <option value="3_1_arm">3/1 ARM</option>
+                                                <option value="5_1_arm">5/1 ARM</option>
+                                                <option value="7_1_arm">7/1 ARM</option>
+                                                <option value="10_1_arm">10/1 ARM</option>
+                                                <option value="3_6_arm">3/6 ARM</option>
+                                                <option value="5_6_arm">5/6 ARM</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -243,6 +260,82 @@
                                     @click="step = 3">Next</button>
                             </div>
                         </div>
+                        <script>
+                            // Handle single selection across all loan term options
+                            function clearOtherSelections(exceptType) {
+                                // Clear months radio buttons
+                                if (exceptType !== 'months') {
+                                    const monthsRadios = document.querySelectorAll('input[name="loan_term"]');
+                                    monthsRadios.forEach(radio => radio.checked = false);
+                                }
+
+                                // Clear years dropdown
+                                if (exceptType !== 'years') {
+                                    document.getElementById('loan_term_years').value = '';
+                                }
+
+                                // Clear ARM dropdown
+                                if (exceptType !== 'arm') {
+                                    document.getElementById('loan_term_arm').value = '';
+                                }
+                            }
+
+                            // Handle months selection
+                            document.addEventListener('change', function(e) {
+                                if (e.target.name === 'loan_term') {
+                                    clearOtherSelections('months');
+                                    console.log('Selected loan term (months):', e.target.value);
+                                }
+                            });
+
+                            // Handle years dropdown selection
+                            function handleYearsSelection(select) {
+                                if (select.value) {
+                                    clearOtherSelections('years');
+                                    console.log('Selected loan term (years):', select.value);
+                                }
+                            }
+
+                            // Handle ARM dropdown selection
+                            function handleArmSelection(select) {
+                                if (select.value) {
+                                    clearOtherSelections('arm');
+                                    console.log('Selected loan term (ARM):', select.value);
+                                }
+                            }
+
+                            // Get final selected value for form submission
+                            function getFinalLoanTermValue() {
+                                // Check months
+                                const selectedMonth = document.querySelector('input[name="loan_term"]:checked');
+                                if (selectedMonth) {
+                                    return {
+                                        type: 'months',
+                                        value: selectedMonth.value
+                                    };
+                                }
+
+                                // Check years
+                                const selectedYear = document.getElementById('loan_term_years').value;
+                                if (selectedYear) {
+                                    return {
+                                        type: 'years',
+                                        value: selectedYear
+                                    };
+                                }
+
+                                // Check ARM
+                                const selectedArm = document.getElementById('loan_term_arm').value;
+                                if (selectedArm) {
+                                    return {
+                                        type: 'arm',
+                                        value: selectedArm
+                                    };
+                                }
+
+                                return null;
+                            }
+                        </script>
                         <!-- Step 3: Additional Information -->
                         <div x-show="step === 3" class="flex flex-col gap-8">
                             <div class="w-full flex flex-col items-center gap-4">
@@ -970,7 +1063,7 @@
                                         <label for="authorization_signature"
                                             class="text-black dark:text-white text-sm">Signature</label>
                                         <div class="border rounded-lg overflow-hidden">
-                                            <canvas id="signature-pad_9" width="600" height="128"
+                                            <canvas id="signature-pad_9" width="1920" height="128"
                                                 class="w-full h-32 bg-white dark:bg-black block touch-none"></canvas>
                                         </div>
                                         <div class="flex gap-2 mt-2">
@@ -1191,7 +1284,7 @@
                                 <div>
                                     <label class="text-black dark:text-white text-sm">Guarantor Signature</label>
                                     <div class="border rounded-lg overflow-hidden">
-                                        <canvas id="signature-pad" width="600" height="128"
+                                        <canvas id="signature-pad" width="1920" height="128"
                                             class="w-full h-32 bg-white dark:bg-black block touch-none"></canvas>
                                     </div>
                                     <div class="flex gap-2 mt-2">
