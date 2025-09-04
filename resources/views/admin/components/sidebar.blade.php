@@ -1,6 +1,6 @@
 @if (auth()->check() && auth()->user()->role === 'admin')
     <nav
-        class="w-[15%] transition-all duration-300 h-screen fixed top-0 left-0 z-50 bg-[#FAFAFA] dark:bg-[#18181B] border-r border-gray-200 dark:border-gray-700">
+        class="w-[15%] transition-all duration-300 h-screen fixed top-0 left-0 z-50 bg-[#FAFAFA] dark:bg-[#18181B] border-r border-black/20 dark:border-gray-700">
         <div class="w-full h-full flex flex-col justify-between p-3">
             <div class="flex flex-col gap-7">
                 <div class="flex gap-2 items-center justify-between">
@@ -21,8 +21,7 @@
                             Navigation</h1>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <a href={{ route('admin.dashboard') }} class="flex items-center gap-2"
-                            :class="collapsed ? 'justify-center' : ''">
+                        <a href={{ route('admin.dashboard') }} class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                 fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 class="lucide lucide-house-icon lucide-house stroke-black dark:stroke-white">
@@ -33,33 +32,7 @@
                             <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Dashboard</h1>
                         </a>
-                        <a href={{ route('admin.dashboard') }} class="flex items-center gap-2"
-                            :class="collapsed ? 'justify-center' : ''">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-layers2-icon lucide-layers-2 stroke-black dark:stroke-white">
-                                <path
-                                    d="M13 13.74a2 2 0 0 1-2 0L2.5 8.87a1 1 0 0 1 0-1.74L11 2.26a2 2 0 0 1 2 0l8.5 4.87a1 1 0 0 1 0 1.74z" />
-                                <path
-                                    d="m20 14.285 1.5.845a1 1 0 0 1 0 1.74L13 21.74a2 2 0 0 1-2 0l-8.5-4.87a1 1 0 0 1 0-1.74l1.5-.845" />
-                            </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
-                                Categories</h1>
-                        </a>
-                        <a href={{ route('admin.dashboard') }} class="flex items-center gap-2"
-                            :class="collapsed ? 'justify-center' : ''">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-message-square-text-icon lucide-message-square-text stroke-black dark:stroke-white">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                                <path d="M13 8H7" />
-                                <path d="M17 12H7" />
-                            </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
-                                Blogs</h1>
-                        </a>
-                        <a href={{ route('admin.container.services.listings') }} class="flex items-center gap-2"
-                            :class="collapsed ? 'justify-center' : ''">
+                        <a href={{ route('admin.container.services.listings') }} class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                 fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 class="lucide lucide-server-icon lucide-server stroke-black dark:stroke-white">
@@ -71,8 +44,7 @@
                             <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Services</h1>
                         </a>
-                        <a href={{ route('admin.container.inquries.listings') }} class="flex items-center gap-2"
-                            :class="collapsed ? 'justify-center' : ''">
+                        <a href={{ route('admin.container.inquries.listings') }} class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -84,6 +56,17 @@
                             </svg>
                             <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Inquries</h1>
+                        </a>
+                        <a href={{ route('admin.container.application.application') }} class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-dock-icon lucide-dock stroke-black dark:stroke-white">
+                                <path d="M2 8h20" />
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="M6 16h12" />
+                            </svg>
+                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
+                                Loan Applications</h1>
                         </a>
                     </div>
                 </div>

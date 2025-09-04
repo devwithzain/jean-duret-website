@@ -40,8 +40,8 @@
                     </thead>
                     <tbody>
                         @foreach ($loan_applications as $application)
-                            <tr class="border-b border-black/10 hover:bg-gray-50 dark:hover:bg-gray-900/20">
-                                <td class="px-4 py-2">{{ $application->compony_name }}</td>
+                            <tr class="border-b border-black/10 hover:bg-gray-50 dark:hover:bg-gray-900/70">
+                                <td class="px-4 py-2">{{ $application->company_name }}</td>
                                 <td class="px-4 py-2">{{ $application->broker_name }}</td>
                                 <td class="px-4 py-2"><a
                                         href="{{ route('client.dashboard.container.my-loan.submission', $application->id) }}"

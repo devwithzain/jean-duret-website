@@ -16,12 +16,12 @@
         </div>
         <div
             class="w-full bg-white dark:bg-black rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]">
-            @if($bookings->isEmpty())
+            @if ($bookings->isEmpty())
                 <p class="text-md px-4 py-2 font-normal leading-tight tracking-tight">No inquiries yet.</p>
             @else
                 <table class="w-full">
                     <thead>
-                        <tr class="border-b border-black/10">
+                        <tr class="border-b border-black/10 dark:border-gray-700">
                             <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
                                 Service
                             </th>
@@ -44,7 +44,7 @@
                     </thead>
                     <tbody>
                         @foreach ($bookings as $booking)
-                            <tr class="border-b border-black/10 hover:bg-gray-50">
+                            <tr class="border-b border-black/10 hover:bg-gray-50 dark:hover:bg-gray-900/70">
                                 <td class="px-4 py-2">{{ $booking->service->title ?? 'N/A' }}</td>
                                 <td class="px-4 py-2">{{ $booking->name ?? 'N/A' }}</td>
                                 <td class="px-4 py-2">{{ $booking->email ?? 'N/A' }}</td>

@@ -10,7 +10,7 @@
                             class="text-lg font-semibold text-gray-800 dark:text-white tracking-tight leading-tight capitalize">
                             {{ auth()->user()->name }}
                         </h1>
-                        <p class="text-sm text-gray-500 dark:text-white font-normal tracking-tight leading-tight">User
+                        <p class="text-sm text-black dark:text-white font-normal tracking-tight leading-tight">User
                             Dashboard</p>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                             class="text-lg font-semibold text-gray-800 dark:text-white tracking-tight leading-tight capitalize">
                             {{ auth()->user()->name }}
                         </h1>
-                        <p class="text-[12px] text-gray-500 dark:text-white font-normal tracking-tight leading-tight">
+                        <p class="text-[12px] text-black dark:text-white font-normal tracking-tight leading-tight">
                             {{ auth()->user()->email }}
                         </p>
                     </div>
@@ -98,8 +98,7 @@
                     </button>
                     <div id="settingDropdown"
                         class="hidden absolute -bottom-full left-full mb-4 ml-2 w-60 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
-                        <button
-                            class="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-900/70 border-b border-black/20 dark:border-gray-700">
+                        <div class="w-full px-4 py-2 text-left border-b border-black/20 dark:border-gray-700">
                             <div class="flex gap-2 items-center">
                                 <img id="imagePreview"
                                     src="{{ auth()->user()->image ? asset('storage/' . auth()->user()->image) : asset('assets/placeholder.png') }}"
@@ -110,12 +109,12 @@
                                         {{ auth()->user()->name }}
                                     </h1>
                                     <p
-                                        class="text-[12px] text-gray-500 dark:text-white font-normal tracking-tight leading-tight">
+                                        class="text-[12px] text-black dark:text-white font-normal tracking-tight leading-tight">
                                         {{ auth()->user()->email }}
                                     </p>
                                 </div>
                             </div>
-                        </button>
+                        </div>
                         <a href={{ route('client.dashboard.container.setting.index') }}
                             class="w-full block px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-900/70 border-b border-black/20 dark:border-gray-700">
                             <div class="flex items-center gap-2">
@@ -128,7 +127,7 @@
                                     <circle cx="12" cy="12" r="3" />
                                 </svg>
                                 <p
-                                    class="text-[12px] text-gray-500 dark:text-white font-normal tracking-tight leading-tight">
+                                    class="text-[12px] text-black dark:text-white font-normal tracking-tight leading-tight">
                                     Account</p>
                             </div>
                         </a>
@@ -145,7 +144,7 @@
                                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
                                 </svg>
                                 <button type="submit"
-                                    class="text-[12px] text-gray-500 dark:text-white font-normal tracking-tight leading-tight">LogOut</button>
+                                    class="text-[12px] text-black dark:text-white font-normal tracking-tight leading-tight">LogOut</button>
                             </div>
                         </form>
                     </div>

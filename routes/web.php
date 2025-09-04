@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\Setting\SettingController;
 use App\Http\Controllers\Admin\Services\ServicesController;
 use App\Http\Controllers\Admin\Inquries\AdminInquriesController;
 use App\Http\Controllers\Admin\Dashboard\AdminHomePageController;
+use App\Http\Controllers\Admin\Application\AdminApplicationController;
 
 // User Dashboard
 use App\Http\Controllers\User\Loan\LoanController;
@@ -64,6 +65,11 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     // Inquries routes
     Route::get('/dashboard/inquries', [AdminInquriesController::class, 'index'])->name('admin.container.inquries.listings');
+
+    // Application routes
+    Route::get('/dashboard/applications', [AdminApplicationController::class, 'index'])->name('admin.container.application.application');
+
+    Route::get('/dashboard/applications/download/{id}', [AdminApplicationController::class, 'downloadPDF'])->name('admin.container.application.submission');
 
     // Setting routes
     Route::get('/dashboard/setting', [SettingController::class, 'index'])->name('admin.container.setting.index');

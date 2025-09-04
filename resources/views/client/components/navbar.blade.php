@@ -32,14 +32,29 @@
                 </button>
                 <div x-show="open" @click.away="open = false"
                     class="absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg py-2 z-50 transition-opacity duration-300">
-                    <a href="{{ route('client.dashboard.container.home.dashboard') }}"
-                        class="block px-4 py-2 hover:bg-gray-200">Dashboard</a>
-                    <a href="{{ route('client.dashboard.container.setting.index') }}"
-                        class="block px-4 py-2 hover:bg-gray-200">Profile</a>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-200">Logout</button>
-                    </form>
+                    @php
+                        $role = auth()->user()->role ?? 'user';
+                    @endphp
+                    @if ($role === 'admin')
+                        <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 hover:bg-gray-200">Dashboard</a>
+                        <a href="{{ route('admin.container.setting.index') }}"
+                            class="block px-4 py-2 hover:bg-gray-200">Profile</a>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-200">Logout</button>
+                        </form>
+                    @else
+                        @if ($role === 'user')
+                            <a href="{{ route('client.dashboard.container.home.dashboard') }}"
+                                class="block px-4 py-2 hover:bg-gray-200">Dashboard</a>
+                            <a href="{{ route('client.dashboard.container.setting.index') }}"
+                                class="block px-4 py-2 hover:bg-gray-200">Profile</a>
+                        @endif
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-200">Logout</button>
+                        </form>
+                    @endif
                 </div>
             @endif
         </div>
