@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="w-full h-svh flex flex-col gap-5">
-        <div class="w-full grid grid-cols-3 gap-5">
+        <div class="w-full grid grid-cols-4 gap-5">
             <div
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
@@ -43,7 +43,7 @@
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
                         <h2 class="text-xl font-medium leading-tight tracking-tighte text-black dark:text-white">Total
-                            Submissions
+                            Applications
                         </h2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                             fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -89,6 +89,39 @@
                     <div>
                         <span class="text-3xl text-black dark:text-white leading-tight tracking-tight font-bold">
                             +{{ $services->count() }}
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-up-icon lucide-arrow-up stroke-green-500">
+                            <path d="m5 12 7-7 7 7" />
+                            <path d="M12 19V5" />
+                        </svg>
+                        <span class="text-sm font-thin text-black dark:text-white"><span
+                                class="text-sm font-thin text-green-500">0%
+                            </span>from last month</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
+                <div class="w-full h-full flex flex-col justify-between gap-4">
+                    <div class="w-full flex items-center justify-between">
+                        <h2 class="text-xl font-medium leading-tight tracking-tighte text-black dark:text-white">Total
+                            Subscriber</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-server-icon lucide-server stroke-black dark:stroke-white">
+                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                            <line x1="6" x2="6.01" y1="6" y2="6" />
+                            <line x1="6" x2="6.01" y1="18" y2="18" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-3xl text-black dark:text-white leading-tight tracking-tight font-bold">
+                            +{{ $newsletterSubscriber->count() }}
                         </span>
                     </div>
                     <div class="flex items-center gap-1">
