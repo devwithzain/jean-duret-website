@@ -31,7 +31,7 @@
                         {{ $service->title }}
                      </h1>
                      <p class="group-hover:text-white text-[#000D51] text-xl font-normal">
-                        {{ $service->description }}
+                        {{ $service->short_description }}
                      </p>
                      <a href="{{ route('service-detail', ['slug' => $service->slug]) }}"
                         class="w-fit text-white text-xl font-medium px-10 py-3 bg-[#2460FD]">Details</a>
