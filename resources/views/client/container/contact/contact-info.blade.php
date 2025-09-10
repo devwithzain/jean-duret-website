@@ -15,7 +15,10 @@
             Email
          </h1>
       </div>
-      <p class="text-[#000D5180] text-2xl font-normal leading-tight tracking-tight">info@divinesolutionfinding.com</p>
+      <a href="mailto:jduret@divinesolutionfunding.com">
+         <p class="text-[#000D5180] text-2xl font-normal leading-tight tracking-tight">Jduret@divinesolutionfunding.com
+         </p>
+      </a>
    </div>
    <div class="w-[300px] flex items-center justify-center flex-col gap-5">
       <div class="flex items-center justify-center gap-4">
@@ -24,6 +27,8 @@
             Phone
          </h1>
       </div>
-      <p class="text-[#000D5180] text-2xl font-normal leading-tight tracking-tight">+1 ( 123 ) 456 7890</p>
+      <a href="tel:+18662348080">
+         <p class="text-[#000D5180] text-2xl font-normal leading-tight tracking-tight">+1 (866) 234-8080</p>
+      </a>
    </div>
 </div>

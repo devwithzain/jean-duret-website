@@ -4,8 +4,9 @@
     </div>
     <div class="w-1/2 flex flex-col gap-10">
         <div class="w-full flex flex-col gap-3">
-            <p class="text-[#000D5180] text-lg font-normal leading-tight tracking-tight">Business consulting</p>
             <h1 class="text-[#000D51] text-7xl font-semibold leading-tight tracking-tight">Get in touch</h1>
+            <p class="text-[#000D51] text-xl font-normal">Need Funding for Your Next
+                Deal? Get fast, hassle-free funding with no credit checks and quick closings.</p>
         </div>
         <form action="{{ route('contact') }}" method="POST" class="w-full flex flex-col gap-4">
             @csrf

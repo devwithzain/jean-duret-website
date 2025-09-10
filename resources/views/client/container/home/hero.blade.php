@@ -2,34 +2,34 @@
    <div class="w-full h-full px-20 flex items-center justify-center gap-10">
       <div class="w-1/2 flex flex-col gap-10">
          <div class="flex flex-col gap-2">
-            <p class="text-white text-lg font-normal leading-tight tracking-tight">Divine
+            <p class="text-white text-xl font-normal">Divine
                Solutions Funding</p>
-            <h1 class="text-white text-[55px] font-semibold leading-tight tracking-tight">Smart Funding. Smarter
+            <h1 class="text-white text-[55px] font-semibold">Smart Funding. Smarter
                <br>Property Deals.
             </h1>
-            <p class="text-white text-lg font-normal leading-tight tracking-tight">Lorem Ipsum is simply dummy text
-               of
-               the printing and <br> typesetting industry. Lorem Ipsum has been</p>
+            <p class="text-white text-xl font-normal">
+               Empowering your property journey with tailored funding solutions.<br>
+               Experience seamless financing and expert guidance with Divine Solutions Funding.
+            </p>
          </div>
          <div class="flex items-center gap-5 flex-wrap">
             <div class="flex items-center gap-4">
                <img src={{ asset('assets/arrowRight.svg') }} alt="heroGirl" class="w-8 h-8 object-cover">
-               <p class="text-white text-lg font-normal leading-tight tracking-tight">One Stop Real Estate Solution
+               <p class="text-white text-xl font-normal">One Stop Real Estate Solution
                </p>
             </div>
             <div class="flex items-center gap-4">
                <img src={{ asset('assets/arrowRight.svg') }} alt="heroGirl" class="w-8 h-8 object-cover">
-               <p class="text-white text-lg font-normal leading-tight tracking-tight">Personalized Client Guidance
+               <p class="text-white text-xl font-normal">Personalized Client Guidance
                </p>
             </div>
             <div class="flex items-center gap-4">
                <img src={{ asset('assets/arrowRight.svg') }} alt="heroGirl" class="w-8 h-8 object-cover">
-               <p class="text-white text-lg font-normal leading-tight tracking-tight">Fast & Hassle-Free Process
+               <p class="text-white text-xl font-normal">Fast & Hassle-Free Process
                </p>
             </div>
          </div>
-         <a href="{{route('services')}}"
-            class="w-fit text-white text-xl font-medium leading-tight tracking-tight px-14 py-5 bg-[#2460FD]">Get
+         <a href="{{route('services')}}" class="w-fit text-white text-xl font-medium px-14 py-5 bg-[#2460FD]">Get
             Started</a>
       </div>
       <div class="w-1/2 h-full relative">
