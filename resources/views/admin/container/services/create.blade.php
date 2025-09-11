@@ -6,8 +6,8 @@
    <div>
       <div class="w-full flex items-center justify-between gap-4 border-b border-black/15 pb-3">
          <div class="flex flex-col">
-            <h1 class="text-4xl font-bold leading-tight tracking-tight">Create Service</h1>
-            <p class="text-md font-normal leading-tight tracking-tight">Add a new service.</p>
+            <h1 class="text-4xl font-bold ">Create Service</h1>
+            <p class="text-md font-normal ">Add a new service.</p>
          </div>
       </div>
       <form action={{ route('store') }} method="post" class="w-full flex flex-col gap-5 py-8"
@@ -15,7 +15,7 @@
          @csrf
          <div class="flex flex-col gap-1.5">
             <label for="title">
-               <p class="text-md font-normal leading-tight tracking-tight">Title</p>
+               <p class="text-md font-normal ">Title</p>
             </label>
             <input id="title" name="title"
                class="w-full outline-none focus:border-black/50 px-3 py-1.5 text-md bg-white dark:bg-black font-normal rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
@@ -23,7 +23,7 @@
          </div>
          <div class="flex flex-col gap-1.5">
             <label for="short_description">
-               <p class="text-md font-normal leading-tight tracking-tight">Short Description</p>
+               <p class="text-md font-normal ">Short Description</p>
             </label>
             <textarea id="short_description" name="short_description" rows="4"
                class="w-full outline-none focus:border-black/50 px-3 py-1.5 text-md bg-white dark:bg-black font-normal rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
@@ -31,7 +31,7 @@
          </div>
          <div class="flex flex-col gap-1.5">
             <label for="description">
-               <p class="text-md font-normal leading-tight tracking-tight">Description</p>
+               <p class="text-md font-normal ">Description</p>
             </label>
             <textarea id="description" name="description" rows="7"
                class="w-full outline-none focus:border-black/50 px-3 py-1.5 text-md bg-white dark:bg-black font-normal rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
@@ -39,7 +39,7 @@
          </div>
          <div class="flex flex-col gap-1.5">
             <label for="image">
-               <p class="text-black text-md font-normal leading-tight tracking-tight">Image</p>
+               <p class="text-black text-md font-normal ">Image</p>
             </label>
             <input id="image" name="image" accept="image/*" onchange="previewImage(this)"
                class="w-full outline-none focus:border-black/50 px-3 py-1.5 text-black text-md bg-white font-normal rounded-lg border border-black/10 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
@@ -47,7 +47,7 @@
             <img id="serviceImagePreview" src="#" alt="Preview" class="mt-2 hidden max-w-xs rounded-lg">
          </div>
          <div class="w-fit flex items-center gap-2 bg-black px-5 py-3 rounded-lg border border-black/10 dark:border-gray-700">
-            <button type="submit" class="text-white text-lg font-normal leading-tight tracking-tight">Create</button>
+            <button type="submit" class="text-white text-xl font-normal ">Create</button>
          </div>
       </form>
    </div>

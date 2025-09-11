@@ -8,7 +8,7 @@
                 <path d="M9 3v18" />
             </svg>
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
+                document.addEventListener('DOMContentLoaded', function () {
                     const svg = document.getElementById('panelToggleSvgDash');
                     const mainContainer = document.getElementById('mainContainer');
                     const sidebar = document.querySelector('section');
@@ -24,7 +24,7 @@
                         mainContainer.style.width = '85%';
                     }
 
-                    svg.addEventListener('click', function() {
+                    svg.addEventListener('click', function () {
                         const currentlyHidden = sidebar.style.display === 'none';
 
                         if (currentlyHidden) {
@@ -42,7 +42,7 @@
             @php
                 $segments = request()->segments();
             @endphp
-            <h1 class="text-lg font-thin text-black dark:text-white flex items-center">
+            <h1 class="text-xl font-thin text-black dark:text-white flex items-center">
                 @foreach ($segments as $index => $segment)
                     <span class="mx-1">></span>
                     @php
@@ -105,7 +105,7 @@
                 }
 
                 // Apply theme on page load
-                (function() {
+                (function () {
                     const theme = localStorage.getItem('theme');
                     const html = document.documentElement;
                     if (theme === 'dark') {

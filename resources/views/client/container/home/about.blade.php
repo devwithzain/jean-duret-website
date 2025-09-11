@@ -3,8 +3,8 @@
       <img src={{ asset('assets/aboutus.jpg') }} alt="aboutUsImage" class="w-full h-full object-cover">
    </div>
    <div class="w-1/2 flex flex-col gap-8 p-20">
-      <p class="text-white text-lg font-normal leading-tight tracking-tight">About us</p>
-      <h1 class="text-white text-7xl font-semibold leading-tight tracking-tight">Your Goals, Our Mission</h1>
+      <p class="text-white text-xl font-normal ">About us</p>
+      <h1 class="text-white text-7xl font-semibold ">Your Goals, Our Mission</h1>
       <p class="text-white text-xl font-normal leading-normal tracking-normal">Hello, my name is Jean Robert Duret, and
          I'm the Chief Executive Officer of Divine Solution Funding. I started this
          business venture with a few close counterparts to ensure one thing-bringing quality service to those looking to
@@ -24,13 +24,12 @@
          require
          promptly.
       </p>
-      <p class="text-white text-xl font-normal leading-tight tracking-tight">With appreciation and purpose, Jean Robert
+      <p class="text-white text-xl font-normal ">With appreciation and purpose, Jean Robert
          Duret<br>
          Chief Executive Officer<br>
          Divine Solution Funding
       </p>
-      <a href="{{route('about')}}"
-         class="w-fit text-white text-xl font-medium leading-tight tracking-tight px-14 py-5 bg-[#2460FD]">Learn
+      <a href="{{route('about')}}" class="w-fit text-white text-xl font-medium  px-14 py-5 bg-[#2460FD]">Learn
          more</a>
    </div>
 </div>

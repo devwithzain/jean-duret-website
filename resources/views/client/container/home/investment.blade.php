@@ -2,14 +2,14 @@
    <div class="flex flex-col gap-10">
       <div class="w-full flex items-center justify-around gap-10">
          <div class="w-full flex flex-col gap-3">
-            <p class="text-[#000D5180] text-xl font-normal">Investment sectors</p>
+            <p class="text-[#000D51] text-xl font-normal">Investment sectors</p>
             <h1 class="text-[#000D51] text-7xl font-semibold">Explore Investment
                Options
                That Build Wealth</h1>
          </div>
          <div class="w-full flex items-center gap-10">
             <img src={{ asset('assets/arrowRight.svg') }} alt="heroGirl" class="w-20 h-20 object-cover">
-            <p class="text-[#000D5180] text-xl font-normal">
+            <p class="text-[#000D51] text-xl font-normal">
                Discover a diverse range of real estate investment opportunities tailored to help you grow and secure
                your
                wealth for the future.

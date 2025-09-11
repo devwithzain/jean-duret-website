@@ -8,7 +8,7 @@
          <div class="w-1/2 flex items-center justify-center">
             <div class="w-full px-10 flex justify-center flex-col gap-8">
                <div class="flex flex-col gap-2">
-                  <h1 class="text-white text-3xl font-bold leading-tight tracking-tight">Create an Account</h1>
+                  <h1 class="text-white text-3xl font-bold ">Create an Account</h1>
                   <div class="flex items-center gap-2">
                      <p class="text-sm text-[#ADABB8]">Already have an account?</p>
                      <a href={{ route('login') }} class="text-sm text-[#9887c9] underline">Login</a>

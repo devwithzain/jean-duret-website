@@ -2,14 +2,14 @@
    <div class="flex flex-col gap-10">
       <div class="w-full flex items-center justify-around">
          <div class="w-full flex flex-col gap-3">
-            <p class="text-[#000D5180] text-xl font-normal">Business consulting</p>
+            <p class="text-[#000D51] text-xl font-normal">Business consulting</p>
             <h1 class="text-[#000D51] text-7xl font-semibold">Your One-Stop Real <br>
                Estate &
                Loan
                Partner</h1>
          </div>
          <div class="w-full flex flex-col gap-3">
-            <p class="text-[#000D5180] text-xl font-normal">
+            <p class="text-[#000D51] text-xl font-normal">
                We provide expert guidance in real estate and loan services, helping you make informed decisions for your
                business and personal needs.
             </p>

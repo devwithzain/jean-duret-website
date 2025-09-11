@@ -1,19 +1,19 @@
 <div class="w-full flex items-center justify-around p-20">
    <div class="w-[300px] flex items-center justify-center flex-col gap-3">
-      <h1 class="text-[#000D51] text-7xl font-semibold leading-tight tracking-tight">
+      <h1 class="text-[#000D51] text-7xl font-semibold ">
          <span class="counter" data-target="250">0</span>+
       </h1>
-      <p class="text-[#000D5180] text-lg font-normal leading-tight tracking-tight">Successful Loan Approvals</p>
+      <p class="text-[#000D51] text-xl font-normal ">Successful Loan Approvals</p>
    </div>
    <div class="w-[300px] flex items-center justify-center flex-col gap-3">
-      <h1 class="text-[#000D51] text-7xl font-semibold leading-tight tracking-tight">
+      <h1 class="text-[#000D51] text-7xl font-semibold ">
          <span class="counter" data-target="100">0</span>+
       </h1>
-      <p class="text-[#000D5180] text-lg font-normal leading-tight tracking-tight">Properties Bought & Sold</p>
+      <p class="text-[#000D51] text-xl font-normal ">Properties Bought & Sold</p>
    </div>
    <div class="w-[300px] flex items-center justify-center flex-col gap-3">
-      <h1 class="text-[#000D51] text-7xl font-semibold leading-tight tracking-tight">24/7</h1>
-      <p class="text-[#000D5180] text-lg font-normal leading-tight tracking-tight">Response Guarantee</p>
+      <h1 class="text-[#000D51] text-7xl font-semibold ">24/7</h1>
+      <p class="text-[#000D51] text-xl font-normal ">Response Guarantee</p>
    </div>
 </div>
 

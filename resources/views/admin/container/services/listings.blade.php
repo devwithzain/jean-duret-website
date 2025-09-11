@@ -6,12 +6,12 @@
     <div>
         <div class=" w-full flex items-center justify-between gap-4 border-b border-black/15 pb-3">
             <div class="flex flex-col">
-                <h1 class="text-4xl font-bold leading-tight tracking-tight">Services</h1>
-                <p class="text-md font-normal leading-tight tracking-tight">Manage Services for
+                <h1 class="text-4xl font-bold ">Services</h1>
+                <p class="text-md font-normal ">Manage Services for
                     your website.</p>
             </div>
             <a href={{ route('create') }}
-                class="text-md text-white dark:text-black bg-black dark:bg-white font-normal leading-tight tracking-tight flex items-center gap-2 px-4 py-2 rounded-lg">
+                class="text-md text-white dark:text-black bg-black dark:bg-white font-normal  flex items-center gap-2 px-4 py-2 rounded-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-plus-icon lucide-plus stroke-white dark:stroke-black">
@@ -23,26 +23,26 @@
         </div>
         <div class="w-full py-8">
             <input
-                class="w-[400px] bg-white dark:bg-black px-5 py-1 text-lg  rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
+                class="w-[400px] bg-white dark:bg-black px-5 py-1 text-xl  rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
                 placeholder="Search..." type="text" />
         </div>
         <div class="w-full  rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]">
             <table class="w-full">
                 <thead>
                     <tr class="border-b border-black/10 dark:border-gray-700">
-                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                        <th class="px-4 py-2 text-left text-md font-normal ">
                             Title
                         </th>
-                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                        <th class="px-4 py-2 text-left text-md font-normal ">
                             Description
                         </th>
-                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                        <th class="px-4 py-2 text-left text-md font-normal ">
                             Image
                         </th>
-                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                        <th class="px-4 py-2 text-left text-md font-normal ">
                             Date
                         </th>
-                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                        <th class="px-4 py-2 text-left text-md font-normal ">
                             Action
                         </th>
                     </tr>

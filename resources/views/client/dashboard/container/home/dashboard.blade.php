@@ -9,7 +9,7 @@
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium leading-tight tracking-tighte text-black dark:text-white">My
+                        <h2 class="text-xl font-medium e text-black dark:text-white">My
                             Loan Application</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -21,13 +21,13 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="text-3xl text-black dark:text-white leading-tight tracking-tight font-bold">
+                        <span class="text-3xl text-black dark:text-white  font-bold">
                             +{{ 12 }}
                         </span>
                     </div>
                     <div class="flex items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-arrow-up-icon lucide-arrow-up stroke-green-500">
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
@@ -42,10 +42,10 @@
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium leading-tight tracking-tighte text-black dark:text-white">My
+                        <h2 class="text-xl font-medium e text-black dark:text-white">My
                             Inquries</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-layers2-icon lucide-layers-2 stroke-black dark:stroke-white">
                             <path
                                 d="M13 13.74a2 2 0 0 1-2 0L2.5 8.87a1 1 0 0 1 0-1.74L11 2.26a2 2 0 0 1 2 0l8.5 4.87a1 1 0 0 1 0 1.74z" />
@@ -54,13 +54,13 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="text-3xl text-black dark:text-white leading-tight tracking-tight font-bold">
+                        <span class="text-3xl text-black dark:text-white  font-bold">
                             +{{ 12 }}
                         </span>
                     </div>
                     <div class="flex items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-arrow-up-icon lucide-arrow-up stroke-green-500">
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
@@ -75,10 +75,10 @@
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium leading-tight tracking-tighte text-black dark:text-white">Accepted
+                        <h2 class="text-xl font-medium e text-black dark:text-white">Accepted
                             Application</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-dock-icon lucide-dock stroke-black dark:stroke-white">
                             <path d="M2 8h20" />
                             <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -86,13 +86,13 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="text-3xl text-black dark:text-white leading-tight tracking-tight font-bold">
+                        <span class="text-3xl text-black dark:text-white  font-bold">
                             +{{ 0 }}
                         </span>
                     </div>
                     <div class="flex items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-arrow-up-icon lucide-arrow-up stroke-green-500">
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
@@ -110,13 +110,13 @@
                 <div class="flex flex-col gap-5">
                     <div class="w-full flex items-center justify-between gap-4 pb-2">
                         <div class="flex flex-col">
-                            <h1 class="text-4xl font-bold leading-tight tracking-tight">My Inquries</h1>
+                            <h1 class="text-4xl font-bold ">My Inquries</h1>
                         </div>
                     </div>
                     <div
                         class="w-full rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]">
                         @if ($bookings->isEmpty())
-                            <p class="text-md px-4 py-2.5 font-normal leading-tight tracking-tight">You haven't submitted
+                            <p class="text-md px-4 py-2.5 font-normal ">You haven't submitted
                                 any inquiries
                                 yet.
                             </p>
@@ -124,16 +124,16 @@
                             <table class="w-full">
                                 <thead>
                                     <tr class="border-b border-black/10 dark:border-gray-700">
-                                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                                        <th class="px-4 py-2 text-left text-md font-normal ">
                                             Service
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                                        <th class="px-4 py-2 text-left text-md font-normal ">
                                             Submited On
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                                        <th class="px-4 py-2 text-left text-md font-normal ">
                                             Message
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                                        <th class="px-4 py-2 text-left text-md font-normal ">
                                             Date
                                         </th>
                                     </tr>
@@ -158,13 +158,13 @@
                 <div class="flex flex-col gap-5">
                     <div class="w-full flex items-center justify-between gap-4 pb-2">
                         <div class="flex flex-col">
-                            <h1 class="text-4xl font-bold leading-tight tracking-tight">My Loan Application</h1>
+                            <h1 class="text-4xl font-bold ">My Loan Application</h1>
                         </div>
                     </div>
                     <div
                         class="w-full rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]">
                         @if ($loan_applications->isEmpty())
-                            <p class="text-md px-4 py-2.5 font-normal leading-tight tracking-tight">You haven't submitted
+                            <p class="text-md px-4 py-2.5 font-normal ">You haven't submitted
                                 any loan
                                 applications
                                 yet.
@@ -173,16 +173,16 @@
                             <table class="w-full">
                                 <thead>
                                     <tr class="border-b border-black/10 dark:border-gray-700">
-                                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                                        <th class="px-4 py-2 text-left text-md font-normal ">
                                             Compony Name
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                                        <th class="px-4 py-2 text-left text-md font-normal ">
                                             Broker Name
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                                        <th class="px-4 py-2 text-left text-md font-normal ">
                                             download pdf
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal leading-tight tracking-tight">
+                                        <th class="px-4 py-2 text-left text-md font-normal ">
                                             Submited On
                                         </th>
                                     </tr>

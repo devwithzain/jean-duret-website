@@ -14,6 +14,6 @@
                fill="#233D92" />
          </g>
       </svg>
-      <h1 class="text-white text-7xl font-semibold leading-tight tracking-tight relative z-50">About Us</h1>
+      <h1 class="text-white text-7xl font-semibold  relative z-50">About Us</h1>
    </div>
 </div>

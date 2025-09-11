@@ -1,41 +1,39 @@
 <div class="w-full flex items-center justify-center p-20">
    <div class="flex flex-col gap-20">
       <div class="w-full flex items-center justify-center flex-col gap-3">
-         <h1 class="text-[#000D5180] text-lg font-normal leading-tight tracking-tight">
+         <h1 class="text-[#000D51] text-xl font-normal ">
             Divine funding solution
          </h1>
-         <h1 class="text-[#000D51] text-7xl font-semibold leading-tight tracking-tight">Driven by Expertise. Focused
+         <h1 class="text-[#000D51] text-7xl font-semibold ">Driven by Expertise. Focused
             on
             Your Success.</h1>
       </div>
-      <div class="flex items-center justify-center gap-20">
-         <div class="w-[300px] flex items-center justify-center flex-col gap-5">
-            <img src={{ asset('assets/whatWeDo.png') }} alt="heroGirl" class="w-20 object-cover">
-            <h1 class="text-[#000D51] text-3xl font-medium leading-tight tracking-tight">
+      <div class="flex items-start justify-center gap-20">
+         <div class="flex items-center justify-center flex-col gap-5">
+            <img src={{ asset('assets/whatWeDo.png') }} alt="heroGirl" class="w-auto object-cover">
+            <h1 class="text-[#000D51] text-3xl font-medium ">
                What we do
             </h1>
-            <p class="text-[#000D5180] text-center text-lg font-normal leading-tight tracking-tight">Lorem Ipsum is
-               simply dummy
-               text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-               ever since</p>
+            <p class="text-[#000D51] text-center text-xl font-normal ">We guide buying,
+               selling, and funding. We provide private loans with closings and no credit checks. We connect sellers
+               and investors with opportunities.</p>
          </div>
-         <div class="w-[300px] flex items-center justify-center flex-col gap-5">
-            <img src={{ asset('assets/howWeWork.png') }} alt="heroGirl" class="w-20 object-cover">
-            <h1 class="text-[#000D51] text-3xl font-medium leading-tight tracking-tight">
+         <div class="flex items-center justify-center flex-col gap-5">
+            <img src={{ asset('assets/howWeWork.png') }} alt="heroGirl" class="w-auto object-cover">
+            <h1 class="text-[#000D51] text-3xl font-medium ">
                How We Work
             </h1>
-            <p class="text-[#000D5180] text-center text-lg font-normal leading-tight tracking-tight">Lorem Ipsum is
-               simply dummy
-               text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-               ever since</p>
+            <p class="text-[#000D51] text-center text-xl font-normal ">We listen to your
+               goals and map simple steps. You stay in control. We move fast, skip credit checks, and
+               keep you
+               updated.</p>
          </div>
-         <div class="w-[300px] flex items-center justify-center flex-col gap-5">
-            <img src={{ asset('assets/whereWeWork.png') }} alt="heroGirl" class="w-20 object-cover">
-            <h1 class="text-[#000D51] text-3xl font-medium leading-tight tracking-tight">Where We Work</h1>
-            <p class="text-[#000D5180] text-center text-lg font-normal leading-tight tracking-tight">Lorem Ipsum is
-               simply dummy
-               text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-               ever since</p>
+         <div class="flex items-center justify-center flex-col gap-5">
+            <img src={{ asset('assets/whereWeWork.png') }} alt="heroGirl" class="w-auto object-cover">
+            <h1 class="text-[#000D51] text-3xl font-medium ">Where We Work</h1>
+            <p class="text-[#000D51] text-center text-xl font-normal ">We support residential and commercial projects.
+               We help with rentals, new construction, and short-term stays. We
+               also fund land, mixed-use, and industrial deals.</p>
          </div>
       </div>
    </div>

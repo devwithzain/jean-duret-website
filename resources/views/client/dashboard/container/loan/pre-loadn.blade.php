@@ -8,56 +8,47 @@
             <div x-data="{ step: 1 }" class="w-full">
                 <div class="w-full flex flex-col pb-4 gap-4 border-b border-black dark:border-gray-700">
                     <div class="w-full flex flex-col gap-4">
-                        <h1 class="text-2xl  text-black dark:text-white leading-tight tracking-tight font-medium">
+                        <h1 class="text-2xl  text-black dark:text-white  font-medium">
                             STEPS FORM
                         </h1>
                         <div>
-                            <h1 class="text-4xl text-[#000D51] dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-4xl text-[#000D51] dark:text-white  font-semibold">
                                 PRE-LOAN APPLICATION</h1>
                         </div>
                         <div>
-                            <p class=" text-lg text-black dark:text-white leading-normal font-medium">Whoever is
+                            <p class=" text-xl text-black dark:text-white leading-normal font-medium">Whoever is
                                 careless with the truth in small matters cannot be trusted with important matters. <span
-                                    class="text-lg text-black dark:text-white leading-normal font-semibold">Albert
+                                    class="text-xl text-black dark:text-white leading-normal font-semibold">Albert
                                     Einstein</span>
                                 Please, take a moment to analyze all the information needed and fill out the pre-loan
                                 application
                                 to the best of your knowledge. “Trust, but verify.” <span
-                                    class="text-lg text-black dark:text-white leading-normal font-semibold">Ronald
+                                    class="text-xl text-black dark:text-white leading-normal font-semibold">Ronald
                                     Reagan.</span>
                             </p>
-                            <p class=" text-lg text-black dark:text-white leading-normal font-medium">Providing wrong
+                            <p class=" text-xl text-black dark:text-white leading-normal font-medium">Providing wrong
                                 or incomplete information may result in a request for further evidence causing a delay in
                                 the
                                 decision-making process or a complete denial of funding.</p>
                         </div>
                         <div class="flex items-center gap-2">
-                            <button type="button"
-                                :class="step === 1 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
+                            <button type="button" :class="step === 1 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
                                 class="px-4 py-2 rounded-lg font-semibold" @click="step = 1">Step 1</button>
-                            <button type="button"
-                                :class="step === 2 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
+                            <button type="button" :class="step === 2 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
                                 class="px-4 py-2 rounded-lg font-semibold" @click="step = 2">Step 2</button>
-                            <button type="button"
-                                :class="step === 3 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
+                            <button type="button" :class="step === 3 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
                                 class="px-4 py-2 rounded-lg font-semibold" @click="step = 3">Step 3</button>
-                            <button type="button"
-                                :class="step === 4 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
+                            <button type="button" :class="step === 4 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
                                 class="px-4 py-2 rounded-lg font-semibold" @click="step = 4">Step 4</button>
-                            <button type="button"
-                                :class="step === 5 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
+                            <button type="button" :class="step === 5 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
                                 class="px-4 py-2 rounded-lg font-semibold" @click="step = 5">Step 5</button>
-                            <button type="button"
-                                :class="step === 6 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
+                            <button type="button" :class="step === 6 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
                                 class="px-4 py-2 rounded-lg font-semibold" @click="step = 6">Step 6</button>
-                            <button type="button"
-                                :class="step === 7 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
+                            <button type="button" :class="step === 7 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
                                 class="px-4 py-2 rounded-lg font-semibold" @click="step = 7">Step 7</button>
-                            <button type="button"
-                                :class="step === 8 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
+                            <button type="button" :class="step === 8 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
                                 class="px-4 py-2 rounded-lg font-semibold" @click="step = 8">Step 8</button>
-                            <button type="button"
-                                :class="step === 9 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
+                            <button type="button" :class="step === 9 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
                                 class="px-4 py-2 rounded-lg font-semibold" @click="step = 9">Step 9</button>
                             <button type="button"
                                 :class="step === 10 ? 'bg-[#000D51] text-white' : 'bg-gray-200 text-black'"
@@ -68,43 +59,43 @@
                 <div class="w-full flex flex-col gap-4 pt-4">
                     <div class="w-fit bg-[#000D51] px-8 py-3">
                         <template x-if="step === 1">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 1. BROKER INFORMATION</h1>
                         </template>
                         <template x-if="step === 2">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 2. LOAN TYPE AND TERMS</h1>
                         </template>
                         <template x-if="step === 3">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 3. PROPERTY INFORMATION</h1>
                         </template>
                         <template x-if="step === 4">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 4. BORROWING ENTITY INFORMATION</h1>
                         </template>
                         <template x-if="step === 5">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 5. PERSON ELIGIBLE TO BIND ENTITY</h1>
                         </template>
                         <template x-if="step === 6">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 6. ASSETS</h1>
                         </template>
                         <template x-if="step === 7">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 7. LOAN SUMMARY OVERVIEW AND EXIT STRATEGY</h1>
                         </template>
                         <template x-if="step === 8">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 8. PERSONAL GUARANTOR INFORMATION</h1>
                         </template>
                         <template x-if="step === 9">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 9. DECLARATIONS BORROWER</h1>
                         </template>
                         <template x-if="step === 10">
-                            <h1 class="text-3xl  text-white dark:text-white leading-tight tracking-tight font-semibold">
+                            <h1 class="text-3xl  text-white dark:text-white  font-semibold">
                                 10. GUARANTOR SIGNATURE</h1>
                         </template>
                     </div>
@@ -115,14 +106,13 @@
                         <div x-show="step === 1" class="flex flex-col gap-8">
                             <div class="w-full flex items-center gap-4">
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="company_name"
-                                        class="text-md font-normal leading-tight tracking-tight">Company
+                                    <label for="company_name" class="text-md font-normal ">Company
                                         Name:</label>
                                     <input id="company_name" name="company_name" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="broker_name" class="text-md font-normal leading-tight tracking-tight">Broker
+                                    <label for="broker_name" class="text-md font-normal ">Broker
                                         Name:</label>
                                     <input id="broker_name" name="broker_name" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -130,15 +120,13 @@
                             </div>
                             <div class="w-full flex items-center gap-4">
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="broker_email"
-                                        class="text-md font-normal leading-tight tracking-tight">Broker
+                                    <label for="broker_email" class="text-md font-normal ">Broker
                                         Email:</label>
                                     <input id="broker_email" name="broker_email" type="email"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="broker_phone"
-                                        class="text-md font-normal leading-tight tracking-tight">Broker
+                                    <label for="broker_phone" class="text-md font-normal ">Broker
                                         Phone:</label>
                                     <input id="broker_phone" name="broker_phone" type="number"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -153,22 +141,19 @@
                         <div x-show="step === 2" class="flex flex-col gap-8">
                             <div class="w-full flex items-center gap-4">
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="purchase_price"
-                                        class="text-md font-normal leading-tight tracking-tight">Purchase Price
+                                    <label for="purchase_price" class="text-md font-normal ">Purchase Price
                                         if you're purchasing:</label>
                                     <input id="purchase_price" name="purchase_price" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="desired_loan_amount"
-                                        class="text-md font-normal leading-tight tracking-tight">Desired Loan
+                                    <label for="desired_loan_amount" class="text-md font-normal ">Desired Loan
                                         Amount:</label>
                                     <input id="desired_loan_amount" name="desired_loan_amount" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="loan_purpose"
-                                        class="text-md font-normal leading-tight tracking-tight">Purpose of the
+                                    <label for="loan_purpose" class="text-md font-normal ">Purpose of the
                                         loan:</label>
                                     <input id="loan_purpose" name="loan_purpose" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -176,8 +161,7 @@
                             </div>
                             <div class="w-full flex flex-col gap-2">
                                 <div class="flex flex-col gap-2">
-                                    <label for="loan_term_type"
-                                        class="text-md font-normal leading-tight tracking-tight">Desired
+                                    <label for="loan_term_type" class="text-md font-normal ">Desired
                                         Loan
                                         term:</label>
                                     <div class="flex flex-col gap-2">
@@ -281,7 +265,7 @@
                             }
 
                             // Handle months selection
-                            document.addEventListener('change', function(e) {
+                            document.addEventListener('change', function (e) {
                                 if (e.target.name === 'loan_term') {
                                     clearOtherSelections('months');
                                     console.log('Selected loan term (months):', e.target.value);
@@ -341,8 +325,7 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="property_street_address"
-                                            class="text-md font-normal leading-tight tracking-tight">Subject
+                                        <label for="property_street_address" class="text-md font-normal ">Subject
                                             Property Street Address:</label>
                                         <input id="property_street_address" name="property_street_address" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -350,58 +333,51 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="property_city"
-                                            class="text-md font-normal leading-tight tracking-tight">City:</label>
+                                        <label for="property_city" class="text-md font-normal ">City:</label>
                                         <input id="property_city" name="property_city" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="property_state"
-                                            class="text-md font-normal leading-tight tracking-tight">State:</label>
+                                        <label for="property_state" class="text-md font-normal ">State:</label>
                                         <input id="property_state" name="property_state" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="property_zip"
-                                            class="text-md font-normal leading-tight tracking-tight">Zip:</label>
+                                        <label for="property_zip" class="text-md font-normal ">Zip:</label>
                                         <input id="property_zip" name="property_zip" type="email"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
-                                    <p class="text-md font-normal leading-tight tracking-tight">Does the property generate
+                                    <p class="text-md font-normal ">Does the property generate
                                         income?</p>
                                     <div class="flex items-center gap-1.5">
-                                        <label for="property_generates_income_yes"
-                                            class="text-md font-normal leading-tight tracking-tight">Yes</label>
-                                        <input id="property_generates_income_yes" name="property_generates_income"
-                                            value="1" type="radio" class="rounded-full" />
+                                        <label for="property_generates_income_yes" class="text-md font-normal ">Yes</label>
+                                        <input id="property_generates_income_yes" name="property_generates_income" value="1"
+                                            type="radio" class="rounded-full" />
                                     </div>
                                     <div class="flex items-center gap-1.5">
-                                        <label for="property_generates_income_no"
-                                            class="text-md font-normal leading-tight tracking-tight">No</label>
-                                        <input id="property_generates_income_no" name="property_generates_income"
-                                            value="0" type="radio" class="rounded-full" />
+                                        <label for="property_generates_income_no" class="text-md font-normal ">No</label>
+                                        <input id="property_generates_income_no" name="property_generates_income" value="0"
+                                            type="radio" class="rounded-full" />
                                     </div>
                                     <div class="flex items-center gap-1.5">
-                                        <label for="property_generates_income_will"
-                                            class="text-md font-normal leading-tight tracking-tight">It will</label>
+                                        <label for="property_generates_income_will" class="text-md font-normal ">It
+                                            will</label>
                                         <input id="property_generates_income_will" name="property_generates_income"
                                             value="2" type="radio" class="rounded-full" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="gross_monthly_rent"
-                                            class="text-md font-normal leading-tight tracking-tight">Actual or
+                                        <label for="gross_monthly_rent" class="text-md font-normal ">Actual or
                                             expected Gross Monthly Rent:
                                         </label>
                                         <input id="gross_monthly_rent" name="gross_monthly_rent" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="expected_gross_monthly_rent"
-                                            class="text-md font-normal leading-tight tracking-tight">Actual or
+                                        <label for="expected_gross_monthly_rent" class="text-md font-normal ">Actual or
                                             expected Gross Monthly Rent:
                                         </label>
                                         <input id="expected_gross_monthly_rent" name="expected_gross_monthly_rent"
@@ -411,24 +387,21 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="number_of_units"
-                                            class="text-md font-normal leading-tight tracking-tight">Number of
+                                        <label for="number_of_units" class="text-md font-normal ">Number of
                                             Units
                                         </label>
                                         <input id="number_of_units" name="number_of_units" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="yearly_property_taxes"
-                                            class="text-md font-normal leading-tight tracking-tight">Yearly
+                                        <label for="yearly_property_taxes" class="text-md font-normal ">Yearly
                                             property taxes (estimate):
                                         </label>
                                         <input id="yearly_property_taxes" name="yearly_property_taxes" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="yearly_hoa_dues"
-                                            class="text-md font-normal leading-tight tracking-tight">Yearly HOA
+                                        <label for="yearly_hoa_dues" class="text-md font-normal ">Yearly HOA
                                             Dues:
                                         </label>
                                         <input id="yearly_hoa_dues" name="yearly_hoa_dues" type="text"
@@ -437,16 +410,14 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="anticipated_rehab_cost"
-                                            class="text-md font-normal leading-tight tracking-tight">Cost of
+                                        <label for="anticipated_rehab_cost" class="text-md font-normal ">Cost of
                                             Anticipated Rehab:
                                         </label>
                                         <input id="anticipated_rehab_cost" name="anticipated_rehab_cost" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="after_repair_value"
-                                            class="text-md font-normal leading-tight tracking-tight">Estimated
+                                        <label for="after_repair_value" class="text-md font-normal ">Estimated
                                             After Repair Value:
                                         </label>
                                         <input id="after_repair_value" name="after_repair_value" type="text"
@@ -455,16 +426,14 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="original_cost"
-                                            class="text-md font-normal leading-tight tracking-tight">Original
+                                        <label for="original_cost" class="text-md font-normal ">Original
                                             Cost (If refinance)
                                         </label>
                                         <input id="original_cost" name="original_cost" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="as_is_value"
-                                            class="text-md font-normal leading-tight tracking-tight">Estimated
+                                        <label for="as_is_value" class="text-md font-normal ">Estimated
                                             "AS IS" Value:
                                         </label>
                                         <input id="as_is_value" name="as_is_value" type="text"
@@ -484,8 +453,7 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="entity_name"
-                                            class="text-md font-normal leading-tight tracking-tight">Entity
+                                        <label for="entity_name" class="text-md font-normal ">Entity
                                             Name:</label>
                                         <input id="entity_name" name="entity_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -493,15 +461,13 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="federal_ein"
-                                            class="text-md font-normal leading-tight tracking-tight">Federal
+                                        <label for="federal_ein" class="text-md font-normal ">Federal
                                             EIN:</label>
                                         <input id="federal_ein" name="federal_ein" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="state_registered"
-                                            class="text-md font-normal leading-tight tracking-tight">State
+                                        <label for="state_registered" class="text-md font-normal ">State
                                             Registered:
                                         </label>
                                         <input id="state_registered" name="state_registered" type="email"
@@ -521,14 +487,12 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_name_1"
-                                            class="text-md font-normal leading-tight tracking-tight">Name:</label>
+                                        <label for="bind_entity_name_1" class="text-md font-normal ">Name:</label>
                                         <input id="bind_entity_name_1" name="bind_entity_name_1" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_percent_1"
-                                            class="text-md font-normal leading-tight tracking-tight">Percent %
+                                        <label for="bind_entity_percent_1" class="text-md font-normal ">Percent %
                                             owned
                                         </label>
                                         <input id="bind_entity_percent_1" name="bind_entity_percent_1" type="email"
@@ -537,14 +501,12 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_name_2"
-                                            class="text-md font-normal leading-tight tracking-tight">Name:</label>
+                                        <label for="bind_entity_name_2" class="text-md font-normal ">Name:</label>
                                         <input id="bind_entity_name_2" name="bind_entity_name_2" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_percent_2"
-                                            class="text-md font-normal leading-tight tracking-tight">Percent %
+                                        <label for="bind_entity_percent_2" class="text-md font-normal ">Percent %
                                             owned
                                         </label>
                                         <input id="bind_entity_percent_2" name="bind_entity_percent_2" type="email"
@@ -553,14 +515,12 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_name_3"
-                                            class="text-md font-normal leading-tight tracking-tight">Name:</label>
+                                        <label for="bind_entity_name_3" class="text-md font-normal ">Name:</label>
                                         <input id="bind_entity_name_3" name="bind_entity_name_3" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_percent_3"
-                                            class="text-md font-normal leading-tight tracking-tight">Percent %
+                                        <label for="bind_entity_percent_3" class="text-md font-normal ">Percent %
                                             owned
                                         </label>
                                         <input id="bind_entity_percent_3" name="bind_entity_percent_3" type="email"
@@ -580,8 +540,7 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="available_cash_to_close"
-                                            class="text-md font-normal leading-tight tracking-tight">Tot.
+                                        <label for="available_cash_to_close" class="text-md font-normal ">Tot.
                                             Available cash to close: (Available liquid cash)</label>
                                         <input id="available_cash_to_close" name="available_cash_to_close" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -589,38 +548,33 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_name"
-                                            class="text-md font-normal leading-tight tracking-tight">Bank 1
+                                        <label for="bank_1_name" class="text-md font-normal ">Bank 1
                                             Name:</label>
                                         <input id="bank_1_name" name="bank_1_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_acc"
-                                            class="text-md font-normal leading-tight tracking-tight">Acc.# (Last
+                                        <label for="bank_1_acc" class="text-md font-normal ">Acc.# (Last
                                             3 Dig.)
                                         </label>
                                         <input id="bank_1_acc" name="bank_1_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_amount"
-                                            class="text-md font-normal leading-tight tracking-tight">Amount:
+                                        <label for="bank_1_amount" class="text-md font-normal ">Amount:
                                         </label>
                                         <input id="bank_1_amount" name="bank_1_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_other_assets"
-                                            class="text-md font-normal leading-tight tracking-tight">Other
+                                        <label for="bank_1_other_assets" class="text-md font-normal ">Other
                                             Assets:
                                         </label>
                                         <input id="bank_1_other_assets" name="bank_1_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_value"
-                                            class="text-md font-normal leading-tight tracking-tight">Value:
+                                        <label for="bank_1_value" class="text-md font-normal ">Value:
                                         </label>
                                         <input id="bank_1_value" name="bank_1_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -628,38 +582,33 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_name"
-                                            class="text-md font-normal leading-tight tracking-tight">Bank 2
+                                        <label for="bank_2_name" class="text-md font-normal ">Bank 2
                                             Name:</label>
                                         <input id="bank_2_name" name="bank_2_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_acc"
-                                            class="text-md font-normal leading-tight tracking-tight">Acc.# (Last
+                                        <label for="bank_2_acc" class="text-md font-normal ">Acc.# (Last
                                             3 Dig.)
                                         </label>
                                         <input id="bank_2_acc" name="bank_2_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_amount"
-                                            class="text-md font-normal leading-tight tracking-tight">Amount:
+                                        <label for="bank_2_amount" class="text-md font-normal ">Amount:
                                         </label>
                                         <input id="bank_2_amount" name="bank_2_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_other_assets"
-                                            class="text-md font-normal leading-tight tracking-tight">Other
+                                        <label for="bank_2_other_assets" class="text-md font-normal ">Other
                                             Assets:
                                         </label>
                                         <input id="bank_2_other_assets" name="bank_2_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_value"
-                                            class="text-md font-normal leading-tight tracking-tight">Value:
+                                        <label for="bank_2_value" class="text-md font-normal ">Value:
                                         </label>
                                         <input id="bank_2_value" name="bank_2_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -667,38 +616,33 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_name"
-                                            class="text-md font-normal leading-tight tracking-tight">Bank 3
+                                        <label for="bank_3_name" class="text-md font-normal ">Bank 3
                                             Name:</label>
                                         <input id="bank_3_name" name="bank_3_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_acc"
-                                            class="text-md font-normal leading-tight tracking-tight">Acc.# (Last
+                                        <label for="bank_3_acc" class="text-md font-normal ">Acc.# (Last
                                             3 Dig.)
                                         </label>
                                         <input id="bank_3_acc" name="bank_3_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_amount"
-                                            class="text-md font-normal leading-tight tracking-tight">Amount:
+                                        <label for="bank_3_amount" class="text-md font-normal ">Amount:
                                         </label>
                                         <input id="bank_3_amount" name="bank_3_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_other_assets"
-                                            class="text-md font-normal leading-tight tracking-tight">Other
+                                        <label for="bank_3_other_assets" class="text-md font-normal ">Other
                                             Assets:
                                         </label>
                                         <input id="bank_3_other_assets" name="bank_3_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_value"
-                                            class="text-md font-normal leading-tight tracking-tight">Value:
+                                        <label for="bank_3_value" class="text-md font-normal ">Value:
                                         </label>
                                         <input id="bank_3_value" name="bank_3_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -706,38 +650,33 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_name"
-                                            class="text-md font-normal leading-tight tracking-tight">Bank 4
+                                        <label for="bank_4_name" class="text-md font-normal ">Bank 4
                                             Name:</label>
                                         <input id="bank_4_name" name="bank_4_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_acc"
-                                            class="text-md font-normal leading-tight tracking-tight">Acc.# (Last
+                                        <label for="bank_4_acc" class="text-md font-normal ">Acc.# (Last
                                             3 Dig.)
                                         </label>
                                         <input id="bank_4_acc" name="bank_4_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_amount"
-                                            class="text-md font-normal leading-tight tracking-tight">Amount:
+                                        <label for="bank_4_amount" class="text-md font-normal ">Amount:
                                         </label>
                                         <input id="bank_4_amount" name="bank_4_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_other_assets"
-                                            class="text-md font-normal leading-tight tracking-tight">Other
+                                        <label for="bank_4_other_assets" class="text-md font-normal ">Other
                                             Assets:
                                         </label>
                                         <input id="bank_4_other_assets" name="bank_4_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_value"
-                                            class="text-md font-normal leading-tight tracking-tight">Value:
+                                        <label for="bank_4_value" class="text-md font-normal ">Value:
                                         </label>
                                         <input id="bank_4_value" name="bank_4_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -756,8 +695,7 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="find_property"
-                                            class="text-md font-normal leading-tight tracking-tight">How did you
+                                        <label for="find_property" class="text-md font-normal ">How did you
                                             find this property?</label>
                                         <textarea id="find_property" name="find_property" type="text" rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20"></textarea>
@@ -765,8 +703,7 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="payoff_strategy"
-                                            class="text-md font-normal leading-tight tracking-tight">How do you
+                                        <label for="payoff_strategy" class="text-md font-normal ">How do you
                                             intend to pay off this loan?
                                         </label>
                                         <textarea id="payoff_strategy" name="payoff_strategy" type="text" rows="5"
@@ -775,8 +712,7 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex items-center gap-1.5">
-                                        <label for="rehab_time"
-                                            class="text-md text-nowrap font-normal leading-tight tracking-tight">How long
+                                        <label for="rehab_time" class="text-md text-nowrap font-normal ">How long
                                             will it take you to rehab (if rehab loan)? (in months)
                                         </label>
                                         <input id="rehab_time" name="rehab_time" type="text" rows="5"
@@ -785,8 +721,7 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="funds_usage"
-                                            class="text-md font-normal leading-tight tracking-tight">How will you
+                                        <label for="funds_usage" class="text-md font-normal ">How will you
                                             use the funds provided by this loan?
                                         </label>
                                         <textarea id="funds_usage" name="funds_usage" type="text" rows="5"
@@ -795,8 +730,7 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex items-center gap-1.5">
-                                        <label for="fix_flip_profit"
-                                            class="text-md text-nowrap font-normal leading-tight tracking-tight">Fix&Flip:
+                                        <label for="fix_flip_profit" class="text-md text-nowrap font-normal ">Fix&Flip:
                                             How much
                                             will you profit?
                                         </label>
@@ -804,23 +738,21 @@
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20">
                                     </div>
                                     <div class="w-full flex items-center gap-1.5">
-                                        <label for="hold_rent_income"
-                                            class="text-md text-nowrap font-normal leading-tight tracking-tight">Hold &
+                                        <label for="hold_rent_income" class="text-md text-nowrap font-normal ">Hold &
                                             Rent: Expected
                                             monthly net income
                                         </label>
-                                        <input id="hold_rent_income" name="hold_rent_income" type="text"
-                                            rows="5"
+                                        <input id="hold_rent_income" name="hold_rent_income" type="text" rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20">
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="experience_description"
-                                            class="text-md font-normal leading-tight tracking-tight">Do you have
+                                        <label for="experience_description" class="text-md font-normal ">Do you have
                                             any Fix & Flip, rehabbing or renting experience? If yes, please describe
                                         </label>
-                                        <textarea id="experience_description" name="experience_description" type="text" rows="5"
+                                        <textarea id="experience_description" name="experience_description" type="text"
+                                            rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20"></textarea>
                                     </div>
                                 </div>
@@ -835,7 +767,7 @@
                         <!-- Step 8: Additional Information -->
                         <div x-show="step === 8" class="flex flex-col gap-8">
                             <div class="w-full flex flex-col items-center gap-4">
-                                <h2 class="font-semibold text-lg mt-6">GUARANTOR FULL NAME (INCLUDE JR. OR SIR. AS
+                                <h2 class="font-semibold text-xl mt-6">GUARANTOR FULL NAME (INCLUDE JR. OR SIR. AS
                                     APPLICABLE):
                                 </h2>
                                 <div class="w-full flex items-center gap-4">
@@ -879,8 +811,7 @@
                                     <div class="w-full flex flex-col gap-1.5">
                                         <label for="guarantor_street_address" class="text-md font-normal">Street
                                             Address:</label>
-                                        <input type="text" name="guarantor_street_address"
-                                            id="guarantor_street_address"
+                                        <input type="text" name="guarantor_street_address" id="guarantor_street_address"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                 </div>
@@ -903,7 +834,7 @@
                                     </div>
                                 </div>
 
-                                <h2 class="font-semibold text-lg mt-6">EMPLOYER INFORMATION:</h2>
+                                <h2 class="font-semibold text-xl mt-6">EMPLOYER INFORMATION:</h2>
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
@@ -995,13 +926,13 @@
                                             <p class="text-black dark:text-white font-medium">{{ $question }}</p>
                                             <div class="flex items-center gap-4 mt-2 sm:mt-0">
                                                 <label for="question_{{ $index }}" class="flex items-center gap-1">
-                                                    <input type="radio" name="question_{{ $index }}"
-                                                        value="yes" class="text-blue-600">
+                                                    <input type="radio" name="question_{{ $index }}" value="yes"
+                                                        class="text-blue-600">
                                                     Yes
                                                 </label>
                                                 <label for="question_{{ $index }}" class="flex items-center gap-1">
-                                                    <input type="radio" name="question_{{ $index }}"
-                                                        value="no" class="text-blue-600" checked>
+                                                    <input type="radio" name="question_{{ $index }}" value="no"
+                                                        class="text-blue-600" checked>
                                                     No
                                                 </label>
                                             </div>
@@ -1074,7 +1005,7 @@
                                         <input type="hidden" name="authorization_signature" id="signature-input_9">
                                     </div>
                                     <script>
-                                        (function() {
+                                        (function () {
                                             const canvas = document.getElementById('signature-pad_9');
                                             const clearBtn = document.getElementById('clear-signature_9');
                                             const signatureInput = document.getElementById('signature-input_9');
@@ -1301,7 +1232,7 @@
                                 </div>
                             </div>
                             <script>
-                                (function() {
+                                (function () {
                                     const canvas = document.getElementById('signature-pad');
                                     const clearBtn = document.getElementById('clear-signature');
                                     const signatureInput = document.getElementById('signature-input');

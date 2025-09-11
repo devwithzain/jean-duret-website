@@ -5,14 +5,14 @@
    <div class="w-1/2 flex flex-col gap-10 p-20">
       <div class="w-full flex flex-col gap-10">
          <div class="w-full flex flex-col gap-4">
-            <p class="text-[#000D51] text-lg font-normal leading-tight tracking-tight">Service</p>
-            <h1 class="text-[#000D51] text-7xl font-semibold leading-tight tracking-tight">{{ $service->title }}</h1>
-            <p class="text-[#000D51] text-lg font-normal leading-normal tracking-normal">
+            <p class="text-[#000D51] text-xl font-normal ">Service</p>
+            <h1 class="text-[#000D51] text-7xl font-semibold ">{{ $service->title }}</h1>
+            <p class="text-[#000D51] text-xl font-normal leading-normal tracking-normal">
                {{ $service->short_description }}
             </p>
-            <p class="text-[#000D51] text-lg font-normal leading-normal tracking-normal">{{ $service->description }}</p>
+            <p class="text-[#000D51] text-xl font-normal leading-normal tracking-normal">{{ $service->description }}</p>
             <button onclick="document.getElementById('bookingModal').style.display='block'"
-               class="w-fit cursor-pointer rounded-md text-white text-lg font-normal leading-normal tracking-normal bg-[#000D51] px-4 py-3">Book
+               class="w-fit cursor-pointer rounded-md text-white text-xl font-normal leading-normal tracking-normal bg-[#000D51] px-4 py-3">Book
                Now</button>
          </div>
       </div>
@@ -28,7 +28,7 @@
             class="w-full rounded-lg h-full object-cover">
       </div>
       <div class="w-1/2 mt-3">
-         <h3 class="text-[#000D51] text-5xl font-semibold leading-tight tracking-tight">Book Service</h3>
+         <h3 class="text-[#000D51] text-5xl font-semibold ">Book Service</h3>
          <form class="mt-4 space-y-4" method="POST" action="{{ route('book-service') }}" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="service_id" value="{{ $service->id }}">
