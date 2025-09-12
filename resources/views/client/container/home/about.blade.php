@@ -2,7 +2,7 @@
    <div class="w-1/2">
       <img src={{ asset('assets/aboutus.jpg') }} alt="aboutUsImage" class="w-full h-full object-cover">
    </div>
-   <div class="w-1/2 flex flex-col gap-8 p-20">
+   <div class="w-1/2 flex flex-col gap-8 py-5 px-20">
       <p class="text-white text-xl font-normal ">About us</p>
       <h1 class="text-white text-7xl font-semibold ">Your Goals, Our Mission</h1>
       <p class="text-white text-xl font-normal leading-normal tracking-normal">Hello, my name is Jean Robert Duret, and

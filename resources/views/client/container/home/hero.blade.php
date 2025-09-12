@@ -48,7 +48,7 @@
             </g>
          </svg>
          <img src={{ asset('assets/heroGirl.png') }} alt="heroGirl"
-            class="w-full h-full object-cover absolute -bottom-28">
+            class="w-full h-full object-contain absolute bottom-0">
       </div>
    </div>
 </div>

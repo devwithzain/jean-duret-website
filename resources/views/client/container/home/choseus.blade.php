@@ -1,8 +1,5 @@
 <div class="w-full flex items-center justify-between gap-10 bg-[#000D51]">
-   <div class="w-1/2">
-      <img src={{ asset('assets/helpinghand.jpg') }} alt="choseUsImage" class="w-full h-full object-cover">
-   </div>
-   <div class="w-1/2 flex flex-col gap-10 p-20">
+   <div class="w-1/2 flex flex-col gap-10 px-20 py-5">
       <div class="w-full flex flex-col gap-10">
          <div class="w-full flex flex-col gap-3">
             <p class="text-white text-xl font-normal">Why choose us</p>
@@ -60,5 +57,8 @@
             </div>
          </div>
       </div>
+   </div>
+   <div class="w-1/2">
+      <img src={{ asset('assets/helpinghand.jpg') }} alt="choseUsImage" class="w-full h-full object-cover">
    </div>
 </div>

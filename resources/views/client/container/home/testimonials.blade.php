@@ -22,7 +22,7 @@
                             </p>
                         </div>
                         <div class="flex flex-col">
-                            <h1 class="text-[#000D51] text-2xl font-semibold ">Lorene Hudson
+                            <h1 class="text-[#000D51] text-2xl font-semibold ">James Miller
                             </h1>
                             <p class="text-[#00000080] text-xl font-normal leading-normal tracking-normal">Homeowner</p>
                         </div>
@@ -48,7 +48,7 @@
                             </p>
                         </div>
                         <div class="flex flex-col">
-                            <h1 class="text-[#000D51] text-2xl font-semibold ">John Doe</h1>
+                            <h1 class="text-[#000D51] text-2xl font-semibold ">John Anderson</h1>
                             <p class="text-[#00000080] text-xl font-normal leading-normal tracking-normal">Seller
                             </p>
                         </div>
@@ -74,8 +74,7 @@
                             </p>
                         </div>
                         <div class="flex flex-col">
-                            <h1 class="text-[#000D51] text-2xl font-semibold ">Jane
-                                Smith</h1>
+                            <h1 class="text-[#000D51] text-2xl font-semibold ">William Harris</h1>
                             <p class="text-[#00000080] text-xl font-normal leading-normal tracking-normal">
                                 Investor</p>
                         </div>
