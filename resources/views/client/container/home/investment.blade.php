@@ -1,22 +1,22 @@
-<div class="w-full flex items-center justify-around px-20 py-20">
+<div class="w-full flex items-center justify-around padding-x padding-y">
    <div class="flex flex-col gap-10">
-      <div class="w-full flex items-center justify-around gap-10">
-         <div class="w-full flex flex-col gap-3">
-            <p class="text-[#000D51] text-xl font-normal">Investment sectors</p>
-            <h1 class="text-[#000D51] text-7xl font-semibold">Explore Investment
+      <div class="w-full flex items-center justify-around gap-10 xm:flex-col sm:flex-col">
+         <div>
+            <p class="text-[#000D51] paragraph font-normal">Investment sectors</p>
+            <h1 class="text-[#000D51] heading font-semibold">Explore Investment
                Options
                That Build Wealth</h1>
          </div>
          <div class="w-full flex items-center gap-10">
             <img src={{ asset('assets/arrowRight.svg') }} alt="heroGirl" class="w-20 h-20 object-cover">
-            <p class="text-[#000D51] text-xl font-normal">
+            <p class="text-[#000D51] paragraph font-normal">
                Discover a diverse range of real estate investment opportunities tailored to help you grow and secure
                your
                wealth for the future.
             </p>
          </div>
       </div>
-      <div class="w-full grid grid-cols-4 gap-10">
+      <div class="w-full grid grid-cols-4 gap-10 xm:grid-cols-1 sm:grid-cols-1">
          <div class="w-full h-[400px] shadow-[0_0_15px_rgba(0,0,0,0.15)] relative group overflow-hidden">
             <img src={{ asset('assets/residental.png') }} alt="heroGirl" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

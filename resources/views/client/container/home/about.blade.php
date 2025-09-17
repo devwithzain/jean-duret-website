@@ -1,11 +1,14 @@
-<div class="w-full flex items-center justify-between gap-10 bg-[#000D51]">
-   <div class="w-1/2">
+<div class="w-full flex items-center justify-between gap-10 bg-[#000D51] xm:flex-col-reverse sm:flex-col-reverse">
+   <div class="w-1/2 xm:w-full sm:w-full">
       <img src={{ asset('assets/aboutus.jpg') }} alt="aboutUsImage" class="w-full h-full object-cover">
    </div>
-   <div class="w-1/2 flex flex-col gap-8 py-5 px-20">
-      <p class="text-white text-xl font-normal ">About us</p>
-      <h1 class="text-white text-7xl font-semibold ">Your Goals, Our Mission</h1>
-      <p class="text-white text-xl font-normal leading-normal tracking-normal">Hello, my name is Jean Robert Duret, and
+   <div class="w-1/2 flex flex-col gap-5 pt-10 padding-x xm:w-full sm:w-full">
+      <div>
+         <p class="text-white paragraph font-normal ">About us</p>
+         <h1 class="text-white heading font-semibold ">Your Goals, Our Mission</h1>
+      </div>
+      <p class="text-white paragraph font-normal leading-normal tracking-normal">Hello, my name is Jean Robert Duret,
+         and
          I'm the Chief Executive Officer of Divine Solution Funding. I started this
          business venture with a few close counterparts to ensure one thing-bringing quality service to those looking to
          fund
@@ -15,7 +18,7 @@
          works for
          them whether commercial or residential.
       </p>
-      <p class="text-white text-xl font-normal leading-normal tracking-normal">Conventional lending process can be
+      <p class="text-white paragraph font-normal leading-normal tracking-normal">Conventional lending process can be
          tedious, over baring , and end still resulting in a lack of success due to credit
          checks and multiple other factors. That is what motivates us to be the community first lenders and realtors
          that work
@@ -24,12 +27,12 @@
          require
          promptly.
       </p>
-      <p class="text-white text-xl font-normal ">With appreciation and purpose, Jean Robert
+      <p class="text-white paragraph font-normal ">With appreciation and purpose, Jean Robert
          Duret<br>
          Chief Executive Officer<br>
          Divine Solution Funding
       </p>
-      <a href="{{route('about')}}" class="w-fit text-white text-xl font-medium  px-14 py-5 bg-[#2460FD]">Learn
+      <a href="{{route('about')}}" class="w-fit text-white paragraph font-medium  px-14 py-5 bg-[#2460FD]">Learn
          more</a>
    </div>
 </div>

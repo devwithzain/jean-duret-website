@@ -6,10 +6,10 @@
     <div class="w-full h-screen flex flex-col gap-5">
         <div class="w-full grid grid-cols-3 gap-5">
             <div
-                class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
+                class="w-full p-5 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium e text-black dark:text-white">My
+                        <h2 class="paragraph font-medium text-black dark:text-white">My
                             Loan Application</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -32,8 +32,8 @@
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
                         </svg>
-                        <span class="text-sm font-thin text-black dark:text-white"><span
-                                class="text-sm font-thin text-green-500">0%
+                        <span class="paragraph font-thin text-black dark:text-white"><span
+                                class="paragraph font-thin text-green-500">0%
                             </span>from last month</span>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium e text-black dark:text-white">My
+                        <h2 class="paragraph font-medium text-black dark:text-white">My
                             Inquries</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -65,8 +65,8 @@
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
                         </svg>
-                        <span class="text-sm font-thin text-black dark:text-white"><span
-                                class="text-sm font-thin text-green-500">0%
+                        <span class="paragraph font-thin text-black dark:text-white"><span
+                                class="paragraph font-thin text-green-500">0%
                             </span>from last month</span>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium e text-black dark:text-white">Accepted
+                        <h2 class="paragraph font-medium e text-black dark:text-white">Accepted
                             Application</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -97,8 +97,8 @@
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
                         </svg>
-                        <span class="text-sm font-thin text-black dark:text-white"><span
-                                class="text-sm font-thin text-green-500">0%
+                        <span class="paragraph font-thin text-black dark:text-white"><span
+                                class="paragraph font-thin text-green-500">0%
                             </span>from last month</span>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                     <div
                         class="w-full rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]">
                         @if ($bookings->isEmpty())
-                            <p class="text-md px-4 py-2.5 font-normal ">You haven't submitted
+                            <p class="paragraph px-4 py-2.5 font-normal ">You haven't submitted
                                 any inquiries
                                 yet.
                             </p>
@@ -124,16 +124,16 @@
                             <table class="w-full">
                                 <thead>
                                     <tr class="border-b border-black/10 dark:border-gray-700">
-                                        <th class="px-4 py-2 text-left text-md font-normal ">
+                                        <th class="px-4 py-2 text-left paragraph font-normal ">
                                             Service
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal ">
+                                        <th class="px-4 py-2 text-left paragraph font-normal ">
                                             Submited On
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal ">
+                                        <th class="px-4 py-2 text-left paragraph font-normal ">
                                             Message
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal ">
+                                        <th class="px-4 py-2 text-left paragraph font-normal ">
                                             Date
                                         </th>
                                     </tr>
@@ -164,7 +164,7 @@
                     <div
                         class="w-full rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]">
                         @if ($loan_applications->isEmpty())
-                            <p class="text-md px-4 py-2.5 font-normal ">You haven't submitted
+                            <p class="paragraph px-4 py-2.5 font-normal ">You haven't submitted
                                 any loan
                                 applications
                                 yet.
@@ -173,16 +173,16 @@
                             <table class="w-full">
                                 <thead>
                                     <tr class="border-b border-black/10 dark:border-gray-700">
-                                        <th class="px-4 py-2 text-left text-md font-normal ">
+                                        <th class="px-4 py-2 text-left paragraph font-normal ">
                                             Compony Name
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal ">
+                                        <th class="px-4 py-2 text-left paragraph font-normal ">
                                             Broker Name
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal ">
+                                        <th class="px-4 py-2 text-left paragraph font-normal ">
                                             download pdf
                                         </th>
-                                        <th class="px-4 py-2 text-left text-md font-normal ">
+                                        <th class="px-4 py-2 text-left paragraph font-normal ">
                                             Submited On
                                         </th>
                                     </tr>

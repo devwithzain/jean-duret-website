@@ -1,17 +1,23 @@
-<div class="w-full h-screen flex items-center justify-center bg-[#f1f1f1]">
+<div class="w-full h-screen flex items-center justify-center bg-[#f1f1f1] p-5">
    <div x-data="{ showPassword: false, showConfirmPassword: false }"
-      class="w-[50%] h-[80vh] bg-[#04031b] rounded-xl py-5 relative z-[999]">
-      <div class="w-full h-full flex justify-between items-center pl-5">
-         <div class="w-1/2 h-full pointer-events-none">
+      class="w-[50%] h-[80vh] bg-[#04031b] rounded-xl py-5 relative z-[999] xm:w-full sm:w-full">
+      <button type="button" onclick="window.history.back()"
+         class="absolute top-4 right-4 z-[1000] bg-[#2f1d88] hover:bg-[#1a0e4a] text-white rounded-full p-2 shadow-lg">
+         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+         </svg>
+      </button>
+      <div class="w-full h-full flex justify-between items-center pl-5 xm:pl-0 sm:pl-0">
+         <div class="w-1/2 xm:hidden sm:hidden h-full pointer-events-none">
             <img src="{{ asset('assets/img.jpg') }}" alt="fromImage" class="w-full h-full object-cover rounded-xl" />
          </div>
-         <div class="w-1/2 flex items-center justify-center">
+         <div class="w-1/2 xm:w-full sm:w-full flex items-center justify-center">
             <div class="w-full px-10 flex justify-center flex-col gap-8">
                <div class="flex flex-col gap-2">
-                  <h1 class="text-white text-3xl font-bold ">Login to an Account</h1>
+                  <h1 class="text-white subHeading font-bold ">Login to an Account</h1>
                   <div class="flex items-center gap-2">
-                     <p class="text-sm text-[#ADABB8]">Don't' have an account?</p>
-                     <a href={{ route('register') }} class="text-sm text-[#9887c9] underline">Register</a>
+                     <p class="paragraph text-[#ADABB8]">Don't' have an account?</p>
+                     <a href={{ route('register') }} class="paragraph text-[#9887c9] underline">Register</a>
                   </div>
                </div>
                <form method="POST" action="{{ route('login') }}" class="flex flex-col gap-5">
@@ -29,7 +35,7 @@
                            class="bg-transparent text-white border-none placeholder:text-[#6D6980] focus:outline-none focus:border-none focus:ring-0 w-full" />
                      </div>
                      @error('email')
-                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                        <span class="text-red-500 paragraph">{{ $message }}</span>
                      @enderror
                   </div>
                   <div class="flex flex-col gap-2">
@@ -64,7 +70,7 @@
                         </button>
                      </div>
                      @error('password')
-                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                        <span class="text-red-500 paragraph">{{ $message }}</span>
                      @enderror
                   </div>
                   <button type="submit"

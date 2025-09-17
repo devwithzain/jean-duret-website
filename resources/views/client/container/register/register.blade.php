@@ -3,5 +3,5 @@
 @section('title', $title ?? 'Default Title')
 
 @section('content')
-@include('client.container.register.form')
-@endsectionn
+   @include('client.container.register.form')
+@endsection

@@ -9,7 +9,7 @@
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium e text-black dark:text-white">Total
+                        <h2 class="paragraph font-medium e text-black dark:text-white">Total
                             Inquries</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -32,8 +32,8 @@
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
                         </svg>
-                        <span class="text-sm font-thin text-black dark:text-white"><span
-                                class="text-sm font-thin text-green-500">0%
+                        <span class="paragraph font-thin text-black dark:text-white"><span
+                                class="paragraph font-thin text-green-500">0%
                             </span>from last month</span>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium e text-black dark:text-white">Total
+                        <h2 class="paragraph font-medium e text-black dark:text-white">Total
                             Applications
                         </h2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
@@ -65,8 +65,8 @@
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
                         </svg>
-                        <span class="text-sm font-thin text-black dark:text-white"><span
-                                class="text-sm font-thin text-green-500">0%
+                        <span class="paragraph font-thin text-black dark:text-white"><span
+                                class="paragraph font-thin text-green-500">0%
                             </span>from last month</span>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium e text-black dark:text-white">Total
+                        <h2 class="paragraph font-medium e text-black dark:text-white">Total
                             Services</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                             fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -98,8 +98,8 @@
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
                         </svg>
-                        <span class="text-sm font-thin text-black dark:text-white"><span
-                                class="text-sm font-thin text-green-500">0%
+                        <span class="paragraph font-thin text-black dark:text-white"><span
+                                class="paragraph font-thin text-green-500">0%
                             </span>from last month</span>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                 class="w-full p-6 h-40 bg-white dark:bg-[#18181B] rounded-lg border dark:border-gray-700 border-black/20 shadow-[0_1px_1px_rgb(0,0,0,0.2)]">
                 <div class="w-full h-full flex flex-col justify-between gap-4">
                     <div class="w-full flex items-center justify-between">
-                        <h2 class="text-xl font-medium e text-black dark:text-white">Total
+                        <h2 class="paragraph font-medium e text-black dark:text-white">Total
                             Subscriber</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                             fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -131,8 +131,8 @@
                             <path d="m5 12 7-7 7 7" />
                             <path d="M12 19V5" />
                         </svg>
-                        <span class="text-sm font-thin text-black dark:text-white"><span
-                                class="text-sm font-thin text-green-500">0%
+                        <span class="paragraph font-thin text-black dark:text-white"><span
+                                class="paragraph font-thin text-green-500">0%
                             </span>from last month</span>
                     </div>
                 </div>
@@ -144,10 +144,10 @@
                 <div class="flex flex-col">
                     <div
                         class="flex flex-1 flex-col justify-center gap-1 p-6 border-b dark:border-gray-700 border-black/20">
-                        <h1 class="text-xl font-medium e text-black dark:text-white">
+                        <h1 class="paragraph font-medium e text-black dark:text-white">
                             Applications
                         </h1>
-                        <h1 class="text-sm font-medium e text-black dark:text-white">User Loan
+                        <h1 class="paragraph font-medium e text-black dark:text-white">User Loan
                             Applications
                         </h1>
                     </div>
@@ -157,7 +157,7 @@
                             </p>
                         @else
                             <div class="rounded-b-md">
-                                <table class="w-full text-sm text-left border-collapse">
+                                <table class="w-full paragraph text-left border-collapse">
                                     <thead class="bg-white dark:bg-[#18181B]">
                                         <tr>
                                             <th class="px-4 py-2 border-b dark:border-gray-700 border-black/20">
@@ -204,15 +204,15 @@
                 <div class="flex flex-col">
                     <div
                         class="flex flex-1 flex-col justify-center gap-1 p-6 border-b dark:border-gray-700 border-black/20">
-                        <h1 class="text-xl font-medium e text-black dark:text-white">Users
+                        <h1 class="paragraph font-medium e text-black dark:text-white">Users
                         </h1>
-                        <h1 class="text-sm font-medium e text-black dark:text-white">Website
+                        <h1 class="paragraph font-medium e text-black dark:text-white">Website
                             Users
                         </h1>
                     </div>
                     <div class="flex flex-col">
                         <div class="rounded-b-md">
-                            <table class="w-full text-sm text-left border-collapse">
+                            <table class="w-full paragraph text-left border-collapse">
                                 <!-- Table Head -->
                                 <thead class="bg-white dark:bg-[#18181B]">
                                     <tr>

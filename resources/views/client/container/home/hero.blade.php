@@ -1,13 +1,13 @@
-<div class="w-full bg-[#000D51] h-screen overflow-hidden">
-   <div class="w-full h-full px-20 flex items-center justify-center gap-10">
-      <div class="w-1/2 flex flex-col gap-10">
+<div class="w-full bg-[#000D51] h-svh overflow-hidden xm:pt-20 sm:pt-20">
+   <div class="w-full h-full padding-x flex items-center justify-center gap-10 xm:flex-col sm:flex-col">
+      <div class="w-1/2 flex flex-col gap-5 xm:w-full sm:w-full">
          <div class="flex flex-col gap-2">
-            <p class="text-white text-xl font-normal">Divine
+            <p class="text-white paragraph font-normal">Divine
                Solutions Funding</p>
-            <h1 class="text-white text-[55px] font-semibold">Smart Funding. Smarter
+            <h1 class="text-white heading font-semibold">Smart Funding. Smarter
                <br>Property Deals.
             </h1>
-            <p class="text-white text-xl font-normal">
+            <p class="text-white paragraph font-normal">
                Empowering your property journey with tailored funding solutions.<br>
                Experience seamless financing and expert guidance with Divine Solutions Funding.
             </p>
@@ -15,26 +15,26 @@
          <div class="flex items-center gap-5 flex-wrap">
             <div class="flex items-center gap-4">
                <img src={{ asset('assets/arrowRight.svg') }} alt="heroGirl" class="w-8 h-8 object-cover">
-               <p class="text-white text-xl font-normal">One Stop Real Estate Solution
+               <p class="text-white paragraph font-normal">One Stop Real Estate Solution
                </p>
             </div>
             <div class="flex items-center gap-4">
                <img src={{ asset('assets/arrowRight.svg') }} alt="heroGirl" class="w-8 h-8 object-cover">
-               <p class="text-white text-xl font-normal">Personalized Client Guidance
+               <p class="text-white paragraph font-normal">Personalized Client Guidance
                </p>
             </div>
             <div class="flex items-center gap-4">
                <img src={{ asset('assets/arrowRight.svg') }} alt="heroGirl" class="w-8 h-8 object-cover">
-               <p class="text-white text-xl font-normal">Fast & Hassle-Free Process
+               <p class="text-white paragraph font-normal">Fast & Hassle-Free Process
                </p>
             </div>
          </div>
-         <a href="{{route('services')}}" class="w-fit text-white text-xl font-medium px-14 py-5 bg-[#2460FD]">Get
+         <a href="{{route('services')}}" class="w-fit text-white paragraph font-medium px-10 py-3 bg-[#2460FD]">Get
             Started</a>
       </div>
-      <div class="w-1/2 h-full relative">
+      <div class="w-1/2 h-full relative xm:w-full sm:w-full">
          <svg xmlns="http://www.w3.org/2000/svg" width="904" height="442" viewBox="0 0 904 442" fill="none"
-            class="absolute top-1/2 -translate-y-1/2">
+            class="absolute top-1/2 -translate-y-1/2 xm:hidden sm:hidden">
             <g opacity="0.2">
                <path
                   d="M46.4692 47.0963L29.5493 165.07C28.4717 172.571 34.3154 179.285 41.8895 179.264L103.87 179.057C124.065 178.985 141.409 164.696 145.336 144.896L151.771 112.507C152.34 109.637 156.029 108.787 157.801 111.108L237.717 215.912C241.25 220.554 240.732 227.102 236.515 231.133L130.167 332.476C126.748 335.74 121.122 332.942 121.65 328.249L126.696 283.747C127.328 278.214 122.966 273.376 117.402 273.427L26.6274 274.215C19.82 274.277 14.0903 279.333 13.1888 286.089L0.289087 383.194C-0.560536 389.556 4.41286 395.182 10.8265 395.141L128.945 394.26C218.134 393.597 293.637 328.228 307.055 240.054L312.992 201.044C325.321 120.05 262.626 47.0963 180.699 47.0963H46.4692Z"

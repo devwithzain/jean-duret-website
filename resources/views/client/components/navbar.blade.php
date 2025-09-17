@@ -2,7 +2,7 @@
     $navLinks = include resource_path('constants/navlinks.php');
 @endphp
 
-<nav class="w-full flex items-center justify-between px-20 py-3 fixed top-0 z-50 bg-transparent transition-transform duration-300"
+<nav class="w-full flex items-center justify-between px-20 py-3 fixed top-0 z-50 bg-transparent transition-transform duration-300 xm:hidden sm:hidden"
     x-data="{ scrollAtTop: true }"
     x-init="window.addEventListener('scroll', () => { scrollAtTop = window.scrollY < window.innerHeight * 0.1; })"
     :class="{
@@ -15,13 +15,13 @@
     </a>
     <div class="flex gap-8">
         @foreach ($navLinks as $link)
-            <a href="{{ route($link['href']) }}" class="text-white text-xl font-medium ">{{ $link['label'] }}</a>
+            <a href="{{ route($link['href']) }}" class="text-white paragraph font-medium ">{{ $link['label'] }}</a>
         @endforeach
     </div>
     <div class="flex items-center gap-3">
         @if (!auth()->check())
             <a href="{{ route('login') }}"
-                class="text-white text-xl font-medium leading-tight cursor-pointer tracking-tight border-2 border-white px-14 py-3">Login</a>
+                class="text-white paragraph font-medium leading-tight cursor-pointer tracking-tight border-2 border-white px-14 py-3">Login</a>
         @endif
         <div x-data="{ open: false }" class="relative">
             @if (auth()->check())
@@ -59,3 +59,6 @@
         </div>
     </div>
 </nav>
+<div class="xm:flex sm:flex hidden">
+    @include('client.components.mobilenavbar')
+</div>

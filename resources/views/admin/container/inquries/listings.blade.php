@@ -11,33 +11,33 @@
         </div>
         <div class="w-full py-8">
             <input
-                class="w-[400px] px-5 py-1 text-xl bg-white dark:bg-black rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
+                class="w-[400px] px-5 py-1 paragraph bg-white dark:bg-black rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
                 placeholder="Search..." type="text" />
         </div>
         <div
             class="w-full bg-white dark:bg-black rounded-lg border border-black/10 dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]">
             @if ($bookings->isEmpty())
-                <p class="text-md px-4 py-2 font-normal ">No inquiries yet.</p>
+                <p class="paragraph px-4 py-2 font-normal ">No inquiries yet.</p>
             @else
                 <table class="w-full">
                     <thead>
                         <tr class="border-b border-black/10 dark:border-gray-700">
-                            <th class="px-4 py-2 text-left text-md font-normal ">
+                            <th class="px-4 py-2 text-left paragraph font-normal ">
                                 Service
                             </th>
-                            <th class="px-4 py-2 text-left text-md font-normal ">
+                            <th class="px-4 py-2 text-left paragraph font-normal ">
                                 Name
                             </th>
-                            <th class="px-4 py-2 text-left text-md font-normal ">
+                            <th class="px-4 py-2 text-left paragraph font-normal ">
                                 Email
                             </th>
-                            <th class="px-4 py-2 text-left text-md font-normal ">
+                            <th class="px-4 py-2 text-left paragraph font-normal ">
                                 Submited On
                             </th>
-                            <th class="px-4 py-2 text-left text-md font-normal ">
+                            <th class="px-4 py-2 text-left paragraph font-normal ">
                                 Message
                             </th>
-                            <th class="px-4 py-2 text-left text-md font-normal ">
+                            <th class="px-4 py-2 text-left paragraph font-normal ">
                                 Date
                             </th>
                         </tr>

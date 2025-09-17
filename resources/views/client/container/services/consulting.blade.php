@@ -1,20 +1,20 @@
-<div class="w-full flex items-center justify-around px-20 py-20">
+<div class="w-full flex items-center justify-around padding-x padding-y">
    <div class="flex flex-col gap-10">
-      <div class="w-full flex items-center justify-around">
+      <div class="w-full flex items-center justify-around xm:flex-col sm:flex-col">
          <div class="w-full flex flex-col gap-3">
-            <p class="text-[#000D51] text-xl font-normal ">Business consulting</p>
-            <h1 class="text-[#000D51] text-7xl font-semibold ">Your One-Stop Real <br>
+            <p class="text-[#000D51] paragraph font-normal ">Business consulting</p>
+            <h1 class="text-[#000D51] heading font-semibold ">Your One-Stop Real <br>
                Estate &
                Loan
                Partner</h1>
          </div>
          <div class="w-full flex flex-col gap-3">
-            <p class="text-[#000D51] text-xl font-normal ">Move deals from idea to closing. Buy, sell or invest with
+            <p class="text-[#000D51] paragraph font-normal ">Move deals from idea to closing. Buy, sell or invest with
                support you trust. Get private money, quick closings, and no
                credit checks. For homes or businesses, we keep each step clear.</p>
          </div>
       </div>
-      <div class="w-full grid grid-cols-3 gap-10">
+      <div class="w-full grid grid-cols-3 gap-10 xm:grid-cols-1 sm:grid-cols-1">
          @if($services)
             @foreach($services as $service)
                <div
@@ -25,11 +25,11 @@
                      <h1 class="group-hover:text-white text-[#000D51] text-3xl font-semibold ">
                         {{ $service->title }}
                      </h1>
-                     <p class="group-hover:text-white text-[#000D51] text-xl font-normal ">
+                     <p class="group-hover:text-white text-[#000D51] paragraph font-normal ">
                         {{ $service->description }}
                      </p>
                      <a href="{{ route('service-detail', ['slug' => $service->slug]) }}"
-                        class="w-fit text-white text-xl font-medium  px-10 py-3 bg-[#2460FD]">Details</a>
+                        class="w-fit text-white paragraph font-medium  px-10 py-3 bg-[#2460FD]">Details</a>
                   </div>
                </div>
             @endforeach

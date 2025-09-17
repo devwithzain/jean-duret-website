@@ -7,17 +7,17 @@
                     <div class="flex gap-2 items-center">
                         <img src="{{ asset('assets/sidebarLogo.png') }}" alt="logo" class="w-10 h-10">
                         <div class="flex flex-col">
-                            <h1 class="text-xl font-semibold text-black dark:text-white tracking-tight leading-tight">
+                            <h1 class="paragraph font-semibold text-black dark:text-white tracking-tight leading-tight">
                                 {{ auth()->user()->name }}
                             </h1>
-                            <p class="text-sm text-black dark:text-white font-normal tracking-tight leading-tight">Admin
+                            <p class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight">Admin
                                 Dashboard</p>
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-col gap-5">
                     <div>
-                        <h1 class="text-xl font-medium text-black dark:text-white tracking-tight leading-tight">
+                        <h1 class="paragraph font-medium text-black dark:text-white tracking-tight leading-tight">
                             Navigation</h1>
                     </div>
                     <div class="flex flex-col gap-4">
@@ -29,7 +29,7 @@
                                 <path
                                     d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                             </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
+                            <h1 class="paragraph font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Dashboard</h1>
                         </a>
                         <a href={{ route('admin.container.services.listings') }} class="flex items-center gap-2">
@@ -41,7 +41,7 @@
                                 <line x1="6" x2="6.01" y1="6" y2="6" />
                                 <line x1="6" x2="6.01" y1="18" y2="18" />
                             </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
+                            <h1 class="paragraph font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Services</h1>
                         </a>
                         <a href={{ route('admin.container.inquries.listings') }} class="flex items-center gap-2">
@@ -53,7 +53,7 @@
                                 <path
                                     d="M20.4 18.9c.2.5-.1 1.1-.6 1.3l-1.9.7c-.5.2-1.1-.1-1.3-.6L11.1 5.1c-.2-.5.1-1.1.6-1.3l1.9-.7c.5-.2 1.1.1 1.3.6Z" />
                             </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
+                            <h1 class="paragraph font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Inquries</h1>
                         </a>
                         <a href={{ route('admin.container.application.application') }} class="flex items-center gap-2">
@@ -64,7 +64,7 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="M6 16h12" />
                             </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
+                            <h1 class="paragraph font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Loan Applications</h1>
                         </a>
                     </div>
@@ -76,10 +76,10 @@
                         src="{{ auth()->user()->image ? asset('storage/' . auth()->user()->image) : asset('assets/placeholder.png') }}"
                         alt="Preview" class="w-10 rounded-full object-cover">
                     <div class="flex flex-col">
-                        <h1 class="text-xl font-semibold text-black dark:text-white tracking-tight leading-tight">
+                        <h1 class="paragraph font-semibold text-black dark:text-white tracking-tight leading-tight">
                             {{ auth()->user()->name }}
                         </h1>
-                        <p class="text-sm text-black dark:text-white font-normal tracking-tight leading-tight">
+                        <p class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight">
                             {{ auth()->user()->email }}
                         </p>
                     </div>
@@ -102,10 +102,11 @@
                                     alt="Preview" class="w-10 rounded-full object-cover">
                                 <div class="flex flex-col">
                                     <h1
-                                        class="text-xl font-semibold text-black dark:text-white tracking-tight leading-tight">
+                                        class="paragraph font-semibold text-black dark:text-white tracking-tight leading-tight">
                                         {{ auth()->user()->name }}
                                     </h1>
-                                    <p class="text-sm text-black dark:text-white font-normal tracking-tight leading-tight">
+                                    <p
+                                        class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight">
                                         {{ auth()->user()->email }}
                                     </p>
                                 </div>
@@ -121,7 +122,7 @@
                                         d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
                                     <circle cx="12" cy="12" r="3" />
                                 </svg>
-                                <p class="text-sm text-black dark:text-white font-normal tracking-tight leading-tight">
+                                <p class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight">
                                     Account</p>
                             </div>
                         </a>
@@ -136,7 +137,8 @@
                                     <path d="M21 12H9" />
                                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
                                 </svg>
-                                <button class="text-sm text-black dark:text-white font-normal tracking-tight leading-tight"
+                                <button
+                                    class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight"
                                     type="submit">LogOut</button>
                             </div>
                         </form>

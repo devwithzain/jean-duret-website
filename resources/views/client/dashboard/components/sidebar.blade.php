@@ -7,16 +7,16 @@
                     <img src="{{ asset('assets/sidebarLogo.png') }}" alt="logo" class="w-10 h-10">
                     <div class="flex flex-col">
                         <h1
-                            class="text-xl font-semibold text-gray-800 dark:text-white tracking-tight leading-tight capitalize">
+                            class="paragraph font-semibold text-gray-800 dark:text-white tracking-tight leading-tight capitalize">
                             {{ auth()->user()->name }}
                         </h1>
-                        <p class="text-sm text-black dark:text-white font-normal tracking-tight leading-tight">User
+                        <p class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight">User
                             Dashboard</p>
                     </div>
                 </div>
                 <div class="flex flex-col gap-5">
                     <div>
-                        <h1 class="text-xl font-medium text-gray-800 dark:text-white tracking-tight leading-tight">
+                        <h1 class="paragraph font-medium text-gray-800 dark:text-white tracking-tight leading-tight">
                             Navigation</h1>
                     </div>
                     <div class="flex flex-col gap-4">
@@ -28,7 +28,7 @@
                                 <path
                                     d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                             </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
+                            <h1 class="paragraph font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Dashboard</h1>
                         </a>
                         <a href={{ route('client.dashboard.container.inquries.listings') }} class="flex items-center gap-2">
@@ -40,7 +40,7 @@
                                 <path
                                     d="m20 14.285 1.5.845a1 1 0 0 1 0 1.74L13 21.74a2 2 0 0 1-2 0l-8.5-4.87a1 1 0 0 1 0-1.74l1.5-.845" />
                             </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
+                            <h1 class="paragraph font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Inquries</h1>
                         </a>
                         <a href={{ route('client.dashboard.container.loan.pre-loan') }} class="flex items-center gap-2">
@@ -51,7 +51,7 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="M6 16h12" />
                             </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">
+                            <h1 class="paragraph font-normal text-black dark:text-white tracking-tight leading-tight">
                                 Apply For
                                 Loan</h1>
                         </a>
@@ -63,7 +63,7 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="M6 16h12" />
                             </svg>
-                            <h1 class="text-md font-normal text-black dark:text-white tracking-tight leading-tight">My
+                            <h1 class="paragraph font-normal text-black dark:text-white tracking-tight leading-tight">My
                                 Loan Applications</h1>
                         </a>
                     </div>
@@ -76,10 +76,10 @@
                         alt="Preview" class="w-10 rounded-full object-cover">
                     <div class="flex flex-col">
                         <h1
-                            class="text-xl font-semibold text-gray-800 dark:text-white tracking-tight leading-tight capitalize">
+                            class="paragraph font-semibold text-gray-800 dark:text-white tracking-tight leading-tight capitalize">
                             {{ auth()->user()->name }}
                         </h1>
-                        <p class="text-[12px] text-black dark:text-white font-normal tracking-tight leading-tight">
+                        <p class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight">
                             {{ auth()->user()->email }}
                         </p>
                     </div>
@@ -102,11 +102,11 @@
                                     alt="Preview" class="w-10 rounded-full object-cover">
                                 <div class="flex flex-col gap-1">
                                     <h1
-                                        class="text-xl font-semibold text-gray-800 dark:text-white tracking-tight leading-tight">
+                                        class="paragraph font-semibold text-gray-800 dark:text-white tracking-tight leading-tight">
                                         {{ auth()->user()->name }}
                                     </h1>
                                     <p
-                                        class="text-[12px] text-black dark:text-white font-normal tracking-tight leading-tight">
+                                        class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight">
                                         {{ auth()->user()->email }}
                                     </p>
                                 </div>
@@ -123,7 +123,7 @@
                                         d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
                                     <circle cx="12" cy="12" r="3" />
                                 </svg>
-                                <p class="text-[12px] text-black dark:text-white font-normal tracking-tight leading-tight">
+                                <p class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight">
                                     Account</p>
                             </div>
                         </a>
@@ -140,7 +140,7 @@
                                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
                                 </svg>
                                 <button type="submit"
-                                    class="text-[12px] text-black dark:text-white font-normal tracking-tight leading-tight">LogOut</button>
+                                    class="paragraph text-black dark:text-white font-normal tracking-tight leading-tight">LogOut</button>
                             </div>
                         </form>
                     </div>

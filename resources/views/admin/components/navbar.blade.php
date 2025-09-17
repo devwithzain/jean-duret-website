@@ -42,7 +42,7 @@
             @php
                 $segments = request()->segments();
             @endphp
-            <h1 class="text-xl font-thin text-black dark:text-white flex items-center">
+            <h1 class="paragraph font-thin text-black dark:text-white flex items-center">
                 @foreach ($segments as $index => $segment)
                     <span class="mx-1">></span>
                     @php

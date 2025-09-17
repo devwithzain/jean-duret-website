@@ -16,17 +16,17 @@
                                 PRE-LOAN APPLICATION</h1>
                         </div>
                         <div>
-                            <p class=" text-xl text-black dark:text-white leading-normal font-medium">Whoever is
+                            <p class=" paragraph text-black dark:text-white leading-normal font-medium">Whoever is
                                 careless with the truth in small matters cannot be trusted with important matters. <span
-                                    class="text-xl text-black dark:text-white leading-normal font-semibold">Albert
+                                    class="paragraph text-black dark:text-white leading-normal font-semibold">Albert
                                     Einstein</span>
                                 Please, take a moment to analyze all the information needed and fill out the pre-loan
                                 application
                                 to the best of your knowledge. “Trust, but verify.” <span
-                                    class="text-xl text-black dark:text-white leading-normal font-semibold">Ronald
+                                    class="paragraph text-black dark:text-white leading-normal font-semibold">Ronald
                                     Reagan.</span>
                             </p>
-                            <p class=" text-xl text-black dark:text-white leading-normal font-medium">Providing wrong
+                            <p class=" paragraph text-black dark:text-white leading-normal font-medium">Providing wrong
                                 or incomplete information may result in a request for further evidence causing a delay in
                                 the
                                 decision-making process or a complete denial of funding.</p>
@@ -106,13 +106,13 @@
                         <div x-show="step === 1" class="flex flex-col gap-8">
                             <div class="w-full flex items-center gap-4">
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="company_name" class="text-md font-normal ">Company
+                                    <label for="company_name" class="paragraph font-normal ">Company
                                         Name:</label>
                                     <input id="company_name" name="company_name" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="broker_name" class="text-md font-normal ">Broker
+                                    <label for="broker_name" class="paragraph font-normal ">Broker
                                         Name:</label>
                                     <input id="broker_name" name="broker_name" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -120,13 +120,13 @@
                             </div>
                             <div class="w-full flex items-center gap-4">
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="broker_email" class="text-md font-normal ">Broker
+                                    <label for="broker_email" class="paragraph font-normal ">Broker
                                         Email:</label>
                                     <input id="broker_email" name="broker_email" type="email"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="broker_phone" class="text-md font-normal ">Broker
+                                    <label for="broker_phone" class="paragraph font-normal ">Broker
                                         Phone:</label>
                                     <input id="broker_phone" name="broker_phone" type="number"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -141,19 +141,19 @@
                         <div x-show="step === 2" class="flex flex-col gap-8">
                             <div class="w-full flex items-center gap-4">
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="purchase_price" class="text-md font-normal ">Purchase Price
+                                    <label for="purchase_price" class="paragraph font-normal ">Purchase Price
                                         if you're purchasing:</label>
                                     <input id="purchase_price" name="purchase_price" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="desired_loan_amount" class="text-md font-normal ">Desired Loan
+                                    <label for="desired_loan_amount" class="paragraph font-normal ">Desired Loan
                                         Amount:</label>
                                     <input id="desired_loan_amount" name="desired_loan_amount" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                 </div>
                                 <div class="w-full flex flex-col gap-1.5">
-                                    <label for="loan_purpose" class="text-md font-normal ">Purpose of the
+                                    <label for="loan_purpose" class="paragraph font-normal ">Purpose of the
                                         loan:</label>
                                     <input id="loan_purpose" name="loan_purpose" type="text"
                                         class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -161,7 +161,7 @@
                             </div>
                             <div class="w-full flex flex-col gap-2">
                                 <div class="flex flex-col gap-2">
-                                    <label for="loan_term_type" class="text-md font-normal ">Desired
+                                    <label for="loan_term_type" class="paragraph font-normal ">Desired
                                         Loan
                                         term:</label>
                                     <div class="flex flex-col gap-2">
@@ -325,7 +325,7 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="property_street_address" class="text-md font-normal ">Subject
+                                        <label for="property_street_address" class="paragraph font-normal ">Subject
                                             Property Street Address:</label>
                                         <input id="property_street_address" name="property_street_address" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -333,36 +333,37 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="property_city" class="text-md font-normal ">City:</label>
+                                        <label for="property_city" class="paragraph font-normal ">City:</label>
                                         <input id="property_city" name="property_city" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="property_state" class="text-md font-normal ">State:</label>
+                                        <label for="property_state" class="paragraph font-normal ">State:</label>
                                         <input id="property_state" name="property_state" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="property_zip" class="text-md font-normal ">Zip:</label>
+                                        <label for="property_zip" class="paragraph font-normal ">Zip:</label>
                                         <input id="property_zip" name="property_zip" type="email"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center gap-4">
-                                    <p class="text-md font-normal ">Does the property generate
+                                    <p class="paragraph font-normal ">Does the property generate
                                         income?</p>
                                     <div class="flex items-center gap-1.5">
-                                        <label for="property_generates_income_yes" class="text-md font-normal ">Yes</label>
+                                        <label for="property_generates_income_yes"
+                                            class="paragraph font-normal ">Yes</label>
                                         <input id="property_generates_income_yes" name="property_generates_income" value="1"
                                             type="radio" class="rounded-full" />
                                     </div>
                                     <div class="flex items-center gap-1.5">
-                                        <label for="property_generates_income_no" class="text-md font-normal ">No</label>
+                                        <label for="property_generates_income_no" class="paragraph font-normal ">No</label>
                                         <input id="property_generates_income_no" name="property_generates_income" value="0"
                                             type="radio" class="rounded-full" />
                                     </div>
                                     <div class="flex items-center gap-1.5">
-                                        <label for="property_generates_income_will" class="text-md font-normal ">It
+                                        <label for="property_generates_income_will" class="paragraph font-normal ">It
                                             will</label>
                                         <input id="property_generates_income_will" name="property_generates_income"
                                             value="2" type="radio" class="rounded-full" />
@@ -370,14 +371,14 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="gross_monthly_rent" class="text-md font-normal ">Actual or
+                                        <label for="gross_monthly_rent" class="paragraph font-normal ">Actual or
                                             expected Gross Monthly Rent:
                                         </label>
                                         <input id="gross_monthly_rent" name="gross_monthly_rent" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="expected_gross_monthly_rent" class="text-md font-normal ">Actual or
+                                        <label for="expected_gross_monthly_rent" class="paragraph font-normal ">Actual or
                                             expected Gross Monthly Rent:
                                         </label>
                                         <input id="expected_gross_monthly_rent" name="expected_gross_monthly_rent"
@@ -387,21 +388,21 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="number_of_units" class="text-md font-normal ">Number of
+                                        <label for="number_of_units" class="paragraph font-normal ">Number of
                                             Units
                                         </label>
                                         <input id="number_of_units" name="number_of_units" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="yearly_property_taxes" class="text-md font-normal ">Yearly
+                                        <label for="yearly_property_taxes" class="paragraph font-normal ">Yearly
                                             property taxes (estimate):
                                         </label>
                                         <input id="yearly_property_taxes" name="yearly_property_taxes" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="yearly_hoa_dues" class="text-md font-normal ">Yearly HOA
+                                        <label for="yearly_hoa_dues" class="paragraph font-normal ">Yearly HOA
                                             Dues:
                                         </label>
                                         <input id="yearly_hoa_dues" name="yearly_hoa_dues" type="text"
@@ -410,14 +411,14 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="anticipated_rehab_cost" class="text-md font-normal ">Cost of
+                                        <label for="anticipated_rehab_cost" class="paragraph font-normal ">Cost of
                                             Anticipated Rehab:
                                         </label>
                                         <input id="anticipated_rehab_cost" name="anticipated_rehab_cost" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="after_repair_value" class="text-md font-normal ">Estimated
+                                        <label for="after_repair_value" class="paragraph font-normal ">Estimated
                                             After Repair Value:
                                         </label>
                                         <input id="after_repair_value" name="after_repair_value" type="text"
@@ -426,14 +427,14 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="original_cost" class="text-md font-normal ">Original
+                                        <label for="original_cost" class="paragraph font-normal ">Original
                                             Cost (If refinance)
                                         </label>
                                         <input id="original_cost" name="original_cost" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="as_is_value" class="text-md font-normal ">Estimated
+                                        <label for="as_is_value" class="paragraph font-normal ">Estimated
                                             "AS IS" Value:
                                         </label>
                                         <input id="as_is_value" name="as_is_value" type="text"
@@ -453,7 +454,7 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="entity_name" class="text-md font-normal ">Entity
+                                        <label for="entity_name" class="paragraph font-normal ">Entity
                                             Name:</label>
                                         <input id="entity_name" name="entity_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -461,13 +462,13 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="federal_ein" class="text-md font-normal ">Federal
+                                        <label for="federal_ein" class="paragraph font-normal ">Federal
                                             EIN:</label>
                                         <input id="federal_ein" name="federal_ein" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="state_registered" class="text-md font-normal ">State
+                                        <label for="state_registered" class="paragraph font-normal ">State
                                             Registered:
                                         </label>
                                         <input id="state_registered" name="state_registered" type="email"
@@ -487,12 +488,12 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_name_1" class="text-md font-normal ">Name:</label>
+                                        <label for="bind_entity_name_1" class="paragraph font-normal ">Name:</label>
                                         <input id="bind_entity_name_1" name="bind_entity_name_1" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_percent_1" class="text-md font-normal ">Percent %
+                                        <label for="bind_entity_percent_1" class="paragraph font-normal ">Percent %
                                             owned
                                         </label>
                                         <input id="bind_entity_percent_1" name="bind_entity_percent_1" type="email"
@@ -501,12 +502,12 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_name_2" class="text-md font-normal ">Name:</label>
+                                        <label for="bind_entity_name_2" class="paragraph font-normal ">Name:</label>
                                         <input id="bind_entity_name_2" name="bind_entity_name_2" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_percent_2" class="text-md font-normal ">Percent %
+                                        <label for="bind_entity_percent_2" class="paragraph font-normal ">Percent %
                                             owned
                                         </label>
                                         <input id="bind_entity_percent_2" name="bind_entity_percent_2" type="email"
@@ -515,12 +516,12 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_name_3" class="text-md font-normal ">Name:</label>
+                                        <label for="bind_entity_name_3" class="paragraph font-normal ">Name:</label>
                                         <input id="bind_entity_name_3" name="bind_entity_name_3" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bind_entity_percent_3" class="text-md font-normal ">Percent %
+                                        <label for="bind_entity_percent_3" class="paragraph font-normal ">Percent %
                                             owned
                                         </label>
                                         <input id="bind_entity_percent_3" name="bind_entity_percent_3" type="email"
@@ -540,7 +541,7 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="available_cash_to_close" class="text-md font-normal ">Tot.
+                                        <label for="available_cash_to_close" class="paragraph font-normal ">Tot.
                                             Available cash to close: (Available liquid cash)</label>
                                         <input id="available_cash_to_close" name="available_cash_to_close" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -548,33 +549,33 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_name" class="text-md font-normal ">Bank 1
+                                        <label for="bank_1_name" class="paragraph font-normal ">Bank 1
                                             Name:</label>
                                         <input id="bank_1_name" name="bank_1_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_acc" class="text-md font-normal ">Acc.# (Last
+                                        <label for="bank_1_acc" class="paragraph font-normal ">Acc.# (Last
                                             3 Dig.)
                                         </label>
                                         <input id="bank_1_acc" name="bank_1_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_amount" class="text-md font-normal ">Amount:
+                                        <label for="bank_1_amount" class="paragraph font-normal ">Amount:
                                         </label>
                                         <input id="bank_1_amount" name="bank_1_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_other_assets" class="text-md font-normal ">Other
+                                        <label for="bank_1_other_assets" class="paragraph font-normal ">Other
                                             Assets:
                                         </label>
                                         <input id="bank_1_other_assets" name="bank_1_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_1_value" class="text-md font-normal ">Value:
+                                        <label for="bank_1_value" class="paragraph font-normal ">Value:
                                         </label>
                                         <input id="bank_1_value" name="bank_1_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -582,33 +583,33 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_name" class="text-md font-normal ">Bank 2
+                                        <label for="bank_2_name" class="paragraph font-normal ">Bank 2
                                             Name:</label>
                                         <input id="bank_2_name" name="bank_2_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_acc" class="text-md font-normal ">Acc.# (Last
+                                        <label for="bank_2_acc" class="paragraph font-normal ">Acc.# (Last
                                             3 Dig.)
                                         </label>
                                         <input id="bank_2_acc" name="bank_2_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_amount" class="text-md font-normal ">Amount:
+                                        <label for="bank_2_amount" class="paragraph font-normal ">Amount:
                                         </label>
                                         <input id="bank_2_amount" name="bank_2_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_other_assets" class="text-md font-normal ">Other
+                                        <label for="bank_2_other_assets" class="paragraph font-normal ">Other
                                             Assets:
                                         </label>
                                         <input id="bank_2_other_assets" name="bank_2_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_2_value" class="text-md font-normal ">Value:
+                                        <label for="bank_2_value" class="paragraph font-normal ">Value:
                                         </label>
                                         <input id="bank_2_value" name="bank_2_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -616,33 +617,33 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_name" class="text-md font-normal ">Bank 3
+                                        <label for="bank_3_name" class="paragraph font-normal ">Bank 3
                                             Name:</label>
                                         <input id="bank_3_name" name="bank_3_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_acc" class="text-md font-normal ">Acc.# (Last
+                                        <label for="bank_3_acc" class="paragraph font-normal ">Acc.# (Last
                                             3 Dig.)
                                         </label>
                                         <input id="bank_3_acc" name="bank_3_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_amount" class="text-md font-normal ">Amount:
+                                        <label for="bank_3_amount" class="paragraph font-normal ">Amount:
                                         </label>
                                         <input id="bank_3_amount" name="bank_3_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_other_assets" class="text-md font-normal ">Other
+                                        <label for="bank_3_other_assets" class="paragraph font-normal ">Other
                                             Assets:
                                         </label>
                                         <input id="bank_3_other_assets" name="bank_3_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_3_value" class="text-md font-normal ">Value:
+                                        <label for="bank_3_value" class="paragraph font-normal ">Value:
                                         </label>
                                         <input id="bank_3_value" name="bank_3_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -650,33 +651,33 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_name" class="text-md font-normal ">Bank 4
+                                        <label for="bank_4_name" class="paragraph font-normal ">Bank 4
                                             Name:</label>
                                         <input id="bank_4_name" name="bank_4_name" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_acc" class="text-md font-normal ">Acc.# (Last
+                                        <label for="bank_4_acc" class="paragraph font-normal ">Acc.# (Last
                                             3 Dig.)
                                         </label>
                                         <input id="bank_4_acc" name="bank_4_acc" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_amount" class="text-md font-normal ">Amount:
+                                        <label for="bank_4_amount" class="paragraph font-normal ">Amount:
                                         </label>
                                         <input id="bank_4_amount" name="bank_4_amount" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_other_assets" class="text-md font-normal ">Other
+                                        <label for="bank_4_other_assets" class="paragraph font-normal ">Other
                                             Assets:
                                         </label>
                                         <input id="bank_4_other_assets" name="bank_4_other_assets" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="bank_4_value" class="text-md font-normal ">Value:
+                                        <label for="bank_4_value" class="paragraph font-normal ">Value:
                                         </label>
                                         <input id="bank_4_value" name="bank_4_value" type="text"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20" />
@@ -695,7 +696,7 @@
                             <div class="w-full flex flex-col items-center gap-4">
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="find_property" class="text-md font-normal ">How did you
+                                        <label for="find_property" class="paragraph font-normal ">How did you
                                             find this property?</label>
                                         <textarea id="find_property" name="find_property" type="text" rows="5"
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20"></textarea>
@@ -703,7 +704,7 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="payoff_strategy" class="text-md font-normal ">How do you
+                                        <label for="payoff_strategy" class="paragraph font-normal ">How do you
                                             intend to pay off this loan?
                                         </label>
                                         <textarea id="payoff_strategy" name="payoff_strategy" type="text" rows="5"
@@ -712,7 +713,7 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex items-center gap-1.5">
-                                        <label for="rehab_time" class="text-md text-nowrap font-normal ">How long
+                                        <label for="rehab_time" class="paragraph text-nowrap font-normal ">How long
                                             will it take you to rehab (if rehab loan)? (in months)
                                         </label>
                                         <input id="rehab_time" name="rehab_time" type="text" rows="5"
@@ -721,7 +722,7 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="funds_usage" class="text-md font-normal ">How will you
+                                        <label for="funds_usage" class="paragraph font-normal ">How will you
                                             use the funds provided by this loan?
                                         </label>
                                         <textarea id="funds_usage" name="funds_usage" type="text" rows="5"
@@ -730,7 +731,7 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex items-center gap-1.5">
-                                        <label for="fix_flip_profit" class="text-md text-nowrap font-normal ">Fix&Flip:
+                                        <label for="fix_flip_profit" class="paragraph text-nowrap font-normal ">Fix&Flip:
                                             How much
                                             will you profit?
                                         </label>
@@ -738,7 +739,7 @@
                                             class="w-full px-3 py-2 dark:bg-black dark:border-gray-700 rounded-md border border-black/20">
                                     </div>
                                     <div class="w-full flex items-center gap-1.5">
-                                        <label for="hold_rent_income" class="text-md text-nowrap font-normal ">Hold &
+                                        <label for="hold_rent_income" class="paragraph text-nowrap font-normal ">Hold &
                                             Rent: Expected
                                             monthly net income
                                         </label>
@@ -748,7 +749,7 @@
                                 </div>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="experience_description" class="text-md font-normal ">Do you have
+                                        <label for="experience_description" class="paragraph font-normal ">Do you have
                                             any Fix & Flip, rehabbing or renting experience? If yes, please describe
                                         </label>
                                         <textarea id="experience_description" name="experience_description" type="text"
@@ -767,23 +768,23 @@
                         <!-- Step 8: Additional Information -->
                         <div x-show="step === 8" class="flex flex-col gap-8">
                             <div class="w-full flex flex-col items-center gap-4">
-                                <h2 class="font-semibold text-xl mt-6">GUARANTOR FULL NAME (INCLUDE JR. OR SIR. AS
+                                <h2 class="font-semibold paragraph mt-6">GUARANTOR FULL NAME (INCLUDE JR. OR SIR. AS
                                     APPLICABLE):
                                 </h2>
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_full_name" class="text-md font-normal">Full Name:</label>
+                                        <label for="guarantor_full_name" class="paragraph font-normal">Full Name:</label>
                                         <input type="text" name="guarantor_full_name" id="guarantor_full_name"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_ssn" class="text-md font-normal">SSN (Last 4
+                                        <label for="guarantor_ssn" class="paragraph font-normal">SSN (Last 4
                                             Digits):</label>
                                         <input type="text" name="guarantor_ssn" id="guarantor_ssn"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_dob" class="text-md font-normal">DOB:</label>
+                                        <label for="guarantor_dob" class="paragraph font-normal">DOB:</label>
                                         <input type="text" name="guarantor_dob" id="guarantor_dob"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
@@ -791,12 +792,12 @@
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_cell_phone" class="text-md font-normal">Cell Phone:</label>
+                                        <label for="guarantor_cell_phone" class="paragraph font-normal">Cell Phone:</label>
                                         <input type="text" name="guarantor_cell_phone" id="guarantor_cell_phone"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_home_phone" class="text-md font-normal">Home Phone:</label>
+                                        <label for="guarantor_home_phone" class="paragraph font-normal">Home Phone:</label>
                                         <input type="text" name="guarantor_home_phone" id="guarantor_home_phone"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
@@ -804,12 +805,12 @@
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_email" class="text-md font-normal">Email Address:</label>
+                                        <label for="guarantor_email" class="paragraph font-normal">Email Address:</label>
                                         <input type="email" name="guarantor_email" id="guarantor_email"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_street_address" class="text-md font-normal">Street
+                                        <label for="guarantor_street_address" class="paragraph font-normal">Street
                                             Address:</label>
                                         <input type="text" name="guarantor_street_address" id="guarantor_street_address"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
@@ -818,23 +819,23 @@
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_city" class="text-md font-normal">City:</label>
+                                        <label for="guarantor_city" class="paragraph font-normal">City:</label>
                                         <input type="text" name="guarantor_city" id="guarantor_city"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_state" class="text-md font-normal">State:</label>
+                                        <label for="guarantor_state" class="paragraph font-normal">State:</label>
                                         <input type="text" name="guarantor_state" id="guarantor_state"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                     <div class="w-full flex flex-col gap-1.5">
-                                        <label for="guarantor_zip" class="text-md font-normal">Zip:</label>
+                                        <label for="guarantor_zip" class="paragraph font-normal">Zip:</label>
                                         <input type="text" name="guarantor_zip" id="guarantor_zip"
                                             class="w-full px-3 py-2 border border-black/20 rounded-md dark:bg-black dark:border-gray-700" />
                                     </div>
                                 </div>
 
-                                <h2 class="font-semibold text-xl mt-6">EMPLOYER INFORMATION:</h2>
+                                <h2 class="font-semibold paragraph mt-6">EMPLOYER INFORMATION:</h2>
 
                                 <div class="w-full flex items-center gap-4">
                                     <div class="w-full flex flex-col gap-1.5">
@@ -939,7 +940,7 @@
                                         </div>
                                     @endforeach
                                 </div>
-                                <p class="mt-6 text-md text-black dark:text-white leading-relaxed">
+                                <p class="mt-6 paragraph text-black dark:text-white leading-relaxed">
                                     Each of the undersigned hereby authorize Lender and Lender's actual or potential
                                     lenders,
                                     agents, brokers, processors,
@@ -992,14 +993,14 @@
                                 <div class="w-full mt-6 flex flex-col items-center justify-between gap-4">
                                     <div class="flex flex-col w-full">
                                         <label for="authorization_signature"
-                                            class="text-black dark:text-white text-sm">Signature</label>
+                                            class="text-black dark:text-white paragraph">Signature</label>
                                         <div class="border rounded-lg overflow-hidden">
                                             <canvas id="signature-pad_9" width="1920" height="128"
                                                 class="w-full h-32 bg-white dark:bg-black block touch-none"></canvas>
                                         </div>
                                         <div class="flex gap-2 mt-2">
                                             <button type="button" id="clear-signature_9"
-                                                class="px-4 py-1 text-sm bg-red-600 text-white rounded-lg">Clear</button>
+                                                class="px-4 py-1 paragraph bg-red-600 text-white rounded-lg">Clear</button>
                                         </div>
                                         <!-- hidden input to store base64 signature -->
                                         <input type="hidden" name="authorization_signature" id="signature-input_9">
@@ -1111,7 +1112,7 @@
                                     </script>
                                     <div class="flex flex-col w-full">
                                         <label for="pull_credit_report_signature"
-                                            class="text-black dark:text-white text-sm">Please Pull This Credit Report To
+                                            class="text-black dark:text-white paragraph">Please Pull This Credit Report To
                                             Help Determine Pricing</label>
                                         <input type="checkbox" name="pull_credit_report_signature"
                                             id="pull_credit_report_signature"
@@ -1129,7 +1130,7 @@
                         <!-- Step 10: Additional Information -->
                         <div x-show="step === 10" class="flex flex-col gap-8">
                             <div class="flex flex-col gap-3">
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     Each of the undersigned parties specifically represents to the Lender, and to each of
                                     its actual
                                     and potential agents,
@@ -1137,7 +1138,7 @@
                                     and
                                     acknowledges that:
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     The information provided in this application is true and correct as of the date set
                                     forth
                                     opposite the signature, and
@@ -1149,25 +1150,25 @@
                                     I have made in this
                                     application and/or criminal penalties.
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     The loan requested pursuant to this application (the "Loan") will be secured by a
                                     mortgage or
                                     deed of trust on the
                                     property described in this application.
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     The property will not be used for any illegal or prohibited purpose or use.
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     The property will be non-owner occupied.
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     Lender and its successors and assigns may retain the original and/or electronic record
                                     of this
                                     application, whether or
                                     not the loan is approved and/or funded.
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     Lender and each of Lender's actual or potential successors, assigns, servicers, brokers,
                                     agents,
                                     insurers, and representatives may continuously rely on the information contained in this
@@ -1175,21 +1176,21 @@
                                     this
                                     application if any of the information changes.
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     Any of the successors or assigns of the aforementioned parties, in addition to any other
                                     rights
                                     and remedies that they may have related to such delinquency, may report my name and
                                     account
                                     information to one or more of the consumer credit reporting agencies.
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     Neither Lender nor any of its agents, brokers, insurers, servicers, successors, or
                                     assigns has
                                     made any representation or warranty, express or implied, to me regarding the property or
                                     the
                                     condition or value of the property.
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     My transmission of this application as an "electronic record" containing my "electronic
                                     signature," as those terms are defined in applicable federal and/or state laws, or my
                                     facsimile
@@ -1199,7 +1200,7 @@
                                     containing my
                                     original written signature.
                                 </p>
-                                <p class="text-md text-black dark:text-white leading-relaxed font-normal">
+                                <p class="paragraph text-black dark:text-white leading-relaxed font-normal">
                                     Each of the undersigned parties hereby acknowledge and agree that Lender, any owner of
                                     the Loan,
                                     each of their servicers, successors, and
@@ -1213,20 +1214,20 @@
                             </div>
                             <div class="flex w-full flex-col gap-4">
                                 <div>
-                                    <label class="text-black dark:text-white text-sm">Guarantor Signature</label>
+                                    <label class="text-black dark:text-white paragraph">Guarantor Signature</label>
                                     <div class="border rounded-lg overflow-hidden">
                                         <canvas id="signature-pad" width="1920" height="128"
                                             class="w-full h-32 bg-white dark:bg-black block touch-none"></canvas>
                                     </div>
                                     <div class="flex gap-2 mt-2">
                                         <button type="button" id="clear-signature"
-                                            class="px-4 py-1 text-sm bg-red-600 text-white rounded-lg">Clear</button>
+                                            class="px-4 py-1 paragraph bg-red-600 text-white rounded-lg">Clear</button>
                                     </div>
                                     <input type="hidden" name="guarantor_signature" id="signature-input">
                                 </div>
                                 <div>
                                     <label for="guarantor_signature_date"
-                                        class="text-black dark:text-white text-sm">Date</label>
+                                        class="text-black dark:text-white paragraph">Date</label>
                                     <input type="date" name="guarantor_signature_date" id="guarantor_signature_date"
                                         class="mt-1 p-2 border rounded-lg dark:bg-black dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600">
                                 </div>
@@ -1336,7 +1337,7 @@
                                     });
                                 })();
                             </script>
-                            <div class=" text-black dark:text-white text-sm">
+                            <div class=" text-black dark:text-white paragraph">
                                 If there are more guarantors, please complete the " guarantor add-on form" for each
                                 guarantor.
                             </div>

@@ -1,19 +1,20 @@
-<div class="w-full flex items-center justify-around p-20">
-   <div class="w-[300px] flex items-center justify-center flex-col gap-3">
-      <h1 class="text-[#000D51] text-7xl font-semibold ">
+<div
+   class="w-full flex items-center justify-around padding-x padding-y xm:flex-col sm:flex-col xm:items-start sm:items-start xm:gap-5 sm:gap-5 xm:justify-start sm:justify-start">
+   <div class="w-[300px] flex items-center justify-center flex-col gap-3 xm:w-full sm:w-full">
+      <h1 class="text-[#000D51] heading font-semibold">
          <span class="counter" data-target="250">0</span>+
       </h1>
-      <p class="text-[#000D51] text-xl font-normal ">Successful Loan Approvals</p>
+      <p class="text-[#000D51] paragraph font-normal">Successful Loan Approvals</p>
    </div>
-   <div class="w-[300px] flex items-center justify-center flex-col gap-3">
-      <h1 class="text-[#000D51] text-7xl font-semibold ">
+   <div class="w-[300px] flex items-center justify-center flex-col gap-3 xm:w-full sm:w-full">
+      <h1 class="text-[#000D51] heading font-semibold">
          <span class="counter" data-target="100">0</span>+
       </h1>
-      <p class="text-[#000D51] text-xl font-normal ">Properties Bought & Sold</p>
+      <p class="text-[#000D51] paragraph font-normal">Properties Bought & Sold</p>
    </div>
-   <div class="w-[300px] flex items-center justify-center flex-col gap-3">
-      <h1 class="text-[#000D51] text-7xl font-semibold ">24/7</h1>
-      <p class="text-[#000D51] text-xl font-normal ">Response Guarantee</p>
+   <div class="w-[300px] flex items-center justify-center flex-col gap-3 xm:w-full sm:w-full">
+      <h1 class="text-[#000D51] heading font-semibold">24/7</h1>
+      <p class="text-[#000D51] paragraph font-normal">Response Guarantee</p>
    </div>
 </div>
 
