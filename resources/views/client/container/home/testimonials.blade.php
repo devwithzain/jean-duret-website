@@ -7,8 +7,8 @@
             <div class="swiper-slide w-full flex items-center justify-center">
                 <div class="w-full h-full flex items-center justify-center gap-5 xm:flex-col sm:flex-col">
                     <div class="w-1/4 xm:w-full sm:w-full">
-                        <img src="{{ asset('assets/testimonials.png') }}" alt="testimonials"
-                            class="w-[500px] object-cover xm:w-full sm:w-full">
+                        <img src="{{ asset('assets/testimonials1.png') }}" alt="testimonials"
+                            class="w-[500px] h-[500px] object-cover xm:w-full sm:w-full">
                     </div>
                     <div class="w-1/4 xm:w-full sm:w-full flex flex-col gap-5">
                         <div>
@@ -35,8 +35,8 @@
             <div class="swiper-slide w-full flex items-center justify-center">
                 <div class="w-full h-full flex items-center justify-center gap-5 xm:flex-col sm:flex-col">
                     <div class="w-1/4 xm:w-full sm:w-full">
-                        <img src="{{ asset('assets/testimonials.png') }}" alt="testimonials"
-                            class="w-[500px] object-cover xm:w-full sm:w-full">
+                        <img src="{{ asset('assets/testimonials2.jpg') }}" alt="testimonials"
+                            class="w-[500px] h-[500px] object-cover xm:w-full sm:w-full">
                     </div>
                     <div class="w-1/4 xm:w-full sm:w-full flex flex-col gap-5">
                         <div>
@@ -61,8 +61,8 @@
             <div class="swiper-slide w-full flex items-center justify-center">
                 <div class="w-full h-full flex items-center justify-center gap-5 xm:flex-col sm:flex-col">
                     <div class="w-1/4 xm:w-full sm:w-full">
-                        <img src="{{ asset('assets/testimonials.png') }}" alt="testimonials"
-                            class="w-[500px] object-cover xm:w-full sm:w-full">
+                        <img src="{{ asset('assets/testimonials3.jpg') }}" alt="testimonials"
+                            class="w-[500px] h-[500px] object-cover xm:w-full sm:w-full">
                     </div>
                     <div class="w-1/4 xm:w-full sm:w-full flex flex-col gap-5">
                         <div>
@@ -87,8 +87,8 @@
             <div class="swiper-slide w-full flex items-center justify-center">
                 <div class="w-full h-full flex items-center justify-center gap-5 xm:flex-col sm:flex-col">
                     <div class="w-1/4 xm:w-full sm:w-full">
-                        <img src="{{ asset('assets/testimonials.png') }}" alt="testimonials"
-                            class="w-[500px] object-cover xm:w-full sm:w-full">
+                        <img src="{{ asset('assets/testimonials4.jpg') }}" alt="testimonials"
+                            class="w-[500px] h-[500px] object-cover xm:w-full sm:w-full">
                     </div>
                     <div class="w-1/4 xm:w-full sm:w-full flex flex-col gap-5">
                         <div>

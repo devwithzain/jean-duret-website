@@ -1,5 +1,5 @@
 <div class="w-full bg-[#000D51] h-[60vh]">
-   <div class="w-full h-full flex items-center justify-center relative">
+   <div class="w-full h-full flex items-center justify-center relative overflow-hidden">
       <svg xmlns="http://www.w3.org/2000/svg" width="904" height="442" viewBox="0 0 904 442" fill="none"
          class="absolute top-1/2 -translate-y-1/2 xm:w-[70%] sm:w-[70%]">
          <g opacity="0.2">
