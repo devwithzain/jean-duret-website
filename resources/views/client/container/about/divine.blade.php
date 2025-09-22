@@ -29,8 +29,8 @@
             <div class="w-[90%] bg-[#2460FD] h-2"></div>
          </div>
       </div>
-      <button class="w-fit text-white paragraph font-medium  px-14 py-5 bg-[#2460FD]">Contact
-         Now</button>
+      <a href="/contact" class="w-fit text-white paragraph font-medium  px-14 py-5 bg-[#2460FD]">Contact
+         Now</a>
    </div>
    <div class="w-1/2 xm:w-full sm:w-full">
       <img src={{ asset('assets/about.png') }} alt="aboutUsImage" class="w-full h-full object-cover">

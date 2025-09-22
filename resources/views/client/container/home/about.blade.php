@@ -1,8 +1,8 @@
 <div class="w-full flex items-center justify-between gap-10 bg-[#000D51] xm:flex-col-reverse sm:flex-col-reverse">
    <div class="w-1/2 xm:w-full sm:w-full">
-      <img src={{ asset('assets/aboutus.jpg') }} alt="aboutUsImage" class="w-full h-full object-cover">
+      <img src={{ asset('assets/aboutus.jpg') }} alt="aboutUsImage" class="w-full h-[800px] object-center">
    </div>
-   <div class="w-1/2 flex flex-col gap-5 pt-10 padding-x xm:w-full sm:w-full">
+   <div class="w-1/2 h-full flex justify-center flex-col gap-5 py-10 padding-x xm:w-full sm:w-full">
       <div>
          <p class="text-white paragraph font-normal ">About us</p>
          <h1 class="text-white heading font-semibold ">Your Goals, Our Mission</h1>
