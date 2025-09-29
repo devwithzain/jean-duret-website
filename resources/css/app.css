@@ -39,7 +39,7 @@ body {
         @apply xxl:text-[40px] xl:text-[35px] lg:text-[28px] ml:text-[22px] md:text-[22px] sm:text-[24px] xm:text-[24px];
     }
     .paragraph {
-        @apply xxl:text-[18px] xl:text-[17px] lg:text-[15px] ml:text-[15px] md:text-[14px] sm:text-[14px] xm:text-[16px];
+        @apply xxl:text-[16px] xl:text-[16px] lg:text-[15px] ml:text-[15px] md:text-[14px] sm:text-[14px] xm:text-[16px];
     }
     .subParagraph {
         @apply xxl:text-[16px] xl:text-[16px] lg:text-[15px] ml:text-[15px] md:text-[15px] sm:text-[14px] xm:text-[14px];

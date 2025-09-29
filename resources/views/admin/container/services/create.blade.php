@@ -39,10 +39,10 @@
          </div>
          <div class="flex flex-col gap-1.5">
             <label for="image">
-               <p class="text-black paragraph font-normal ">Image</p>
+               <p class="paragraph font-normal ">Image</p>
             </label>
             <input id="image" name="image" accept="image/*" onchange="previewImage(this)"
-               class="w-full outline-none focus:border-black/50 px-3 py-1.5 text-black paragraph bg-white font-normal rounded-lg border border-black/10 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
+               class="w-full outline-none focus:border-black/50 px-3 py-1.5 paragraph border border-black/10 rounded-lg dark:border-gray-700 shadow-[0_0_1px_rgba(0,0,0,0.2)]"
                type="file">
             <img id="serviceImagePreview" src="#" alt="Preview" class="mt-2 hidden max-w-xs rounded-lg">
          </div>
