@@ -6,7 +6,8 @@
             Address
          </h1>
       </div>
-      <p class="text-[#000D51] paragraph font-normal ">123 State St. Xyz, Texas, USA</p>
+      <p class="text-[#000D51] paragraph font-normal ">2695 Post St #1087 Jacksonville Florida 32204
+      </p>
    </div>
    <div class="w-[300px] flex items-center justify-center flex-col gap-5 xm:w-full sm:w-full">
       <div class="flex items-center justify-center gap-4">
