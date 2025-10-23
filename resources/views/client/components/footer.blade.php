@@ -83,8 +83,8 @@
                         <h1 class="text-white paragraph font-medium ">Address:
                         </h1>
                         <div class="flex items-center gap-2">
-                            <a class="text-white paragraph font-normal ">123 State St. Xyz,
-                                Texas, USA</a>
+                            <a class="text-white paragraph font-normal ">2695 Post St #1087 Jacksonville Florida
+                                32204</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,8 @@
             Copyright © {{ date('Y') }} Divine Solution Fundings. All rights reserved.
         </p>
         <p class="text-white paragraph font-normal leading-normal tracking-normal">
-            Designed & Developed by American Web Tronics
+            Designed & Developed by <a href="https://americanwebtronics.com/" class="hover:underline">American Web
+                Tronics</a>
         </p>
     </div>
 </div>
